@@ -1,0 +1,23 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Phpizza
+tagline:             Minimal is good
+description:         I'm an insane web developer.
+url:                 http://alanaktion.github.io
+baseurl:             /
+paginate:            7
+
+# About/contact
+author:
+  name:              Alan Hardman
+  url:               https://phpizza.com
+  email:             alan@phpizza.com

@@ -1,0 +1,16 @@
+---
+layout: post
+title: Web Comics
+date: 2011-12-27 01:16:35
+---
+There are a lot of disappointments with most web comics, since it's a relatively easy hobby to get into, but every now and then someone makes one that's simply incredible.  I've spent the last few years getting into reading them, and I've got a nice list of my favorites I'd like to share.
+<h2><a title="licd.com" href="http://leasticoulddo.com/" target="_blank">Least I Could Do</a></h2>
+Currently written by Ryan Sohmer and Lar Desouza, this is one of the most incredibly well-written comics I've ever seen.  It certainly has some inappropriate themes, but if you want a unique, intriguing, and simply hilarious comic to read, this is it.
+<h2><a title="xkcd.com" href="http://xkcd.com" target="_blank">xkcd</a></h2>
+A largely-followed comic written by Randall Munroe, updated mondays, wednesdays, and fridays.  It's primary focus is on math and science, specifically technology and programming.  If you're a geek like me, you'll learn to love <a href="http://xkcd.com" target="_blank">xkcd</a>.
+<h2><a title="girlswithslingshots.com" href="http://www.girlswithslingshots.com" target="_blank">Girls with Slingshots</a></h2>
+Written by Danielle Corsetto, <a href="http://www.girlswithslingshots.com" target="_blank">Girls with Slingshots</a> is updated weekdays, and features a cast of mainly young-adult girls.  It's certainly the type of comic where certain types of people will really appreciate it, but I love it and am glad to say I've read the entire archive more than once.
+<h2><a title="questionablecontent.net" href="http://questionablecontent.net" target="_blank">Questionable Content</a></h2>
+Updated weekdays by Jeph Jacques, <a href="http://questionablecontent.net" target="_blank">QC</a> has a huge following, and has an amazingly written plot.  The story circles around Marten Reed, a young adult who's life is turned around by a girl he meets in a bar.  In my opinion, the name is quite misleading, as, for the most part, the comic is really quite clean.  It's not one that you expect to get laughs out of each day, but the story is one that will make you never want Jeph to stop writing.
+
+There are plenty of others that I read daily, or that I used to read, or am just getting into that I didn't write full descriptions for, but they're certainly worth checking out.  <a title="wigucomics.com" href="http://wigucomics.com" target="_blank">Wigu</a>, <a title="treadingground.com" href="http://treadingground.com" target="_blank">Treading Ground</a> (complete), <a title="anderslovesmaria.reneengstrom.com" href="http://anderslovesmaria.reneengstrom.com" target="_blank">Anders Loves Maria</a> (complete, wow), <a title="dumbingofage.com" href="http://dumbingofage.com" target="_blank">Dumbing of Age</a>, <a title="overcompensating.com" href="http://overcompensating.com" target="_blank">Overcompensating</a>, and <a title="bunny-comic.com" href="http://www.bunny-comic.com/" target="_blank">Bunny</a> are a few that come to mind.
