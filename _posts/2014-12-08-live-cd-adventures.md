@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Live CD Adventures
+title: Filesystem Adventures
 ---
 I figure I may as well tell this story.
 
