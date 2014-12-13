@@ -7,4 +7,4 @@ date: 2014-05-01 21:05:36
 
 > You immerse yourself in a world of total meaninglessness where all that matters is a little series of numbers bent into a giant labyrinth of symbols and a different series of numbers or a picture of a kitten came out the other end.
 
-Source: [Programming Sucks](http://stilldrinking.org/)
+Source: [Programming Sucks](http://stilldrinking.org/programming-sucks), an essay on the amazing Still Drinking website by Peter Welch.
