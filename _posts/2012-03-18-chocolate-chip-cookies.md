@@ -6,27 +6,27 @@ date: 2012-03-18 01:28:12
 Preheat Oven to 375°
 
 Cream together:
-<ul>
-	<li>⅓ cup shortening</li>
-	<li>⅓ cup butter</li>
-	<li>½ cup sugar</li>
-	<li>½ cup brown sugar</li>
-</ul>
+
+* ⅓ cup shortening
+* ⅓ cup butter
+* ½ cup sugar
+* ½ cup brown sugar
+
 Beat in:
-<ul>
-	<li>1 egg</li>
-	<li>1 tsp. vanilla</li>
-</ul>
+
+* 1 egg
+* 1 tsp. vanilla
+
 Stir in with mixer on low speed:
-<ul>
-	<li>½ tsp. baking soda</li>
-	<li>½ tsp. salf</li>
-	<li>1 ½ cup flour</li>
-</ul>
+
+* ½ tsp. baking soda
+* ½ tsp. salf
+* 1 ½ cup flour
+
 Stir in with wooden spoon:
-<ul>
-	<li>½ cup chocolate chips</li>
-</ul>
+
+* ½ cup chocolate chips
+
 Drop by rounded teaspoons onto ungreased cookie sheet.
 
 Bake 8-10 minutes or until cookies are light brown.
