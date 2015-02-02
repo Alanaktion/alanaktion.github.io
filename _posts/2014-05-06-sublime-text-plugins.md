@@ -7,7 +7,8 @@ I use several plugins every day in [Sublime Text 3](http://www.sublimetext.com/3
 
 * [Package Control](https://sublime.wbond.net/installation)
 	* This one is essential for any Sublime Text user, and makes installing other plugins very simple and fast.
-* [SublimeGit](https://sublimegit.net/)
+* Git or SidebarGit from Package Control
+	* Both can be used together, or just pick the one you prefer
 * SublimeLinter - I use these sub-plugins:
 	* SublimeLinter-php
     * SublimeLinter-jshint (Requires Node.js, `npm install -g jshint`)
@@ -47,3 +48,5 @@ Here's my User Preferences file:
 	}
 
 This includes my absolute favorite code font, [ProFont](http://tobiasjung.name/profont/), designed to be incredibly readable at small sizes. Use `ProFontIIx` if you're on Mac, it's beautiful. Note the `save_on_focus_lost` option, which does exactly what it says it will.
+
+Edit: I used to include [SublimeGit](https://sublimegit.net/) in this plugin list, but it's a commercial, closed-source option that is no longer receiving any support. It barely works at all on OS X Yosemite, and has numerous issues on Windows as well. Stay away from it.
