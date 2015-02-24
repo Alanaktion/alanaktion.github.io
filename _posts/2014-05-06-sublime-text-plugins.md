@@ -77,4 +77,4 @@ OS X keymap, including adjustments to Home and End keys:
 		{ "keys": ["super+shift+end"], "command": "move_to", "args": {"to": "eof", "extend": true} }
 	]
 
-Edit: I include [SublimeGit](https://sublimegit.net/) in this plugin list, but it's a commercial, closed-source option ~~that is no longer receiving any support~~. ~~It barely works at all on OS X Yosemite, and has numerous issues on Windows as well.~~ Most issues have been fixed, but I always prefer to use open source software anyway.
+Edit: I include [SublimeGit](https://sublimegit.net/) in this plugin list, but it's a commercial, closed-source option that has numerous issues on Windows and a few on OS X. Most issues have been fixed, but I always prefer to use open source software anyway.
