@@ -12,7 +12,7 @@ relative_permalinks: true
 title:               Phpizza
 tagline:             Minimal is good
 description:         I'm an insane web developer.
-url:                 http://alanaktion.github.io
+url:                 https://alanaktion.github.io
 baseurl:             /
 paginate:            7
 
