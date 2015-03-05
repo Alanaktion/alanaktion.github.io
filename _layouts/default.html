@@ -19,6 +19,8 @@
         </div>
       </div>
 
+      <a class="kittehz" href="javascript:kitteh();">Click for Kittehz</a>
+
       <div class="container content">
         {{ content }}
       </div>
@@ -42,6 +44,15 @@
           checkbox.checked = false;
         }, false);
       })(document);
+
+      function kitteh() {
+        var img = document.createElement('img');
+        img.src = 'http://thecatapi.com/api/images/get?format=src&rand=' + Math.random();
+        img.className = 'kitteh';
+        img.style.left = (Math.random() * (window.innerWidth - 300)).toFixed() + 'px';
+        img.style.top = (Math.random() * (window.innerHeight - 300)).toFixed() + 'px';
+        document.body.appendChild(img);
+      }
     </script>
   </body>
 </html>
