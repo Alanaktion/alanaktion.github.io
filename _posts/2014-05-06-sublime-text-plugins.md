@@ -7,7 +7,8 @@ I use several plugins every day in [Sublime Text 3](http://www.sublimetext.com/3
 
 * [Package Control](https://sublime.wbond.net/installation)
 	* This one is essential for any Sublime Text user, and makes installing other plugins very simple and fast.
-* [SublimeGit](https://sublimegit.net/)
+* Git, SidebarGit, or SublimeGit (commercial) from Package Control
+	* All can be used together, or just pick the one you prefer
 * SublimeLinter - I use these sub-plugins:
 	* SublimeLinter-php
     * SublimeLinter-jshint (Requires Node.js, `npm install -g jshint`)
@@ -47,3 +48,33 @@ Here's my User Preferences file:
 	}
 
 This includes my absolute favorite code font, [ProFont](http://tobiasjung.name/profont/), designed to be incredibly readable at small sizes. Use `ProFontIIx` if you're on Mac, it's beautiful. Note the `save_on_focus_lost` option, which does exactly what it says it will.
+
+I also have custom hotkeys for SublimeGit commands, which I have bound to G-keys on my Logitech keyboards.
+
+Windows keymap:
+
+	[
+		{ "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
+		{ "keys": ["ctrl+shift+g", "l"], "command": "git_pull" },
+		{ "keys": ["ctrl+shift+g", "p"], "command": "git_push" },
+		{ "keys": ["ctrl+shift+g", "a"], "command": "git_add_current_file" }
+	]
+
+OS X keymap, including adjustments to Home and End keys:
+
+	[
+		{ "keys": ["super+k", "super+m"], "command": "toggle_minimap" },
+		{ "keys": ["super+shift+g", "l"], "command": "git_pull" },
+		{ "keys": ["super+shift+g", "p"], "command": "git_push" },
+		{ "keys": ["super+shift+g", "a"], "command": "git_add_current_file" },
+		{ "keys": ["home"], "command": "move_to", "args": {"to": "bol"} },
+		{ "keys": ["end"], "command": "move_to", "args": {"to": "eol"} },
+		{ "keys": ["shift+end"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+		{ "keys": ["shift+home"], "command": "move_to", "args": {"to": "bol", "extend": true } },
+		{ "keys": ["super+home"], "command": "move_to", "args": {"to": "bof"} },
+		{ "keys": ["super+end"], "command": "move_to", "args": {"to": "eof"} },
+		{ "keys": ["super+shift+home"], "command": "move_to", "args": {"to": "bof", "extend": true} },
+		{ "keys": ["super+shift+end"], "command": "move_to", "args": {"to": "eof", "extend": true} }
+	]
+
+Edit: I include [SublimeGit](https://sublimegit.net/) in this plugin list, but it's a commercial, closed-source option that has numerous issues on Windows and a few on OS X. Most issues have been fixed, but I always prefer to use open source software anyway.
