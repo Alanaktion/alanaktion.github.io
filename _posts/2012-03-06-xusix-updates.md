@@ -3,7 +3,7 @@ layout: post
 title: Xusix Updates
 date: 2012-03-06 00:36:15
 ---
-Our social network <a href="http://www.xusix.com">Xusix</a> has been under development for quite a while now, and we'd like to introduce some of the neat things we've added in recent times.
+Our social network [Xusix](http://www.xusix.com) has been under development for quite a while now, and we'd like to introduce some of the neat things we've added in recent times.
 
 * Live comments - When you comment on a post, it instantly send the comment out, and anyone viewing the post is shown the new comment.  The text box immediately lets you write another comment, allowing a live, ongoing conversation.
 * Mobile Access - The Xusix layout has recently been redesigned from the ground up, and although it looks exactly the same on a desktop browser, it now optimizes automatically for netbooks, tablets, and mobile devices.

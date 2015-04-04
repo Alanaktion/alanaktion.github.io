@@ -5,10 +5,10 @@ date: 2011-11-10 09:57:35
 ---
 I've seen this one a lot lately.  Basically, it shows a fake version of the Google and Yahoo! search engines in the attempt to track all of your personal information that you enter into those sites. Even if you don't care about your information getting stolen, it prevents you from using Google Apps services such as Gmail, Google Voice, and in many situations, even the basic Google search engine will not work at all.
 
-The biggest problem with repairing this virus is that it is technically not so much a virus as a setting. There is no malicious software causing it, no secret tracking cookie, no browser extension. It is simply caused by a Windows setting, not in the Internet Options, the Windows Registry, it is not found in the Control Panel, or even in the Network and Sharing Center or the Computer Management. Therefore no anti-virus software or registry cleaner will ever find it.
+The biggest problem with repairing this virus is that it is technically not so much a virus as a setting. There is no malicious software causing it, no secret tracking cookie, no browser extension. It is simply caused by a Windows setting, not in the Internet Options, the Windows Registry, it is not found in the Control Panel, or even in the Network and Sharing Center or the Computer Management. Therefore very few anti-virus software options will ever find it.
 
 ## Diagnosing the Problem
-Obviously you need to see if you actually have this problem before trying to remove it. The easiest way to see the problem is to look at the <a href="http://www.google.com/" target="_blank">Google Home Page</a>. Check the **copyright date** at the bottom of the page. If the year is incorrect, you probably have the virus. Another method of checking it is to go to <a href="https://mail.google.com/" target="_blank">Gmail</a>. If the page returns a 404, 403, or 500 error, you've got the virus.
+Obviously you need to see if you actually have this problem before trying to remove it. The easiest way to see the problem is to look at the <a href="https://www.google.com/" target="_blank">Google Home Page</a>. That link will show a security warning if your connection to Google has been compromised. Another method of checking it is to go to <a href="https://mail.google.com/" target="_blank">Gmail</a>. If the page returns a 404, 403, or 500 error, you've got the virus.
 
 ## Repairing the Problem
 
@@ -28,10 +28,10 @@ Obviously you need to see if you actually have this problem before trying to rem
 2. Remove any lines from the file containing `google` or `yahoo` and save the file. The virus should now be repaired!
 
 ### Other UNIX/Linux
-1. Using a text editor as **root**, open `/etc/hosts`.
+1. Using a text editor as *root*, open `/etc/hosts`.
 2. Remove any lines from the file containing `google` or `yahoo` and save the file. The virus should now be repaired!
 
-### Android OS
+### Android
 1. Using a text editor with root access, open `/system/etc/hosts`.
 2. Remove any lines from the file containing `google` or `yahoo` and save the file. The virus should now be repaired!
 
