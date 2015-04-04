@@ -1,0 +1,17 @@
+/**
+ * Saints Row Theme
+ *
+ * Apply by adding .theme-sr to <body>
+ *
+ * @base-color: 9C48B8;
+ */
+.theme-sr .sidebar-nav-item.active,
+.theme-sr #sidebar-checkbox:checked ~ .sidebar-toggle {
+	background-color: #9c48b8;
+}
+.theme-sr code,
+.theme-sr .container a,
+.theme-sr .sidebar-toggle,
+.theme-sr .related-posts li a:hover {
+	color: #9c48b8;
+}
