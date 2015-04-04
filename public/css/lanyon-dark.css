@@ -4,10 +4,11 @@
  *
  * Based on the Lanyon Inverted style, this style provides a cleaner looking,
  * fully dark-themed style for Lanyon. Most noticably, the background has been
- * lightened slightly, and many of the darker text styles have been adjusted.
+ * lightened slightly, many of the darker text styles have been adjusted, and
+ * the body text has been changed to a sans-serif font.
  *
- * It also includes a sans-serif font override, since serif fonts just don't
- * look very good on black, unless you're a dang good designer, which I am not.
+ * I've also added an additional theme, theme-sr. This uses the wonderful
+ * purple color from Saints Row as an accent.
  *
  * Designed by Alan Hardman <alan@phpizza.com>
  */
@@ -256,4 +257,24 @@ a.pagination-item:hover {
 }
 #sidebar-checkbox:checked ~ .wrap {
 	opacity: 0.8;
+}
+
+/**
+ * Saints Row Theme
+ *
+ * Apply by adding .theme-sr to <body>
+ *
+ * @base-color: 9C48B8;
+ */
+.theme-sr .sidebar-nav-item.active,
+.theme-sr #sidebar-checkbox:checked ~ .sidebar-toggle {
+	background-color: #9c48b8;
+}
+.theme-sr .container a,
+.theme-sr .sidebar-toggle,
+.theme-sr .related-posts li a:hover {
+	color: #9c48b8;
+}
+.theme-sr code {
+	color: #b06dc6;
 }
