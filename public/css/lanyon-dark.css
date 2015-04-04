@@ -1,0 +1,259 @@
+/*
+ * Lanyon Dark Style
+ * This stylesheet contains complete color overrides for Poole and Lanyon.
+ *
+ * Based on the Lanyon Inverted style, this style provides a cleaner looking,
+ * fully dark-themed style for Lanyon. Most noticably, the background has been
+ * lightened slightly, and many of the darker text styles have been adjusted.
+ *
+ * It also includes a sans-serif font override, since serif fonts just don't
+ * look very good on black, unless you're a dang good designer, which I am not.
+ *
+ * Designed by Alan Hardman <alan@phpizza.com>
+ */
+
+/*
+ *                        ___
+ *                       /\_ \
+ *  _____     ___     ___\//\ \      __
+ * /\ '__`\  / __`\  / __`\\ \ \   /'__`\
+ * \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
+ *  \ \ ,__/\ \____/\ \____//\____\ \____\
+ *   \ \ \/  \/___/  \/___/ \/____/\/____/
+ *    \ \_\
+ *     \/_/
+ *
+ *    Darkened up a bit
+ */
+
+/*
+ * Body resets
+ */
+body {
+	color: #eaeaea;
+	background-color: #101010;
+}
+a {
+	color: #2d92d9;
+}
+strong {
+	color: #cfcfcf;
+}
+
+/* Misc */
+hr {
+	border-top-color: #eee;
+	border-bottom-color: #000;
+}
+abbr {
+	color: #aaa;
+}
+abbr[title] {
+	border-bottom-color: #1a1a1a;
+}
+
+/* Code */
+code {
+	color: #e05c69;
+	background-color: #202020;
+}
+pre {
+	background-color: #202020;
+}
+
+/* Quotes */
+blockquote {
+	color: #858585;
+	border-left-color: #1a1a1a;
+}
+
+/* Tables */
+table, td, th {
+	border-color: #1a1a1a;
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+	background-color: #202020;
+}
+
+/*
+ * Messages
+ */
+.message {
+	color: #8e8e8e;
+	background-color: #202020;
+}
+
+/*
+ * Masthead
+ */
+.masthead-title,
+.masthead-title a,
+.masthead-title small {
+	color: #afafaf;
+}
+
+/*
+ * Posts and pages
+ */
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+	color: #cfcfcf;
+}
+/* Meta data line below post title */
+.post-date {
+	color: #656565;
+}
+
+/* Related posts */
+.related {
+	border-top-color: #111;
+}
+.related-posts li small {
+	color: #666;
+}
+.related-posts li a:hover {
+	color: #2d92d9;
+}
+
+/*
+ * Pagination
+ */
+.pagination {
+	color: #333;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+	border-color: #111;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+	background-color: #0a0a0a;
+}
+
+/*
+ *  ___
+ * /\_ \
+ * \//\ \      __      ___   __  __    ___     ___
+ *   \ \ \   /'__`\  /' _ `\/\ \/\ \  / __`\ /' _ `\
+ *    \_\ \_/\ \_\.\_/\ \/\ \ \ \_\ \/\ \_\ \/\ \/\ \
+ *    /\____\ \__/.\_\ \_\ \_\/`____ \ \____/\ \_\ \_\
+ *    \/____/\/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
+ *                               /\___/
+ *                               \/__/
+ *
+ *    Darkened and adjusted. Just enough.
+ */
+
+/*
+ * Global resets
+ */
+
+/* Sans-serif body text */
+html {
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #cecece;
+}
+
+/*
+ * Masthead
+ */
+.masthead {
+	border-color: #202020;
+}
+.masthead-title,
+.masthead-title a {
+	color: #afafaf;
+}
+.masthead-title small {
+	color: #777;
+}
+
+/*
+ * Sidebar
+ *
+ * Lanyon's sidebar is *absolutely perfect*, so I'm only changing the toggle.
+ */
+
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.sidebar-toggle {
+	color: #afafaf;
+	background-color: #202020;
+}
+.sidebar-toggle:active,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+	color: #000;
+	background-color: #afafaf;
+}
+
+/*
+ * Posts and pages
+ */
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+	color: #cfcfcf;
+}
+
+/* Meta data line below post title */
+.post-date {
+	color: #656565;
+}
+
+/* Related Posts */
+.related {
+	border-color: #202020;
+}
+.related-posts li small {
+	color: #666;
+}
+.related-posts li a:hover {
+	color: #2d92d9;
+}
+
+/*
+ * Pagination
+ */
+.pagination {
+	color: #333;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+	background-color: #0A0A0A;
+}
+
+/*
+ * Overlay sidebar
+ */
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+	box-shadow: 0 0 0 .25rem #000;
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+	box-shadow: .25rem 0 .5rem rgba(255,255,255,.1);
+}
+
+/* Only one tweak for a reverse layout */
+.layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+	box-shadow: -.25rem 0 .5rem rgba(255,255,255,.1);
+}
+
+/* Fade content out slightly while sidebar is open -- because I can :P */
+#sidebar-checkbox ~ .wrap {
+	-webkit-transition: -webkit-transform .3s ease-in-out,
+			opacity .3s ease-in-out;
+	transition: transform .3s ease-in-out,
+			opacity .3s ease-in-out;
+}
+#sidebar-checkbox:checked ~ .wrap {
+	opacity: 0.8;
+}

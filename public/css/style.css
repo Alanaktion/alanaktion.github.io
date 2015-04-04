@@ -4,7 +4,7 @@
 	right: 0;
 
 	padding: 20px 15px;
-	color: #313131;
+	color: #808080;
 	letter-spacing: -.025rem;
 
 	font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -13,7 +13,7 @@
 	opacity: 0;
 }
 .kittehz:hover, .kittehz:focus {
-	opacity: 0.3;
+	opacity: 0.5;
 }
 .kitteh {
 	position: absolute;
