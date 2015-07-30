@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phpizza</title>
+	<style type="text/css">
+		html {
+			margin: 0;
+			padding: 0;
+		}
+		html, body {
+			height: 100%;
+		}
+		body {
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 2px;
+
+			background: #000;
+			color: #0e0;
+			text-shadow: 0 0 1px rgba(0,238,0,.6);
+			font-family: Menlo, Monaco, 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+			font-size: 9pt;
+		}
+		.content {
+			display: inline;
+		}
+		@keyframes pulse {
+			from {opacity: 0;}
+			20% {opacity: 1;}
+			50% {opacity: 1;}
+			70% {opacity: 0;}
+			to {opacity: 0;}
+		}
+		.prompt {
+			display: inline;
+			font: inherit;
+			color: transparent;
+			text-shadow: 0 0 0 #0e0;
+			background-color: transparent;
+			padding: 0;
+			border: 0;
+			margin: 0;
+			width: 1px;
+		}
+		.prompt:focus {
+			outline: none;
+		}
+		.cursor {
+			font: inherit;
+			color: #0e0;
+		}
+		.cursor.fade {
+			animation: pulse 1s linear infinite normal;
+		}
+		#prompt-content {
+			position: absolute;
+			white-space: pre;
+			top: 0;
+			left: -10000px;
+		}
+	</style>
+</head>
+<body>
+<div class="content">guest@phpizza:~$</div>
+<input id="prompt" class="prompt" spellcheck="false" autofocus><span class="cursor fade">&block;</span>
+<span id="prompt-content"></span>
+<script>
+	var d = document,
+		w = window,
+		b = d.body,
+		p = d.getElementById('prompt'),
+		c = d.getElementById('prompt-content'),
+		u = d.getElementsByClassName('cursor')[0],
+		h = []; // command history
+
+	// Force focus on prompt
+	b.addEventListener('click', function(e) {
+		if(e.target.tagName != 'INPUT') {
+			p.focus();
+		}
+	}, false);
+
+	// Handle prompt key press for size changes and command running
+	p.addEventListener('keypress', function(e) {
+		switch(e.which) {
+			case 13: // Enter
+				h.push(p.value);
+				console.log('Command run: ' + p.value);
+				p.value = '';
+				p.style.width = '1px';
+				break;
+			case 9: // Tab
+				// Tab is handled in `keydown`
+				break;
+			default:
+				c.innerText = p.value + 'x';
+				p.style.width = (c.clientWidth ? c.clientWidth : 1) + 'px';
+		}
+		w.scrollTo(0, b.scrollHeight);
+	}, false);
+
+	// Handle some non-alphanum keys
+	p.addEventListener('keydown', function(e) {
+		switch(e.which) {
+			case 8:
+				c.innerText = p.value.slice(0,-1);
+				p.style.width = (c.clientWidth ? c.clientWidth : 1) + 'px';
+				break;
+			case 9:
+				console.log('Autocompleting: ' + p.value);
+				e.preventDefault();
+				break;
+		}
+
+		// Disable fade temporarily
+		u.className = 'cursor';
+		if(window.t) {
+			clearTimeout(window.t);
+		}
+		window.t = setTimeout(function() {
+			u.offsetWidth = u.offsetWidth; // Hack to reset animation timer
+			u.className = 'cursor fade';
+		}, 200);
+
+	});
+
+</script>
+</body>
+</html>
+
