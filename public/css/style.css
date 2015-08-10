@@ -1,22 +1,39 @@
+html {
+  font-size: 14px;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (min-width: 30em) {
+  .sidebar {
+    font-size: .8rem;
+  }
+}
+html, h1, h2, h3, h4, h5, h6, .sidebar {
+  font-family: "Noto Sans", sans-serif;
+}
+
 .kittehz {
-	position: absolute;
-	top: 0;
-	right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-	padding: 20px 15px;
-	color: #808080;
-	letter-spacing: -.025rem;
+  padding: 20px 15px;
+  color: #808080;
+  letter-spacing: -.025rem;
 
-	font-family: "PT Sans", Helvetica, Arial, sans-serif;
-	cursor: pointer;
+  /*font-family: "PT Sans", Helvetica, Arial, sans-serif;*/
+  cursor: pointer;
 
-	opacity: 0;
+  opacity: 0;
 }
 .kittehz:hover, .kittehz:focus {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 .kitteh {
-	position: absolute;
-	max-width: 400px;
-	height: auto;
+  position: absolute;
+  max-width: 400px;
+  height: auto;
 }
