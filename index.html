@@ -19,24 +19,20 @@
 			background: #000;
 			color: #0e0;
 			text-shadow: 0 0 1px rgba(0,238,0,.6);
-			font-family: Menlo, Monaco, 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+			font-family: Menlo, Monaco, 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace, monospace;
 			font-size: 9pt;
 		}
+
 		.content {
 			display: inline;
 		}
-		@keyframes pulse {
-			from {opacity: 0;}
-			20% {opacity: 1;}
-			50% {opacity: 1;}
-			70% {opacity: 0;}
-			to {opacity: 0;}
-		}
+
 		.prompt {
 			display: inline;
 			font: inherit;
-			color: transparent;
-			text-shadow: 0 0 0 #0e0;
+			color: inherit;
+			/*color: transparent;*/
+			/*text-shadow: 0 0 0 #0e0;*/
 			background-color: transparent;
 			padding: 0;
 			border: 0;
@@ -46,13 +42,23 @@
 		.prompt:focus {
 			outline: none;
 		}
+
+		@keyframes pulse {
+			from {opacity: 0;}
+			20% {opacity: 1;}
+			50% {opacity: 1;}
+			70% {opacity: 0;}
+			to {opacity: 0;}
+		}
 		.cursor {
+			display: none; /* Maybe just use native cursor for now... */
 			font: inherit;
-			color: #0e0;
+			color: inherit;
 		}
 		.cursor.fade {
 			animation: pulse 1s linear infinite normal;
 		}
+
 		#prompt-content {
 			position: absolute;
 			white-space: pre;
@@ -63,16 +69,116 @@
 </head>
 <body>
 <div class="content">guest@phpizza:~$</div>
-<input id="prompt" class="prompt" spellcheck="false" autofocus><span class="cursor fade">&block;</span>
+<input id="prompt" class="prompt" spellcheck="false" value autofocus><span class="cursor fade">&block;</span>
 <span id="prompt-content"></span>
 <script>
+
+// Commands are defined as anonymous functions with a return value sent to stdout
+var Commands = {
+	ls: function(params) {
+		if(params && params.indexOf('-l') != -1) {
+			return 'total ' + (Object.keys(Directories).length * 4) + '<br>' + Object.keys(Directories).join('<br>');
+		} else {
+			return Object.keys(Directories).join(' ');
+		}
+	},
+	cd: function(params) {
+		if(params && params in Directories) {
+			window.location = Directories[params];
+		} else if(params && params != '.') {
+			return 'cd: ' + (params.split(' ', 1)[0]) + ': No such file or directory';
+		}
+	},
+	pwd: function() {
+		return '/home/guest';
+	},
+	cat: function() {
+		return '<img src="fluffly.jpg" style="width: 480px; height: 320px;" alt="Fluffly">';
+	},
+	whoami: function() {
+		return 'guest';
+	},
+	hostname: function(params) {
+		if(params && params.indexOf('-f') != -1) {
+			return 'phpizza.com';
+		}
+		return 'phpizza';
+	},
+	echo: function(params) {
+		return params.replace(/^[\s"']+|[\s"']+$/g, '');
+	},
+	vim: function(params) {
+		return 'vim: Try nano.';
+	},
+	nano: function(params) {
+		return 'nano: Try vim.';
+	},
+	login: function() {
+		return 'login: Cannot possibly work without effective root';
+	},
+	logout: function() {
+		return 'logout: not login shell: use `exit\'';
+	},
+	exit: function() {
+		return 'exit: now why would you want to do that?';
+	},
+	js: function(params) {
+		try {
+			return eval(params);
+		} catch (e) {
+			return e.message;
+		}
+	},
+	clear: function() {
+		document.getElementsByClassName('content')[0].innerHTML = '';
+	},
+	setcolor: function(params) {
+		document.body.style.color = params;
+		document.body.style.text_shadow = undefined;
+	}
+};
+
+// Map directories for ls and cd to URLs
+var Directories = {
+	github: 'https://github.com/Alanaktion',
+	twitter: 'https://twitter.com/alanaktion',
+	blog: 'https://blog.phpizza.com',
+	resume: 'https://blog.phpizza.com/resume/',
+};
+
+(function() {
+
+	// Some handy aliases
 	var d = document,
 		w = window,
 		b = d.body,
-		p = d.getElementById('prompt'),
-		c = d.getElementById('prompt-content'),
-		u = d.getElementsByClassName('cursor')[0],
+		p = d.getElementById('prompt'), // Input used to prompt for user text
+		r = d.getElementById('prompt-content'), // Hidden span used to determine input size
+		c = d.getElementsByClassName('content')[0], // Content box
+		u = d.getElementsByClassName('cursor')[0], // Fake blinking cursor
+		m = 'guest@phpizza:~$', // Prompt message
+		t = false, // Records if last keyup was the tab key
 		h = []; // command history
+
+	// Render stdout and a new prompt
+	var stdout = function(command, str) {
+		if(!c.innerHTML) {
+			c.innerHTML = m;
+			return;
+		}
+		if(str === undefined) {
+			c.innerHTML += ' ' + command + '<br>' + m;
+		} else {
+			c.innerHTML += ' ' + command + '<br>' + str + '<br>' + m;
+		}
+	};
+
+	// Check browser support
+	if(!('addEventListener' in b) || !('keys' in Object)) {
+		d.getElementsByClassName('content')[0].innerHTML = 'Sorry, your browser is not supported :(';
+		u.remove();
+		return;
+	}
 
 	// Force focus on prompt
 	b.addEventListener('click', function(e) {
@@ -85,32 +191,71 @@
 	p.addEventListener('keypress', function(e) {
 		switch(e.which) {
 			case 13: // Enter
-				h.push(p.value);
-				console.log('Command run: ' + p.value);
+
+				// Run command
+				var command = p.value,
+					parts = command.split(' '),
+					exe = parts.shift(),
+					params = parts.join(' ');
+				if(exe in Commands) {
+					h.push(command);
+					stdout(command, Commands[exe](params));
+				} else {
+					stdout(command, 'Command not found: ' + exe);
+				}
+
+				// Reset prompt
 				p.value = '';
 				p.style.width = '1px';
 				break;
+
 			case 9: // Tab
 				// Tab is handled in `keydown`
 				break;
 			default:
-				c.innerText = p.value + 'x';
-				p.style.width = (c.clientWidth ? c.clientWidth : 1) + 'px';
+				r.innerText = p.value + 'x';
+				p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
 		}
 		w.scrollTo(0, b.scrollHeight);
 	}, false);
 
 	// Handle some non-alphanum keys
+	// TODO: Add arrow key history navigation
 	p.addEventListener('keydown', function(e) {
 		switch(e.which) {
 			case 8:
-				c.innerText = p.value.slice(0,-1);
-				p.style.width = (c.clientWidth ? c.clientWidth : 1) + 'px';
+				t = false;
+				r.innerText = p.value.slice(0,-1);
+				p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
 				break;
 			case 9:
-				console.log('Autocompleting: ' + p.value);
 				e.preventDefault();
+				var command = p.value;
+				var commandNames = Object.keys(Commands);
+
+				// If prompt is empty, and tab has been pressed before, list all available commands
+				if(!command.length && t) {
+					stdout('', commandNames.join(' '));
+					return;
+				}
+
+				// Try to find `command` in Commands object
+				if(command.length) {
+					for(var i = 0; i < commandNames.length; i++) {
+						if(commandNames[i].substr(0, command.length) == command) {
+							// Command matches, autocomplete
+							p.value = commandNames[i] + ' ';
+							p.dispatchEvent(new Event('keypress'));
+							r.innerText = p.value;
+							p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
+						}
+					}
+				}
+
+				t = true;
 				break;
+			default:
+				t = false;
 		}
 
 		// Disable fade temporarily
@@ -119,12 +264,13 @@
 			clearTimeout(window.t);
 		}
 		window.t = setTimeout(function() {
-			u.offsetWidth = u.offsetWidth; // Hack to reset animation timer
+			u.offsetWidth = u.offsetWidth; // Hack to reset animation timer; doesn't seem to work quite the way I wanted it to.
 			u.className = 'cursor fade';
 		}, 200);
 
 	});
 
+})();
 </script>
 </body>
 </html>
