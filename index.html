@@ -21,6 +21,8 @@
 			text-shadow: 0 0 1px rgba(0,238,0,.6);
 			font-family: Menlo, Monaco, 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace, monospace;
 			font-size: 9pt;
+
+			word-break: break-all;
 		}
 
 		.content {
@@ -182,7 +184,12 @@ var Directories = {
 
 	// Force focus on prompt
 	b.addEventListener('click', function(e) {
-		if(e.target.tagName != 'INPUT') {
+		if(e.target.tagName != 'INPUT' && window.getSelection().toString() === '') {
+			p.focus();
+		}
+	}, false);
+	b.addEventListener('keydown', function(e) {
+		if(e.target.tagName != 'INPUT' && !e.ctrlKey) {
 			p.focus();
 		}
 	}, false);
