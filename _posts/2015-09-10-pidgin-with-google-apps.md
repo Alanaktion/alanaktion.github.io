@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pidgin with Google Apps
-date: 2015-10-10 13:20:55
+date: 2015-09-10 13:20:55
 ---
 
 I love using Pidgin with our chat server at work. It's a really nice, clean IM client (apart from the account management, that's a mess). Setting it up with Google Apps is slightly more tricky.
