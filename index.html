@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
 	<title>Phpizza</title>
 	<style type="text/css">
 		html {
@@ -71,7 +72,7 @@
 </head>
 <body>
 <div class="content">guest@phpizza:~$</div>
-<input id="prompt" class="prompt" spellcheck="false" value autofocus><span class="cursor fade">&block;</span>
+<input id="prompt" class="prompt" spellcheck="false" autocomplete="off" autofocus><span class="cursor fade">&block;</span>
 <span id="prompt-content"></span>
 <script>
 
@@ -220,7 +221,10 @@ var Directories = {
 				// Tab is handled in `keydown`
 				break;
 			default:
-				r.innerText = p.value + 'x';
+				console.log(p.value);
+				r.textContent = p.value + 'x';
+				console.log(r.textContent);
+				console.log(r);
 				p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
 		}
 		w.scrollTo(0, b.scrollHeight);
@@ -232,7 +236,7 @@ var Directories = {
 		switch(e.which) {
 			case 8:
 				t = false;
-				r.innerText = p.value.slice(0,-1);
+				r.textContent = p.value.slice(0,-1);
 				p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
 				break;
 			case 9:
@@ -253,7 +257,7 @@ var Directories = {
 							// Command matches, autocomplete
 							p.value = commandNames[i] + ' ';
 							p.dispatchEvent(new Event('keypress'));
-							r.innerText = p.value;
+							r.textContent = p.value;
 							p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
 						}
 					}
