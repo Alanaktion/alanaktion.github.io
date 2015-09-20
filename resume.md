@@ -21,7 +21,7 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 
 ### Technology
 
-- **Programming:** PHP, JavaScript, HTML5, CSS/LESS/SCSS, VB.NET
+- **Programming:** PHP, JavaScript, HTML5, CSS/LESS/SCSS, C#, VB.NET
 - **Software:** Apache, nginx, HHVM, MySQL, Node.js, Unison
 - **Systems:** Linux (Debian/Ubuntu), Windows, OS X
 
