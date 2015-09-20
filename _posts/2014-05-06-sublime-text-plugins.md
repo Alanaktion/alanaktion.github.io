@@ -9,6 +9,7 @@ I use several plugins every day in [Sublime Text 3](http://www.sublimetext.com/3
 	* This one is essential for any Sublime Text user, and makes installing other plugins very simple and fast.
 * Git, SidebarGit, or SublimeGit (commercial) from Package Control
 	* All can be used together, or just pick the one you prefer
+* GitGutter
 * SublimeLinter - I use these sub-plugins:
 	* SublimeLinter-php
     * SublimeLinter-jshint (Requires Node.js, `npm install -g jshint`)
@@ -16,23 +17,35 @@ I use several plugins every day in [Sublime Text 3](http://www.sublimetext.com/3
 * Markdown Preview
 * XDebug Client
 
+Code formatting is also nice sometimes, these are great for that:
+
+* HTML-CSS-JS Prettify
+* Indent XML
+* JsFormat
+
+And if you're using languages not natively supported by Sublime, here are some great packages:
+
+* SCSS
+* LESS
+* INI
+* ApacheConf.tmLanguage
+
+----
+
 I use the Soda Dark theme, installable via Package Control, with a modified Monokai color scheme that increases the contrast.
 
-Here's my User Preferences file:
+Here's my User Preferences file, with the parts requiring custom packages removed:
 
 	{
-		"theme": "Soda Dark 3.sublime-theme",
-		"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 		"auto_complete_commit_on_tab": true,
 		"auto_find_in_selection": true,
 		"auto_match_enabled": true,
 		"copy_with_empty_selection": true,
 		"default_line_ending": "unix",
 		"ensure_newline_at_eof_on_save": true,
-		"trim_trailing_white_space_on_save": true,
-		"font_face": "ProFontWindows",
+		"font_face": "Menlo",
 		"font_options": [
-			"gray_antialias"
+			"grey_antialias"
 		],
 		"font_size": 9,
 		"highlight_line": true,
@@ -43,11 +56,15 @@ Here's my User Preferences file:
 		"save_on_focus_lost": true,
 		"shift_tab_unindent": true,
 		"show_encoding": true,
-		"show_full_path": false,
+		"show_full_path": true,
+		"trim_trailing_white_space_on_save": true,
 		"word_wrap": true
 	}
 
-This includes my absolute favorite code font, [ProFont](http://tobiasjung.name/profont/), designed to be incredibly readable at small sizes. Use `ProFontIIx` if you're on Mac, it's beautiful. Note the `save_on_focus_lost` option, which does exactly what it says it will.
+
+This used to, but no longer includes my absolute favorite code font, [ProFont](http://tobiasjung.name/profont/), designed to be incredibly readable at small sizes. Use `ProFontIIx` if you're on Mac, it's beautiful. I've since switched to Menlo, because I'm working longer days and can't focus on tiny text that long anymore :(
+
+Also note the `save_on_focus_lost` option, which does exactly what it says it will.
 
 I also have custom hotkeys for SublimeGit commands, which I have bound to G-keys on my Logitech keyboards.
 
@@ -76,5 +93,3 @@ OS X keymap, including adjustments to Home and End keys:
 		{ "keys": ["super+shift+home"], "command": "move_to", "args": {"to": "bof", "extend": true} },
 		{ "keys": ["super+shift+end"], "command": "move_to", "args": {"to": "eof", "extend": true} }
 	]
-
-Edit: I include [SublimeGit](https://sublimegit.net/) in this plugin list, but it's a commercial, closed-source option that has numerous issues on Windows and a few on OS X. Most issues have been fixed, but I always prefer to use open source software anyway.
