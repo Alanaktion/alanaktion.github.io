@@ -34,12 +34,12 @@ All of these were loaded from Chrome 45 on a desktop PC, with uBlock and Privacy
 
 For comparison, here's my current test site's requests:
 
-- 25 requests, 1.0 MB
-- 1 CSS file, 21.7 KB
-- 5 JS files, 53.9 KB
+- 20 requests, 779 KB
+- 1 CSS file, 21.5 KB
+- 1 JS file, 45.9 KB
 - 14 images, 577 KB
-- 3 webfonts, 412 KB (very bad)
+- 3 webfonts, 132 KB (higher than I would like)
 
-Apart from the webfonts, this loads very, very quickly. The webfont slowness was what prompted me to look into what other networks were doing, and it was good to see that other sites weren't requiring nearly as much data for their webfonts. In Webkit browsers, on a slow connection, webfonts this big can prevent the content from showing for a good 5-6 seconds, which is definitely not usable. The reason for the size of my fonts is that they include the full Unicode glyph set, which is great for consistency between many languages, but is just not worth the load time.
+Apart from the webfonts, this loads very, very quickly. The webfont slowness was what prompted me to look into what other networks were doing, and it was good to see that other sites weren't requiring nearly as much data for their webfonts. In Webkit browsers, on a slow connection, webfonts this big can prevent the content from showing for a good 5-6 seconds, which is definitely not usable. The large size of the webfonts is an issue, and the largest one is surprisingly my custom icon font, which I definitely need to optimize more before production. I'll likely remove many of the icons from the set since I don't need most of them.
 
 The only conclusion I can draw from this is that Twitter is the only company who knows what they're doing. Google+ has good cached load times, which is probably fine since most of their assets are cached from other Google pages anyway, but Facebook needing 1.7 MB of JavaScript is just scary.
