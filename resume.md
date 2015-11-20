@@ -27,12 +27,25 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 
 ### Experience
 
+**Designer** - Driscoll for Senate, 2012
+
+- Designed branding for campaign including logo and colors
+- Built and maintained responsive website
+
+**Lead Developer** Cubik Network, 2012 - 2013
+
+- Developed a flexible PHP-based social network platform
+- Designed a responsive app interface for the web site
+- Set up and maintained Apache-based Linux web servers
+
 **Senior Web Developer** - Thrive Life, March 2013 - Present
 
 - Developed custom modules for Magento eCommerce platform in PHP
 - Set up and maintained Linux web server cluster with nginx and MySQL
+  - Later updated codebase and server setup to run HHVM
 - Developed open-source project management system - [phproject.org](http://www.phproject.org/)
   - Currently in use by entire company to track projects, tasks, bugs, and kaizens.
+- 2014 Employee of the Year
 
 ### Awards
 
