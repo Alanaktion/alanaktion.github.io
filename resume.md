@@ -5,7 +5,7 @@ title: Résumé
 
 # Alan Hardman
 
-Phone: [(801) 252-6128](tel:18012526128) · Email: [alan@phpizza.com](mailto:alan@phpizza.com) · Web: [phpizza.com](https://phpizza.com/)
+Phone: [+1 385 207-6652](tel:13852076652) · Email: [alan@phpizza.com](mailto:alan@phpizza.com) · Web: [phpizza.com](https://phpizza.com/)
 
 ## Web Developer
 
@@ -32,7 +32,7 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 - Designed branding for campaign including logo and colors
 - Built and maintained responsive website
 
-**Lead Developer** Cubik Network, 2012 - 2013
+**Lead Developer** - Cubik Network, 2012 - 2013
 
 - Developed a flexible PHP-based social network platform
 - Designed a responsive app interface for the web site
