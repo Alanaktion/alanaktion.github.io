@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: page-notitle
 title: About
 ---
+
+<img class="profile-pic" src="https://cdn.phpizza.com/~alan/blog-img/profile/alan-1-sq-540.png" alt="Alan">
 
 ### Alan Hardman
 
