@@ -13,3 +13,7 @@ The capacitive touch screen is absolutely perfect, and the included upgraded Sur
 Sadly Windows 10 is still not really stable. Everyone keeps telling me they haven't had any issues with it. Maybe I'm just incredibly unlucky, but I've got five devices running Windows 10, and every one of them has some serious usability issue with the OS. Most noticably on the Surface Pro 4, the lock screen sometimes gets stuck and won't respond to touch or keyboard input, and more annoyingly, the device never wakes from sleep about one in ten times the power button is pressed.
 
 Overall, I'm not sure whether I'd recommend the Surface Pro 4 to anyone. I absolutely love it a lot of the time, but the quality issues I've experienced feel like something you'd have on a $200 tablet, not a $900 one (plus the $130 for the keyboard cover). I look forward to seeing what Microsoft does with the future Surface line. There's a long way to go before it's perfect (or even worth the price, probably), but so far this thing is awesome.
+
+**Update (Dec 4):**
+
+The latest Windows Updates included a new display driver that has somehow prevented my Surface Pen from working, including crashing OneNote on startup even when the pen is off. I'm getting really tired of how broken this overpriced device is. iPad Pro for me!
