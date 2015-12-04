@@ -16,4 +16,4 @@ Overall, I'm not sure whether I'd recommend the Surface Pro 4 to anyone. I absol
 
 **Update (Dec 4):**
 
-The latest Windows Updates included a new display driver that has somehow prevented my Surface Pen from working, including crashing OneNote on startup even when the pen is off. I'm getting really tired of how broken this overpriced device is. iPad Pro for me!
+The latest Windows Updates included a new display driver that has somehow prevented my Surface Pen from working, including crashing OneNote on startup even when the pen is off. Installing updates for Windows Defender somehow fixed this, not sure why. I'm really considering an iPad Pro, which isn't really what I want at all.
