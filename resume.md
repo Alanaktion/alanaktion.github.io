@@ -1,11 +1,11 @@
 ---
-layout: resume
+layout: page
 title: Résumé
 ---
 
 # Alan Hardman
 
-Phone: [(801) 252-6128](tel:18012526128) · Email: [alan@phpizza.com](mailto:alan@phpizza.com) · Web: [phpizza.com](https://phpizza.com/)
+Phone: [+1 385 207-6652](tel:13852076652) · Email: [alan@phpizza.com](mailto:alan@phpizza.com) · Web: [phpizza.com](https://phpizza.com/)
 
 ## Web Developer
 

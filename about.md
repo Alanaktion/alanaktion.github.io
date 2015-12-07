@@ -3,6 +3,8 @@ layout: page
 title: About
 ---
 
+<img class="profile-pic" src="https://cdn.phpizza.com/~alan/blog-img/profile/alan-1-sq-540.png" alt="Alan">
+
 ### Alan Hardman
 
 I'm a web developer & designer with several years of freelance and professional experience. I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database design, corporate writing, and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
