@@ -32,7 +32,7 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 - Designed branding for campaign including logo and colors
 - Built and maintained responsive website
 
-**Lead Developer** Cubik Network, 2012 - 2013
+**Lead Developer** - Cubik Network, 2012 - 2013
 
 - Developed a flexible PHP-based social network platform
 - Designed a responsive app interface for the web site
