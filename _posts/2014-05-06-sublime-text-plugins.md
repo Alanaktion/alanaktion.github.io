@@ -66,7 +66,7 @@ This used to, but no longer includes my absolute favorite code font, [ProFont](h
 
 Also note the `save_on_focus_lost` option, which does exactly what it says it will.
 
-I also have custom hotkeys for SublimeGit commands, which I have bound to G-keys on my Logitech keyboards.
+I also have custom hotkeys for SublimeGit commands, which I have bound to G-keys on my Logitech keyboards, as well as re-bindings of <kbd>Ctrl+Tab</kbd> and <kbd>Ctrl+Shift+Tab</kbd> that make more sense to me.
 
 Windows keymap:
 
@@ -74,7 +74,9 @@ Windows keymap:
 		{ "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
 		{ "keys": ["ctrl+shift+g", "l"], "command": "git_pull" },
 		{ "keys": ["ctrl+shift+g", "p"], "command": "git_push" },
-		{ "keys": ["ctrl+shift+g", "a"], "command": "git_add_current_file" }
+		{ "keys": ["ctrl+shift+g", "a"], "command": "git_add_current_file" },
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" }
 	]
 
 OS X keymap, including adjustments to Home and End keys:
