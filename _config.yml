@@ -1,6 +1,6 @@
 # Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+markdown:            kramdown
+highlighter:         rouge
 
 # Permalinks
 permalink:           pretty
@@ -22,3 +22,6 @@ author:
   name:              Alan Hardman
   url:               https://phpizza.com
   email:             alan@phpizza.com
+
+# Workaround npm issue
+exclude:             ["reveal/node_modules"]
