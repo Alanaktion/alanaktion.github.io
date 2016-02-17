@@ -12,7 +12,7 @@ This time around I got it working perfectly, so I decided I'd write a little gui
 
 ### Partition setup
 
-I've always found graphical tools much easier to use when working with disk partitions on linux, so I used the [Gparted live CD](gparted.org/download.php) to configure my partitions. I used a `msdos` partition table with a single data partition, plus a 2 GB swap partition at the end of the disk. What you use is up to you, but this guide assumes a single partition with an `msdos` table.
+I've always found graphical tools much easier to use when working with disk partitions on linux, so I used the [Gparted live CD](gparted.org/download.php) to configure my partitions. I used a `msdos` partition table with a single data partition, plus a 2 GB swap partition at the end of the disk. What you use is up to you, but this guide assumes a single partition with an `msdos` table. Note that the current version of the Gparted live CD won't boot properly on VirtualBox without EFI enabled.
 
 ### Start installation
 
@@ -20,14 +20,18 @@ Just boot the [live CD](https://www.archlinux.org/download/)! :P
 
 ## Install base system
 
-Once you're in the live CD, start by mounting your data partition.
+### Mount partition
+
+Once you're in the live CD, start by mounting your data partition, and any other partitions you created in `/mnt`.
 
 ``` bash
 mkdir -p /mnt
 mount /dev/sda1 /mnt
 ```
 
-After mounting, edit `/etc/pacman.d/mirrorlist`, moving your preferred mirror to the top of the list.
+### Set up base packages and fstab
+
+Edit `/etc/pacman.d/mirrorlist`, moving your preferred mirror to the top of the list.
 
 ```bash
 pacstrap -i /mnt base
@@ -46,8 +50,8 @@ arch-chroot /mnt
 sed -i "s/#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
+locale-gen
 ```
-
 
 ### Configure timezone
 
@@ -74,7 +78,7 @@ systemctl enable net-auto-wireless.service
 
 ### Configure package manager
 
-Open `/etc/pacman.conf` and check that the `[core]`, `[extra]`, and `[community]` lines are uncommented. If you're on a 64-bit system (you should be), uncomment the `[multilib]` lines for 32-bit compatibility.
+Open `/etc/pacman.conf` and check that the `[core]`, `[extra]`, and `[community]` lines are uncommented. If you're on a 64-bit system (you should be), optionally uncomment the `[multilib]` lines for 32-bit compatibility.
 
 After updating your pacman config, refresh the repository list:
 
