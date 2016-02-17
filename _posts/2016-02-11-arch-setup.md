@@ -155,3 +155,5 @@ sudo systemctl enable gdm.service # Enable gdm
 ***
 
 After installing your preferred DE, reboot, and your system should be ready to go!
+
+For a basic overview of the `pacman` and the Arch User Repositories, see the Arch wiki and [this gist](https://gist.github.com/Alanaktion/03d7c0f12c5378ba269f).
