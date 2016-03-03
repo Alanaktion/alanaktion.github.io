@@ -146,15 +146,23 @@ pacman -S nvidia lib32-nvidia-utils # Nvidia
 
 ```bash
 pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter
-sudo systemctl enable lightdm.service # Enable lightdm
+systemctl enable lightdm.service # Enable lightdm
 ```
 
 #### Gnome
 
 ```bash
 pacman -S gnome # Install desktop
-sudo systemctl enable gdm.service # Enable gdm
+systemctl enable gdm.service # Enable gdm
 ```
+
+#### KDE Plasma 5
+
+```bash
+pacman -S plasma
+systemctl enable sddm
+```
+
 
 ***
 
