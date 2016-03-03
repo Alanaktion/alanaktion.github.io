@@ -159,10 +159,9 @@ systemctl enable gdm.service # Enable gdm
 #### KDE Plasma 5
 
 ```bash
-pacman -S plasma
+pacman -S plasma kde-applications
 systemctl enable sddm
 ```
-
 
 ***
 
