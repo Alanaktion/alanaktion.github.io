@@ -152,7 +152,7 @@ systemctl enable lightdm.service # Enable lightdm
 #### Gnome
 
 ```bash
-pacman -S gnome # Install desktop
+pacman -S gnome # Install desktops
 systemctl enable gdm.service # Enable gdm
 ```
 
@@ -165,6 +165,8 @@ systemctl enable sddm
 
 ***
 
-After installing your preferred DE, reboot, and your system should be ready to go!
+After installing your preferred DE, reboot, and your system should be ready to go! If you decide to switch DEs, make sure you disable the display manager before uninstalling, otherwise you'll have to manually remove the symlink from /etc/systemd.
 
-For a basic overview of the `pacman` and the Arch User Repositories, see the Arch wiki and [this gist](https://gist.github.com/Alanaktion/03d7c0f12c5378ba269f).
+If you're running Arch in VirtualBox, you'll want to install the guest additions with `pacman -S virtualbox-guest-utils`.
+
+For a basic overview of the `pacman` and the Arch User Repositories, see the [Arch wiki](https://wiki.archlinux.org/	) and [this gist](https://gist.github.com/Alanaktion/03d7c0f12c5378ba269f).
