@@ -79,9 +79,15 @@ var Directories = {
 		u = d.getElementsByClassName('cursor')[0], // Fake blinking cursor
 		m = 'guest@phpizza:~$', // Prompt message
 		t = false, // Records if last keyup was the tab key
-		h = []; // command history
+		h = [], // command history
+		s = -1; // history position
 
-	// Render stdout and a new prompt
+	/**
+	 * Render stdout and a new prompt
+	 * @param  {string} command
+	 * @param  {string} str
+	 * @return {void}
+	 */
 	var stdout = function(command, str) {
 		if(!c.innerHTML) {
 			c.innerHTML = m;
@@ -119,7 +125,6 @@ var Directories = {
 	p.addEventListener('keypress', function(e) {
 		switch(e.which) {
 			case 13: // Enter
-
 				// Run command
 				var command = p.value,
 					parts = command.split(' '),
@@ -133,19 +138,16 @@ var Directories = {
 				}
 
 				// Reset prompt
+				s = -1;
 				p.value = '';
 				p.style.width = '1px';
 				break;
-
 			case 9: // Tab
 				// Tab is handled in `keydown`
 				break;
 			default:
-				console.log(p.value);
 				r.textContent = p.value + 'x';
-				console.log(r.textContent);
-				console.log(r);
-				p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
+				p.style.width = (r.clientWidth || 1) + 'px';
 		}
 		w.scrollTo(0, b.scrollHeight);
 	}, false);
@@ -154,12 +156,12 @@ var Directories = {
 	// TODO: Add arrow key history navigation
 	p.addEventListener('keydown', function(e) {
 		switch(e.which) {
-			case 8:
+			case 8: // Backspace
 				t = false;
 				r.textContent = p.value.slice(0,-1);
-				p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
+				p.style.width = (r.clientWidth || 1) + 'px';
 				break;
-			case 9:
+			case 9: // Tab
 				e.preventDefault();
 				var command = p.value;
 				var commandNames = Object.keys(Commands);
@@ -178,12 +180,49 @@ var Directories = {
 							p.value = commandNames[i] + ' ';
 							p.dispatchEvent(new Event('keypress'));
 							r.textContent = p.value;
-							p.style.width = (r.clientWidth ? r.clientWidth : 1) + 'px';
+							p.style.width = (r.clientWidth || 1) + 'px';
 						}
 					}
 				}
 
 				t = true;
+				break;
+			case 38: // Up arrow
+				if(s == -1) {
+					s = h.length - 1;
+					console.log("Resetting to position n-1");
+				} else if(s > 0) {
+					s--;
+					console.log("Moving up 1");
+				} else {
+					console.log("Already at first item");
+				}
+				if(s != -1) {
+					p.value = h[s];
+					r.textContent = p.value + 'x';
+					p.style.width = (r.clientWidth || 1) + 'px';
+					p.setSelectionRange(p.value.length, p.value.length);
+					console.log("Showing history item " + s);
+				}
+				break;
+			case 40: // Down arrow
+				if(s != -1) {
+					s++;
+					console.log("Moving down 1");
+				}
+				if(s != -1 && h.length < s ) {
+					p.value = h[s];
+					r.textContent = p.value + 'x';
+					p.style.width = (r.clientWidth || 1) + 'px';
+					p.setSelectionRange(p.value.length, p.value.length);
+					console.log("Showing history item " + s);
+				}
+				if(s >= h.length) {
+					s = -1;
+					p.value = '';
+					p.style.width = '1px';
+					console.log("End of history reached");
+				}
 				break;
 			default:
 				t = false;
@@ -213,12 +252,13 @@ var Directories = {
 
 	// Handle theme selection menu
 	var o = d.getElementById('theme-select'),
-		children = o.children;
-	for (var i = 0; i < children.length; i++) {
-		var el = children[i];
-		el.addEventListener('click', function(e) {
+		children = o.children,
+		oListener = function(e) {
 			setTheme(this.children[0].value, true);
-		});
+		}, el;
+	for (var i = 0; i < children.length; i++) {
+		el = children[i];
+		el.addEventListener('click', oListener);
 	}
 
 	// Restore saved theme selection, if any
