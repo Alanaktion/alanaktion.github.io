@@ -3,7 +3,7 @@ markdown:            kramdown
 highlighter:         rouge
 
 # Permalinks
-permalink:           pretty
+permalink:           /:year/:month/:day/:title/
 
 # Setup
 title:               Phpizza
