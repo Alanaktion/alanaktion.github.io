@@ -5,7 +5,7 @@
 	<title>Phpizza</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body class="ubuntu">
+<body class="xfce">
 	<div class="container">
 		<div class="window">
 			<div class="window-title">
@@ -13,9 +13,19 @@
 				<h1>guest@phpizza: ~</h1>
 				<span class="window-title-right"></span>
 			</div>
-			<div id="terminal" class="terminal">guest@phpizza:~$ </div>
+			<div id="terminal" class="terminal">
+				<div class="content">guest@phpizza:~$</div>
+				<input id="prompt" class="prompt" spellcheck="false" autocomplete="off" autofocus>
+				<span id="prompt-content"></span>
+			</div>
 		</div>
 	</div>
+	<form id="os-select">
+		<label><input type="radio" name="theme" value="win10">Windows 10</label>
+		<label><input type="radio" name="theme" value="osx">OS X</label>
+		<label><input type="radio" name="theme" value="ubuntu">Ubuntu</label>
+		<label><input type="radio" name="theme" value="xfce" checked>Xfce</label>
+	</form>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
