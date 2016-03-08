@@ -189,38 +189,56 @@ var Directories = {
 				t = false;
 		}
 
-		// Disable fade temporarily
-		u.className = 'cursor';
-		if(window.t) {
-			clearTimeout(window.t);
-		}
-		window.t = setTimeout(function() {
-			u.offsetWidth = u.offsetWidth; // Hack to reset animation timer; doesn't seem to work quite the way I wanted it to.
-			u.className = 'cursor fade';
-		}, 200);
-
 	});
 
-	// Handle OS selection menu
-	var o = d.getElementById('os-select'),
+	/**
+	 * Set the theme
+	 * @param {string} name  Which theme to select
+	 * @param {bool}   save  Whether to save the theme selection to LocalStorage
+	 * @return {bool}  Success or failure
+	 */
+	var setTheme = function(name, save) {
+		var radio = d.querySelector('input[name=theme][value=' + name + ']');
+		if(radio) {
+			b.className = name;
+			radio.checked = true;
+			if(save && 'localStorage' in window) {
+				localStorage.theme = name;
+			}
+			return true;
+		}
+		console.log('no matchy :(');
+		return false;
+	};
+
+	// Handle theme selection menu
+	var o = d.getElementById('theme-select'),
 		children = o.children;
 	for (var i = 0; i < children.length; i++) {
 		var el = children[i];
 		el.addEventListener('click', function(e) {
-			var theme = this.children[0].value;
-			b.className = theme;
-			if('localStorage' in window) {
-				localStorage.theme = theme;
-			}
+			setTheme(this.children[0].value, true);
 		});
 	}
 
-	// Restore saved OS selection, if any
+	// Restore saved theme selection, if any
 	if('localStorage' in window && localStorage.theme) {
 		var themeRadio = d.querySelector('input[name=theme][value=' + localStorage.theme + ']');
 		if(themeRadio) {
 			themeRadio.checked = true;
 			b.className = localStorage.theme;
+		}
+	} else {
+		// If no saved theme is found, guess based on user agent
+		if(navigator.userAgent.match(/Linux/)) {
+			setTheme('xfce');
+		} else if(navigator.userAgent.match(/Macintosh|OS X|Darwin/)) {
+			setTheme('osx');
+		} else if(navigator.userAgent.match(/Windows/)) {
+			setTheme('win10');
+		} else {
+			// Default to Ubuntu I guess? That should annoy any BSD users :P
+			setTheme('ubuntu');
 		}
 	}
 
