@@ -282,4 +282,50 @@ var Directories = {
 		}
 	}
 
+	// Place the terminal window after themeing
+	var tWindow = d.getElementsByClassName('window')[0],
+		tWindowTitle = d.getElementsByClassName('window-title')[0];
+		setWindowPos = function(x, y) {
+			if(x < 0) x = 0;
+			if(y < 0) y = 0;
+			if(x > window.innerWidth - tWindow.offsetWidth) x = window.innerWidth - tWindow.offsetWidth;
+			if(y > window.innerHeight - tWindow.offsetHeight) y = window.innerHeight - tWindow.offsetHeight;
+			tWindow.style.top = y + 'px';
+			tWindow.style.left = x + 'px';
+			return [x, y];
+		};
+	tWindow.style.position = 'absolute';
+	if('localStorage' in window && localStorage.winX) {
+		setWindowPos(localStorage.winX, localStorage.winY);
+	} else {
+		tWindow.style.top = ((window.innerHeight - tWindow.offsetHeight) / 2) + 'px';
+		tWindow.style.left = ((window.innerWidth - tWindow.offsetWidth) / 2) + 'px';
+	}
+
+	// Handle dragging the title bar
+	var tWinX = 0, tWinY = 0,
+		winX = 0, winY = 0;
+	window.addEventListener('mousemove', function(e) {
+		if (e.which == 1 && winX !== null) {
+			winX = document.all ? window.event.clientX : e.pageX;
+			winY = document.all ? window.event.clientY : e.pageY;
+			var coords = setWindowPos(winX - tWinX, winY - tWinY);
+			if('localStorage' in window) {
+				localStorage.winX = coords[0];
+				localStorage.winY = coords[1];
+			}
+		}
+	});
+	tWindowTitle.addEventListener('mousedown', function(e) {
+		winX = document.all ? window.event.clientX : e.pageX;
+		winY = document.all ? window.event.clientY : e.pageY;
+		tWinX = winX - tWindow.offsetLeft;
+		tWinY = winY - tWindow.offsetTop;
+		e.preventDefault();
+	});
+	window.addEventListener('mouseup', function(e) {
+		winX = null;
+		winY = null;
+	});
+
 })();

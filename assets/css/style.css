@@ -16,6 +16,12 @@ html, body {
 	align-items: center;
 	justify-content: center;
 }
+.window {
+	z-index: 1;
+}
+.window-title {
+	cursor: default;
+}
 .window-title h1 {
 	margin: 0;
 }
@@ -30,6 +36,7 @@ html, body {
 
 	background-color: #000;
 	color: #ccc;
+	cursor: text;
 
 	overflow-y: scroll;
 	overflow-x: hidden;
