@@ -100,11 +100,6 @@ var Directories = {
 			c.innerHTML += ' ' + command + '<br>' + str + '<br>' + m;
 		}
 
-		// Save buffer to localStorage
-		if('localStorage' in window) {
-			localStorage.buffer = c.innerHTML;
-		}
-
 		p.scrollIntoView(false);
 	};
 
@@ -197,14 +192,11 @@ var Directories = {
 				t = true;
 				break;
 			case 38: // Up arrow
+				t = false;
 				if(s == -1) {
 					s = h.length - 1;
-					console.log("Resetting to position n-1");
 				} else if(s > 0) {
 					s--;
-					console.log("Moving up 1");
-				} else {
-					console.log("Already at first item");
 				}
 				if(s != -1) {
 					p.value = h[s];
@@ -215,18 +207,18 @@ var Directories = {
 				}
 				break;
 			case 40: // Down arrow
-				if(s != -1) {
-					s++;
-					console.log("Moving down 1");
+				t = false;
+				if(s == -1) {
+					return;
 				}
-				if(s != -1 && h.length < s ) {
+				s++;
+				if(s < h.length) {
 					p.value = h[s];
 					r.textContent = p.value + 'x';
 					p.style.width = (r.clientWidth || 1) + 'px';
 					p.setSelectionRange(p.value.length, p.value.length);
-					console.log("Showing history item " + s);
-				}
-				if(s >= h.length) {
+					console.log("Showing history item " + s + " of " + h.length);
+				} else {
 					s = -1;
 					p.value = '';
 					p.style.width = '1px';
@@ -268,11 +260,6 @@ var Directories = {
 	for (var i = 0; i < children.length; i++) {
 		el = children[i];
 		el.addEventListener('click', oListener);
-	}
-
-	// Display saved buffer, if any
-	if('localStorage' in window && localStorage.buffer) {
-		c.innerHTML = localStorage.buffer;
 	}
 
 	// Restore saved history, if any
