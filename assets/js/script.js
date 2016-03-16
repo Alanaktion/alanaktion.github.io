@@ -89,6 +89,7 @@ var Directories = {
 	 * @return {void}
 	 */
 	var stdout = function(command, str) {
+		// Display output
 		if(!c.innerHTML) {
 			c.innerHTML = m;
 			return;
@@ -97,6 +98,11 @@ var Directories = {
 			c.innerHTML += ' ' + command + '<br>' + m;
 		} else {
 			c.innerHTML += ' ' + command + '<br>' + str + '<br>' + m;
+		}
+
+		// Save buffer to localStorage
+		if('localStorage' in window) {
+			localStorage.buffer = c.innerHTML;
 		}
 
 		p.scrollIntoView(false);
@@ -132,6 +138,9 @@ var Directories = {
 					params = parts.join(' ');
 				if(exe in Commands) {
 					h.push(command);
+					if('localStorage' in window && 'JSON' in window) {
+						localStorage.history = JSON.stringify(h);
+					}
 					stdout(command, Commands[exe](params));
 				} else {
 					stdout(command, 'Command not found: ' + exe);
@@ -259,6 +268,16 @@ var Directories = {
 	for (var i = 0; i < children.length; i++) {
 		el = children[i];
 		el.addEventListener('click', oListener);
+	}
+
+	// Display saved buffer, if any
+	if('localStorage' in window && localStorage.buffer) {
+		c.innerHTML = localStorage.buffer;
+	}
+
+	// Restore saved history, if any
+	if('localStorage' in window && localStorage.history) {
+		h = JSON.parse(localStorage.history);
 	}
 
 	// Restore saved theme selection, if any
