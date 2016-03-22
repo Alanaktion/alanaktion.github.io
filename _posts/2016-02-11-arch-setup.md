@@ -10,19 +10,40 @@ This time around I got it working perfectly, so I decided I'd write a little gui
 
 ## Getting Started
 
+Start by booting the [live CD](https://www.archlinux.org/download/).
+
 ### Partition setup
 
-I've always found graphical tools much easier to use when working with disk partitions on linux, so I used the [Gparted live CD](gparted.org/download.php) to configure my partitions. I used a `msdos` partition table with a single data partition, plus a 2 GB swap partition at the end of the disk. What you use is up to you, but this guide assumes a single partition with an `msdos` table. Note that the current version of the Gparted live CD won't boot properly on VirtualBox without EFI enabled.
+*Note: this guide only covers the setup for a MBR partition table as booting GPT requires more system-specific setup.*
 
-### Start installation
+If you prefer a more graphical tool you can use the [Gparted live CD](gparted.org/download.php) to configure your partitions, then skip to the "Install base system" step. Note that the current version of the Gparted live CD won't boot properly on VirtualBox without EFI enabled.
 
-Just boot the [live CD](https://www.archlinux.org/download/)! :P
+Locate the disk you want to install your system to with `lsblk`, then start `cfdisk` with that device.
+
+```bash
+cfdisk /dev/sda
+```
+
+In `cfdisk`, create a new partition table, then the partitions you would like, writing the changes when you're finished.
+
+Next, create a filesystem, substituting your new system partition and repeating for each partition you need to format.
+
+```bash
+mkfs.ext4 /dev/sda1
+```
+
+If a swap partition was created, activate it:
+
+```bash
+mkswap /dev/sda2
+swapon /dev/sda2
+```
 
 ## Install base system
 
 ### Mount partition
 
-Once you're in the live CD, start by mounting your data partition, and any other partitions you created in `/mnt`.
+Start the installation by mounting your system partition, and any other non-swap partitions you created in `/mnt`.
 
 ``` bash
 mkdir -p /mnt
@@ -31,14 +52,20 @@ mount /dev/sda1 /mnt
 
 ### Set up base packages and fstab
 
-Edit `/etc/pacman.d/mirrorlist`, moving your preferred mirror to the top of the list.
+Move your preferred mirror to the top of the list:
+
+```bash
+vim /etc/pacman.d/mirrorlist
+```
+
+Install base packages and generate new fstab:
 
 ```bash
 pacstrap -i /mnt base
-genfstab -U -p /mnt >> /mnt/etc/fstab # Generate new /etc/fstab
+genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
 
-After the `genfstab` run, you can edit your `/mnt/etc/fstab` file to add a swap line, etc.
+Chroot into the new installation:
 
 ```bash
 arch-chroot /mnt
@@ -49,7 +76,7 @@ arch-chroot /mnt
 ```bash
 sed -i "s/#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LANG=en_US.UTF-8
+. /etc/locale.conf
 locale-gen
 ```
 
@@ -62,18 +89,19 @@ hwclock --systohc --utc
 
 ### Configure network
 
-```bash
-systemctl enable dhcpcd@eth0.service
-```
+Run `ip link` to list all network interfaces and enable DHCP on the one you want to use:
 
-If `eth0` is not your interface, run `ip link` to list all interfaces.
+```bash
+ip link
+systemctl enable dhcpcd@eth0
+```
 
 #### Configure wireless (optional)
 
 ```
 pacman -S wireless_tools wpa_supplicant wpa_actiond dialog
 wifi-menu
-systemctl enable net-auto-wireless.service
+systemctl enable net-auto-wireless
 ```
 
 ### Configure package manager
@@ -146,14 +174,14 @@ pacman -S nvidia lib32-nvidia-utils # Nvidia
 
 ```bash
 pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter
-systemctl enable lightdm.service # Enable lightdm
+systemctl enable lightdm # Enable lightdm
 ```
 
 #### Gnome
 
 ```bash
 pacman -S gnome # Install desktops
-systemctl enable gdm.service # Enable gdm
+systemctl enable gdm # Enable gdm
 ```
 
 #### KDE Plasma 5
