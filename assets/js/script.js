@@ -45,7 +45,11 @@ var Commands = {
 		return 'logout: not login shell: use `exit\'';
 	},
 	exit: function() {
-		return 'exit: now why would you want to do that?';
+		var w = document.getElementsByClassName('window')[0];
+		w.className = 'window';
+		setTimeout(function() {
+			w.remove();
+		}, 500);
 	},
 	js: function(params) {
 		try {
@@ -56,6 +60,20 @@ var Commands = {
 	},
 	clear: function() {
 		document.getElementsByClassName('content')[0].innerHTML = '';
+	},
+	sudo: function(params) {
+		var pArray = params.split(' ');
+		switch(pArray[0]) {
+			case '':
+				return 'Usage: sudo [command]';
+			case 'reboot':
+				window.location.reload();
+				break;
+			default:
+				if(pArray[0] in Commands)
+					return Commands[pArray[0]]();
+				return 'sudo: ' + pArray[0] + ': command not found';
+		}
 	}
 };
 
@@ -172,7 +190,7 @@ var Directories = {
 
 				// If prompt is empty, and tab has been pressed before, list all available commands
 				if(!command.length && t) {
-					stdout('', commandNames.join(' '));
+					stdout('', commandNames.sort().join(' '));
 					return;
 				}
 
@@ -333,5 +351,8 @@ var Directories = {
 		winX = null;
 		winY = null;
 	});
+
+	// Display window
+	tWindow.className = 'window in';
 
 })();
