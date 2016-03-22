@@ -5,17 +5,13 @@ html {
   font-size: 14px;
 }
 @media (min-width: 38em) {
-  html {
-    font-size: 15px;
+  body {
+    font-size: 1.1429em;
   }
 }
-@media (min-width: 30em) {
-  .sidebar {
-    font-size: .8rem;
-  }
-}
+
 html, h1, h2, h3, h4, h5, h6, .sidebar {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", "Droid Sans", "Liberation Sans", sans-serif;
 }
 
 ul > li > ul {
@@ -23,8 +19,16 @@ ul > li > ul {
 }
 
 /* Override some responsive changes */
+.sidebar {
+  font-size: .8rem;
+}
+@media (min-width: 30em)
+  .sidebar {
+    font-size: .75rem;
+  }
+}
 .container {
-  max-width: 38rem;
+  max-width: 48rem;
 }
 .sidebar-toggle:before {
   padding-bottom: .15rem;
