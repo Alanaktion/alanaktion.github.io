@@ -14,7 +14,7 @@ baseurl:             /
 
 # Pagination
 gems:                [jekyll-paginate]
-paginate:            15
+paginate:            10
 paginate_path:       page:num
 
 # About/contact
