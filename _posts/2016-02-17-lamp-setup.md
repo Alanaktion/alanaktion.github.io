@@ -68,7 +68,7 @@ sudo nano /etc/apache2/sites-available/wordpress.conf
 
 Enter the following text in the new file, replacing `example.com` with your domain (you should point the domain to the server's IP address as well):
 
-```
+```apache
 <VirtualHost *:80>
 ServerName example.com
 DocumentRoot /var/www/wordpress
@@ -77,7 +77,7 @@ DocumentRoot /var/www/wordpress
 
 If you want additional domains or subdomains to point to this website as well, you can add a `ServerAlias` line after `ServerName`, like this:
 
-```
+```apache
 ServerAlias www.example.com example.org
 ```
 

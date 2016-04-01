@@ -23,7 +23,7 @@ mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
 Create a new file `/etc/nginx/hhvm.conf`:
 
-```
+```nginx
 location ~ \.php$ {
   fastcgi_pass   127.0.0.1:9000;
   fastcgi_index  index.php;
@@ -34,7 +34,7 @@ location ~ \.php$ {
 
 Add a line to any nginx servers that need PHP:
 
-```
+```nginx
 include hhvm.conf;
 ```
 

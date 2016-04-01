@@ -98,7 +98,7 @@ systemctl enable dhcpcd@eth0
 
 #### Configure wireless (optional)
 
-```
+```bash
 pacman -S wireless_tools wpa_supplicant wpa_actiond dialog
 wifi-menu
 systemctl enable net-auto-wireless
