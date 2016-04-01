@@ -13,31 +13,35 @@ The examples below direct `(www.)domain2.com` to `/domain2/`.
 ### Apache
 Within the file `.htaccess` in your server's root directory, include the following:
 
-    RewriteEngine On
-    RewriteCond %{HTTP_HOST} ^(www.)?domain2.com$
-    RewriteCond %{REQUEST_URI} !^/domain2/
-    RewriteRule ^(.*)$ domain2/$1 [L]
+```apache
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www.)?domain2.com$
+RewriteCond %{REQUEST_URI} !^/domain2/
+RewriteRule ^(.*)$ domain2/$1 [L]
+```
 
 ### Microsoft IIS 7
 Within the file `web.config` in your server's root directory, include the following:
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <configuration>
-        <system.webServer>
-            <rewrite>
-                <rules>
-                    <rule name="prosecure.tk" enabled="true">
-                        <match url=".*" />
-                        <conditions>
-                            <add input="{HTTP_HOST}" pattern="^(www.)?domain2.com" />
-                            <add input="{PATH_INFO}" pattern="^/domain2/" negate="true" />
-                        </conditions>
-                        <action type="Rewrite" url="domain2{R:0}" />
-                    </rule>
-                </rules>
-            </rewrite>
-            <security>
-                <requestFiltering allowDoubleEscaping="true" />
-            </security>
-        </system.webServer>
-    </configuration>
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="prosecure.tk" enabled="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^(www.)?domain2.com" />
+                        <add input="{PATH_INFO}" pattern="^/domain2/" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="domain2{R:0}" />
+                </rule>
+            </rules>
+        </rewrite>
+        <security>
+            <requestFiltering allowDoubleEscaping="true" />
+        </security>
+    </system.webServer>
+</configuration>
+```

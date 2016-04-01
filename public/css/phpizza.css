@@ -245,6 +245,7 @@ pre, p > code {
 pre {
   padding: 7px 10px;
   line-height: 1.12;
+  overflow-x: auto;
 }
 p > code {
   padding: 1px 4px;

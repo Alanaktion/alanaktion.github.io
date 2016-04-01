@@ -7,6 +7,8 @@ The latest package update for php-fpm on Ubuntu is a bit messy to install if you
 
 You can manually change ownership or permissions to give your web server user read/write access, but when the service restarts, it will fail again. The best way to fix the issue is to uncomment these lines in your pool.d file (changing owner, group, and permissions when necessary):
 
-    listen.owner = www-data
-    listen.group = www-data
-    listen.mode = 0666
+```ini
+listen.owner = www-data
+listen.group = www-data
+listen.mode = 0666
+```

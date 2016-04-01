@@ -9,23 +9,25 @@ First, run `sudo apt-get install bridge-utils`, if the package is not already in
 
 Next, update your `/etc/network/interfaces` file to include a `br0` adapter, moving any ip configuration from `eth0`. This is the complete configuration that I'm running:
 
-    auto lo
-    iface lo inet loopback
+```
+auto lo
+iface lo inet loopback
 
-    auto eth0
-    iface eth0 inet manual
+auto eth0
+iface eth0 inet manual
 
-    auto br0
-    iface br0 inet static
-        address 192.99.15.40
-        netmask 255.255.255.0
-        network 192.99.15.0
-        broadcast 192.99.15.255
-        gateway 192.99.15.254
-        bridge_ports eth0
-        bridge_stp off
-        bridge_fd 0
-        bridge_maxwait 0
+auto br0
+iface br0 inet static
+    address 192.99.15.40
+    netmask 255.255.255.0
+    network 192.99.15.0
+    broadcast 192.99.15.255
+    gateway 192.99.15.254
+    bridge_ports eth0
+    bridge_stp off
+    bridge_fd 0
+    bridge_maxwait 0
+```
 
 You can also safely add an `iface eth0 inet6` section for IPv6 networking, without it interfering with the bridged adapter configuration.
 
