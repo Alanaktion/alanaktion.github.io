@@ -3,8 +3,8 @@ markdown:            kramdown
 highlighter:         rouge
 
 # GFM
-kramdown:
-  input:             GFM
+# kramdown:
+#   input:             GFM
 
 # Permalinks
 permalink:           /:year/:month/:day/:title/
