@@ -207,7 +207,7 @@ body {
 }
 .navbar-nav a {
   display: block;
-  padding: 0 15px;
+  padding: 5px 15px;
   line-height: 24px;
   color: inherit;
   text-decoration: none;
@@ -280,8 +280,8 @@ img {
 .profile-pic {
   display: block;
   margin: -135px auto 15px;
-  max-width: 270px;
-  height: auto;
+  width: 270px;
+  height: 270px;
   background-color: #f5f5f5;
   border-radius: 50%;
 }
