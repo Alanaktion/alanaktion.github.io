@@ -13,7 +13,7 @@ The examples below direct `(www.)domain2.com` to `/domain2/`.
 ### Apache
 Within the file `.htaccess` in your server's root directory, include the following:
 
-```apache
+```
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^(www.)?domain2.com$
 RewriteCond %{REQUEST_URI} !^/domain2/
