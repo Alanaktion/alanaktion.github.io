@@ -50,7 +50,7 @@ body {
 }
 
 .post, .page {
-  background-color: #eee;
+  background-color: #f5f5f5;
   padding: 15px;
 }
 @media only screen and (max-width: 767px) {
@@ -60,7 +60,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .post, .page {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     margin-bottom: 30px;
     padding: 60px;
   }
@@ -71,6 +71,7 @@ body {
   line-height: 1;
   font-weight: normal;
   margin: 15px 0;
+  text-shadow: 0 1px 0 #fff;
 }
 .post-title a {
   text-decoration: none;
@@ -238,7 +239,7 @@ body {
 pre, p > code {
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #f5f5f5;
+  background-color: #eee;
   font-size: 14px;
   font-family: Menlo, Meslo, Monaco, "Courier New", monospace;
 }
