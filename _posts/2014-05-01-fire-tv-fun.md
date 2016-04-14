@@ -54,10 +54,10 @@ I also tried installing the stock Play Store app, but it has a lot of other requ
 ### Screenshots
 
 A photo of my Fire TV running [CPU-Z](https://play.google.com/store/apps/details?id=com.cpuid.cpu_z), showing some system specs:
-![CPU-Z Photo](//phpizza.com/~alan/blog-img/2014_04_30_21_34_51s.jpg)
+![CPU-Z Photo](//blog.phpizza.com/assets/2014_04_30_21_34_51s.jpg)
 
 My personal favorite App on my Fire TV so far, [Microsoft Remote Desktop](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android):
-![Microsoft Remote Desktop](//phpizza.com/~alan/blog-img/2014_04_30_21_41_17s.jpg)
+![Microsoft Remote Desktop](//blog.phpizza.com/assets/2014_04_30_21_41_17s.jpg)
 Amazingly, the keyboard works almost seamlessly on Remote Desktop, and as long as your LAN is fast enough, it works great for streaming media that isn't supported another way.
 
 ----
