@@ -1,8 +1,14 @@
 // Commands are defined as anonymous functions with a return value sent to stdout
 var Commands = {
 	ls: function(params) {
-		if(params && params.indexOf('-l') != -1) {
+		if(params && params.indexOf('l') != -1) {
 			return 'total ' + (Object.keys(Directories).length * 4) + '<br>' + Object.keys(Directories).join('<br>');
+		} else if(params && params.indexOf('bin') != -1) {
+			if(params.indexOf('l') != -1) {
+				return 'total ' + (Object.keys(Directories).length * 4) + '<br>' + Object.keys(Directories).join('<br>');
+			} else {
+				return Object.keys(Commands).join(' ');
+			}
 		} else {
 			return Object.keys(Directories).join(' ');
 		}
@@ -114,7 +120,7 @@ var Directories = {
 		}
 		if(str === undefined) {
 			c.innerHTML += ' ' + command + '<br>' + m;
-		} else {
+		} else if(str !== false) {
 			c.innerHTML += ' ' + command + '<br>' + str + '<br>' + m;
 		}
 
@@ -220,7 +226,9 @@ var Directories = {
 					p.value = h[s];
 					r.textContent = p.value + 'x';
 					p.style.width = (r.clientWidth || 1) + 'px';
-					p.setSelectionRange(p.value.length, p.value.length);
+					window.setTimeout(function() {
+						p.setSelectionRange(p.value.length, p.value.length);
+					}, 1);
 					console.log("Showing history item " + s);
 				}
 				break;
@@ -234,7 +242,9 @@ var Directories = {
 					p.value = h[s];
 					r.textContent = p.value + 'x';
 					p.style.width = (r.clientWidth || 1) + 'px';
-					p.setSelectionRange(p.value.length, p.value.length);
+					window.setTimeout(function() {
+						p.setSelectionRange(p.value.length, p.value.length);
+					}, 1);
 					console.log("Showing history item " + s + " of " + h.length);
 				} else {
 					s = -1;
@@ -327,8 +337,8 @@ var Directories = {
 	}
 
 	// Handle dragging the title bar
-	var tWinX = 0, tWinY = 0,
-		winX = 0, winY = 0;
+	var tWinX = null, tWinY = null,
+		winX = null, winY = null;
 	window.addEventListener('mousemove', function(e) {
 		if (e.which == 1 && winX !== null) {
 			winX = document.all ? window.event.clientX : e.pageX;
