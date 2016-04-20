@@ -16,6 +16,11 @@ description:         I'm an insane web developer.
 url:                 https://alanaktion.github.io
 baseurl:             /
 
+# SCSS
+sass:
+  style: compressed
+  sass_dir: _scss
+
 # Pagination
 gems:                [jekyll-paginate]
 paginate:            10
