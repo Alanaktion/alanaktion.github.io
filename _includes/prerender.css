@@ -22,9 +22,11 @@ body{margin:0;background-color:#342F34}
 }
 
 .chk-nav-toggle{position:absolute;visibility:hidden}
-.nav-toggle{position:absolute}
-.nav-dismiss{position:absolute;opacity:0}
-.navbar{position:absolute;visibility:hidden}
+.nav-toggle,.nav-dismiss,.navbar{position:absolute}
+.navbar{visibility:hidden}
+@media only screen and (min-width: 768px){
+  .nav-toggle,.nav-dismiss,.navbar{position:fixed}
+}
 
 .content a{color:inherit}
 pre,p>code{font-size: 14px;}

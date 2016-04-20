@@ -4,6 +4,12 @@
 @import 'normalize';
 
 /* Variables */
+// Colors
+$body-bg: #342F34;
+$body-fg: #f5f5f5;
+$post-bg: #f5f5f5;
+$link-color: #0087cb;
+
 // Responsive breakpoints
 $desktop-min: 768px;
 $desktop-max: 767px;
@@ -23,11 +29,11 @@ html {
 }
 
 body {
-  background-color: #342F34;
+  background-color: $body-bg;
 }
 
 .site-header {
-  color: #f5f5f5;
+  color: $body-fg;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   h3 {
@@ -48,7 +54,7 @@ body {
 }
 
 .post, .page {
-  background-color: #f5f5f5;
+  background-color: $post-bg;
   padding: 15px;
   @media only screen and (max-width: $desktop-max) {
     border-bottom: 1px solid #ccc;
@@ -76,7 +82,7 @@ body {
 }
 
 .pagination {
-  color: #f5f5f5;
+  color: $body-fg;
   margin-bottom: 30px;
   &:after {
     content: "";
@@ -156,6 +162,8 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity .2s ease, visibility 0s linear .2s;
+
+  z-index: 1000;
 }
 .chk-nav-toggle:checked ~ .nav-dismiss {
   opacity: 1;
@@ -182,6 +190,8 @@ body {
   transform: scale(0.95) translate(-3px, -10px);
   transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
 
+  z-index: 1001;
+
   p {
     margin: 0;
     margin-bottom: 15px;
@@ -206,13 +216,13 @@ body {
     line-height: 24px;
     color: inherit;
     text-decoration: none;
-  }
-  &:hover, &:focus {
-    background-color: #ddd;
-  }
-  &.active {
-    background-color: #444;
-    color: #fff;
+    &:hover, &:focus {
+      background-color: #ddd;
+    }
+    &.active {
+      background-color: #444;
+      color: #fff;
+    }
   }
 }
 
@@ -227,7 +237,7 @@ body {
 .content a {
   color: inherit;
   &:hover, &:focus {
-    color: #0087cb;
+    color: $link-color;
   }
 }
 
@@ -256,13 +266,23 @@ img {
 
 /* Archive */
 .archive {
-  color: #f5f5f5;
+  color: $body-fg;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
   li {
     position: relative;
     a {
       position: absolute;
       left: 60px;
+      right: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  h2 {
+    @media only screen and (max-width: $desktop-max) {
+      margin: 0 30px;
     }
   }
 }
@@ -292,7 +312,7 @@ img {
   margin: -135px auto 15px;
   width: 270px;
   height: 270px;
-  background-color: #f5f5f5;
+  background-color: $post-bg;
   border-radius: 50%;
 }
 
