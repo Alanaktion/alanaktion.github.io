@@ -73,12 +73,16 @@ Windows keymap:
 
 ```js
 [
+    { "keys": ["ctrl+,"], "command": "open_file", "args": {"file": "$packages/User/Preferences.sublime-settings"} },
+    { "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
     { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
     { "keys": ["ctrl+shift+g", "l"], "command": "git_pull" },
     { "keys": ["ctrl+shift+g", "p"], "command": "git_push" },
     { "keys": ["ctrl+shift+g", "a"], "command": "git_add_current_file" },
-{ "keys": ["ctrl+tab"], "command": "next_view" },
-{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+    { "keys": ["ctrl+shift+g", "s"], "command": "git_status" }
 ]
 ```
 
@@ -87,9 +91,14 @@ OS X keymap, including adjustments to Home and End keys:
 ```js
 [
     { "keys": ["super+k", "super+m"], "command": "toggle_minimap" },
+    { "keys": ["super+tab"], "command": "next_view" },
+    { "keys": ["super+shift+tab"], "command": "prev_view" },
+
     { "keys": ["super+shift+g", "l"], "command": "git_pull" },
     { "keys": ["super+shift+g", "p"], "command": "git_push" },
     { "keys": ["super+shift+g", "a"], "command": "git_add_current_file" },
+    { "keys": ["super+shift+g", "s"], "command": "git_status" },
+
     { "keys": ["home"], "command": "move_to", "args": {"to": "bol"} },
     { "keys": ["end"], "command": "move_to", "args": {"to": "eol"} },
     { "keys": ["shift+end"], "command": "move_to", "args": {"to": "eol", "extend": true} },
