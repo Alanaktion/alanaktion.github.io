@@ -26,6 +26,7 @@ body{margin:0;background-color:#342F34}
 .navbar{visibility:hidden}
 @media only screen and (min-width: 768px){
   .nav-toggle,.nav-dismiss,.navbar{position:fixed}
+  .nav-dismiss{opacity:0}
 }
 
 .content a{color:inherit}
