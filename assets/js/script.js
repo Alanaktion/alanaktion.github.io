@@ -1,11 +1,35 @@
+/**
+ *    __           _
+ *   / /  __ _ ___| |__   ___  ___
+ *  / /  / _` / __| '_ \ / _ \/ __|
+ * / /__| (_| \__ \ | | |  __/\__ \
+ * \____/\__,_|___/_| |_|\___||___/
+ *
+ * Powered by kittehz
+ *
+ * @author Alan Hardman <alan@phpizza.com>
+ */
+
 // Commands are defined as anonymous functions with a return value sent to stdout
 var Commands = {
+	about: function() {
+		return `
+    __           _
+   / /  __ _ ___| |__   ___  ___
+  / /  / _\` / __| '_ \\ / _ \\/ __|
+ / /__| (_| \\__ \\ | | |  __/\\__ \\
+ \\____/\\__,_|___/_| |_|\\___||___/
+
+Lame Attempt at a Shell in ECMAScript
+
+By Alan Hardman, named after Kieran's cat\n`;
+	},
 	ls: function(params) {
 		if(params && params.indexOf('l') != -1) {
-			return 'total ' + (Object.keys(Directories).length * 4) + '<br>' + Object.keys(Directories).join('<br>');
+			return 'total ' + (Object.keys(Directories).length * 4) + '\n' + Object.keys(Directories).join('\n');
 		} else if(params && params.indexOf('bin') != -1) {
 			if(params.indexOf('l') != -1) {
-				return 'total ' + (Object.keys(Directories).length * 4) + '<br>' + Object.keys(Directories).join('<br>');
+				return 'total ' + (Object.keys(Directories).length * 4) + '\n' + Object.keys(Directories).join('\n');
 			} else {
 				return Object.keys(Commands).join(' ');
 			}
@@ -119,9 +143,9 @@ var Directories = {
 			return;
 		}
 		if(str === undefined) {
-			c.innerHTML += ' ' + command + '<br>' + m;
+			c.innerHTML += ' ' + command + '\n' + m;
 		} else if(str !== false) {
-			c.innerHTML += ' ' + command + '<br>' + str + '<br>' + m;
+			c.innerHTML += ' ' + command + '\n' + str + '\n' + m;
 		}
 
 		p.scrollIntoView(false);
