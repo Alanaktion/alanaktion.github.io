@@ -13,7 +13,7 @@ permalink:           /:year/:month/:day/:title/
 title:               Phpizza
 tagline:             Minimal is good
 description:         I'm an insane web developer.
-url:                 https://alanaktion.github.io
+url:                 https://blog.phpizza.com
 baseurl:             /
 
 # SCSS
