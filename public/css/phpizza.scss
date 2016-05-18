@@ -16,6 +16,7 @@ $desktop-max: 767px;
 
 /* Layout */
 .container {
+  // display: block;
   max-width: 780px;
   margin: 0 auto;
 
@@ -26,7 +27,7 @@ $desktop-max: 767px;
 
 /* Base Style */
 html {
-  font: 17px/1.618 'Crimson Text', 'Droid Serif', 'Times New Roman', serif;
+  font: 17px/1.618 'Open Sans', 'Roboto Sans', 'Droid Sans', sans-serif;
 }
 
 body {
@@ -182,7 +183,6 @@ body {
   overflow-y: auto;
 
   font-size: 14px;
-  font-family: 'Helvetica Neue', 'Liberation Sans', Tahoma, sans-serif;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

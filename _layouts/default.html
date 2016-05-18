@@ -18,9 +18,10 @@
   </div>
 
   <script>
+    // Google Fonts
     WebFontConfig = {
       google: {
-        families: ['Crimson Text']
+        families: ['Open Sans']
       }
     };
     (function(d) {
@@ -30,15 +31,14 @@
     })(document);
   </script>
   <script>
+    // CSS Post-load
     var cb = function() {
       var l = document.createElement('link');
       l.rel = 'stylesheet';
       l.href = '{{ site.baseurl }}public/css/phpizza.css';
-      var h = document.getElementsByTagName('head')[0];
-      h.parentNode.insertBefore(l, h);
+      document.getElementsByTagName('head')[0].appendChild(l);
     };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    var raf = window.requestAnimationFrame;
     if (raf) raf(cb);
     else window.addEventListener('load', cb);
   </script>

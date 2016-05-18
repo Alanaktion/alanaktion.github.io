@@ -1,5 +1,15 @@
-html{font:17px/1.618 'Crimson Text','Droid Serif','Times New Roman',serif}
+html{font:17px/1.618 'Open Sans','Roboto Sans','Droid Sans',sans-serif}
 body{margin:0;background-color:#342F34}
+
+/* Minimalist approach of "hide errything":
+.container{display:none}
+
+.chk-nav-toggle{position:absolute;visibility:hidden}
+.navbar{visibility:hidden}
+@media only screen and (min-width: 768px){
+  .nav-dismiss{opacity:0}
+}*/
+
 .container{max-width:780px;margin:0 auto}
 
 .site-header{color:#f5f5f5;text-align:center;}
@@ -15,10 +25,10 @@ body{margin:0;background-color:#342F34}
 .post-title a{text-decoration:none}
 @media only screen and (max-width: 767px){
   .post,.page{border-bottom:1px solid #ccc}
-  .post-title{text-align:center;font-size:48px}
 }
 @media only screen and (min-width: 768px){
   .post,.page{margin-bottom:30px;padding:60px}
+  .post-title{text-align:center;font-size:48px}
 }
 
 .chk-nav-toggle{position:absolute;visibility:hidden}
