@@ -21,8 +21,12 @@ sass:
   style: compressed
   sass_dir: _scss
 
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
 # Pagination
-gems:                [jekyll-paginate]
 paginate:            10
 paginate_path:       page:num
 
