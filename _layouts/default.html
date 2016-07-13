@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 {% include head.html %}
-<body>
+<body class="home">
   {% include nav.html %}
 
   <div class="container">
@@ -17,30 +17,6 @@
     </main>
   </div>
 
-  <script>
-    // Google Fonts
-    WebFontConfig = {
-      google: {
-        families: ['Open Sans']
-      }
-    };
-    (function(d) {
-      var wf = d.createElement('script'), s = d.scripts[0];
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-      s.parentNode.insertBefore(wf, s);
-    })(document);
-  </script>
-  <script>
-    // CSS Post-load
-    var cb = function() {
-      var l = document.createElement('link');
-      l.rel = 'stylesheet';
-      l.href = '{{ site.baseurl }}public/css/phpizza.css';
-      document.getElementsByTagName('head')[0].appendChild(l);
-    };
-    var raf = window.requestAnimationFrame;
-    if (raf) raf(cb);
-    else window.addEventListener('load', cb);
-  </script>
+  {% include scripts.html %}
 </body>
 </html>
