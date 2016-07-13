@@ -14,7 +14,6 @@ title:               Phpizza
 tagline:             Minimal is good
 description:         I'm an insane web developer.
 url:                 https://blog.phpizza.com
-baseurl:             /
 
 # SCSS
 sass:

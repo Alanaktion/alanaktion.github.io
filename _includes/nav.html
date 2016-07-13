@@ -7,7 +7,7 @@
   <p>{{ site.description }}</p>
 
   <nav class="navbar-nav">
-    <a class="{% if page.url == site.baseurl %}active{% endif %}" href="{{ site.baseurl }}">Home</a>
+    <a class="{% if page.url == site.baseurl %}active{% endif %}" href="/">Home</a>
     <a class="{% if page.url == '/about/' %}active{% endif %}" href="/about/">About</a>
     <a class="{% if page.url == '/archive/' %}active{% endif %}" href="/archive/">Archive</a>
     {% assign pages_list = site.pages | sort:"url" %}
