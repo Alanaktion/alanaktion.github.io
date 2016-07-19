@@ -14,7 +14,7 @@ Start by booting the [live CD](https://www.archlinux.org/download/).
 
 ### Partition setup
 
-*Note: this guide only covers the setup for a MBR partition table as booting GPT requires more system-specific setup.*
+*Note: this guide only covers the setup for a MBR partition table as [booting GPT]({% post_url 2016-07-19-arch-uefi %}) requires more system-specific setup.*
 
 If you prefer a more graphical tool you can use the [Gparted live CD](gparted.org/download.php) to configure your partitions, then skip to the "Install base system" step. Note that the current version of the Gparted live CD won't boot properly on VirtualBox without EFI enabled.
 
@@ -52,7 +52,7 @@ mount /dev/sda1 /mnt
 
 ### Set up base packages and fstab
 
-Move your preferred mirror to the top of the list:
+Move your preferred mirror to the top of the list, or add mine (https://mirror.phpizza.com/archlinux/):
 
 ```bash
 vim /etc/pacman.d/mirrorlist
