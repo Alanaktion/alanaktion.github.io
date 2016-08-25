@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
 {% include head.html %}
-<body class="home">
+<body>
   {% include nav.html %}
 
-  <div class="container">
-    <header class="site-header">
+  <header class="site-header">
+    <div class="container">
       <h3>
         <a href="/">{{ site.title }}</a>
         <small>{{ site.tagline }}</small>
       </h3>
-    </header>
+    </div>
+  </header>
 
+  <div class="container">
     <main class="content">
       {{ content }}
     </main>

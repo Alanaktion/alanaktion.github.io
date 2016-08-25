@@ -21,10 +21,6 @@ $desktop-max: 767px;
 .container {
   max-width: $desktop-min;
   margin: 0 auto;
-
-  @media only screen and (max-width: $desktop-max) {
-    min-height: 100vh;
-  }
 }
 
 /* Base Style */
@@ -40,54 +36,17 @@ body {
   color: $body-fg;
 }
 
-.jumbotron {
-  position: relative;
-  height: 800px;
-  height: 100vh;
-  background-image: url(https://blog.phpizza.com/assets/ui/jumbotron-bg.jpg);
-  background-size: cover;
-  background-color: #f7f8f2;
-  text-align: center;
-  margin-bottom: $spacer * 4;
-  @media only screen and (max-width: $desktop-max) {
-    margin-bottom: $spacer * 2;
-  }
-
-  h1 {
-    padding-top: 30vh;
-    font-size: 10vh;
-    line-height: 20vh;
-    margin: 0;
-    color: $heading-fg;
-    font-weight: 100;
-    letter-spacing: 2px;
-  }
-  h3 {
-    margin: 0;
-    font-size: 16px;
-    color: $body-fg;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 7px;
-  }
-  &:after {
-    content: '\2304';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 40vh;
-    font-size: 5vh;
-    color: $body-fg;
-    opacity: 0.2;
-  }
-}
-
 .site-header {
   text-align: center;
   color: $heading-fg;
+  background-image: url(https://blog.phpizza.com/assets/ui/header-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: ($spacer / 3) 0;
+  margin-bottom: $spacer;
   h3 {
     margin: 10px 0;
-    font-weight: normal;
+    font-weight: 300;
   }
   a {
     color: $heading-fg;
@@ -95,10 +54,19 @@ body {
   }
   small {
     color: $body-fg;
+    font-size: 18px;
   }
   @media only screen and (min-width: $desktop-min + ($spacer * 2)) {
-    margin: $spacer * 2 0;
+    background-position: right center;
+    padding: $spacer * 2 0;
+    margin-bottom: $spacer * 2;
     text-align: left;
+    h3 {
+      font-size: 32px;
+    }
+    small {
+      font-size: 18px;
+    }
   }
 }
 
@@ -380,6 +348,9 @@ img {
   padding-top: 1px;
   > p:first-child {
     margin-top: 0;
+    @media only screen and (min-width: $desktop-min + ($spacer * 2)) {
+      margin-top: -245px;
+    }
   }
 }
 
@@ -390,7 +361,7 @@ img {
   height: 270px;
   background-color: $post-bg;
   border-radius: 50%;
-  @media only screen and (max-width: $desktop-max) {
+  @media only screen and (max-width: $desktop-max + ($spacer * 2)) {
     width: 135px;
     height: 135px;
   }
