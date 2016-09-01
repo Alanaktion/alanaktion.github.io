@@ -268,7 +268,7 @@ img {
   margin-bottom: 15px;
   @media only screen and (min-width: $desktop-min) {
     width: 768px;
-    margin: 0 auto $spacer;
+    margin: 0 auto;
     &:after {
       content: '';
       display: table;
