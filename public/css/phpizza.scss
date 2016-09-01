@@ -1,6 +1,5 @@
 ---
 ---
-
 @import 'normalize';
 
 /* Variables */
@@ -10,6 +9,7 @@ $body-fg: #5A6E65;
 $post-bg: #f5f5f5;
 $link-color: #0087cb;
 $heading-fg: #04202a;
+$active-bg: #4C5B5E;
 
 $spacer: 15px;
 
@@ -44,6 +44,9 @@ body {
   background-size: cover;
   padding: ($spacer / 3) 0;
   margin-bottom: $spacer;
+  @media only screen and (min-width: $desktop-min) {
+    height: 100px;
+  }
   h3 {
     margin: 10px 0;
     font-weight: 300;
@@ -143,7 +146,7 @@ img {
     }
   }
   @media only screen and (min-width: $desktop-min) {
-    font-size: 48px;
+    font-size: 36px;
   }
 }
 
@@ -181,37 +184,30 @@ img {
 .chk-nav-toggle {
   position: absolute;
   visibility: hidden;
-  &:checked + .nav-toggle {
-    background-color: #e5e5e5;
-    opacity: 1;
-  }
 }
 .nav-toggle {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 14px;
+  left: 14px;
 
-  display: block;
-  width: 22px;
-  height: 22px;
-  padding: 5px;
-
-  font-size: 18px;
-  line-height: 22px;
-  color: $heading-fg;
-  text-align: center;
-
-  background-color: rgba(#e5e5e5, 0.5);
-  border-radius: 5px;
-  opacity: 0.65;
+  opacity: 0.6;
   cursor: pointer;
+  z-index: 100;
 
-  z-index: 999;
-
-  &:before {
-    content: '\22ee';
+  @media only screen and (min-width: $desktop-min) {
+    display: none;
   }
-  &:hover, &:focus {
+
+  .icon {
+    fill: none;
+    width: 32px;
+    height: 32px;
+    stroke: $heading-fg;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-width: 2px;
+  }
+  &:hover, &:focus, .chk-nav-toggle:checked ~ & {
     opacity: 1;
   }
 }
@@ -219,43 +215,38 @@ img {
 .nav-dismiss {
   position: absolute;
   position: fixed;
-  top: 0;
+  top: 60px;
   bottom: 0;
   left: 0;
   right: 0;
 
-  opacity: 0;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  opacity: 0.8;
 
-  transition: opacity .2s ease, visibility 0s linear .2s;
-
-  z-index: 1000;
+  z-index: 90;
 
   .chk-nav-toggle:checked ~ & {
-    opacity: 1;
     visibility: visible;
-    transition: opacity .2s ease;
   }
 }
 
 .navbar {
   position: absolute;
-  top: 47px;
-  left: 10px;
+  visibility: hidden;
 
+  font-size: 14px;
+  width: 100%;
   max-height: 85vh;
   overflow-y: auto;
 
-  font-size: 14px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.95) translate(-3px, -10px);
-  transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+  @media only screen and (min-width: $desktop-min) {
+    position: static;
+    visibility: visible;
+    margin-top: $spacer * -4;
+    margin-bottom: $spacer * 2;
+    height: $spacer * 2;
+  }
 
   z-index: 1001;
 
@@ -266,42 +257,49 @@ img {
   }
   .navbar-title {
     margin: 10px 0 0;
-    b {
-      font-weight: normal;
-      color: $heading-fg;
-    }
+    color: $heading-fg;
+    font-weight: bold;
   }
   .chk-nav-toggle:checked ~ & {
-    opacity: 1;
     visibility: visible;
-    transform: none;
-    transition: opacity .2s ease, transform .2s ease;
   }
 }
 .navbar-nav {
   margin-bottom: 15px;
+  @media only screen and (min-width: $desktop-min) {
+    width: 768px;
+    margin: 0 auto $spacer;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
   a {
+    box-sizing: border-box;
+    @media only screen and (min-width: $desktop-min) {
+      float: left;
+      height: $spacer * 2;
+    }
     display: block;
     padding: 5px 15px;
-    line-height: 24px;
+    line-height: $spacer * 2 - 10px;
     color: inherit;
     text-decoration: none;
     &:hover, &:focus {
-      background-color: lighten($body-fg, 50%);
+      color: #000;
     }
     &.active {
-      background-color: $heading-fg;
+      background-color: $active-bg;
+      background: transparent linear-gradient(to right, $active-bg, transparent);
       color: #fff;
+      @media only screen and (min-width: $desktop-min) {
+        background: #fff;
+        color: #000;
+      }
     }
   }
 }
-
-@media only screen and (min-width: $desktop-min) {
-  .nav-toggle, .navbar {
-    position: fixed;
-  }
-}
-
 
 /* Archive */
 .archive {
@@ -311,6 +309,9 @@ img {
   .year {
     list-style: none;
     padding-left: 0;
+    @media only screen and (max-width: $desktop-max) {
+      padding: 0 $spacer;
+    }
     li {
       position: relative;
       a {
@@ -323,12 +324,20 @@ img {
       }
     }
   }
-  h2 {
+  .excerpt {
+    margin-left: 60px;
+    font-size: 12px;
     @media only screen and (max-width: $desktop-max) {
-      margin: 0 $spacer * 2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
-
+  h2 {
+    @media only screen and (max-width: $desktop-max) {
+      margin: 0 $spacer;
+    }
+  }
 }
 
 /* Utilities */
@@ -343,22 +352,11 @@ img {
   border: 0;
 }
 
-.page-about {
-  margin-top: 150px;
-  padding-top: 1px;
-  > p:first-child {
-    margin-top: 0;
-    @media only screen and (min-width: $desktop-min + ($spacer * 2)) {
-      margin-top: -245px;
-    }
-  }
-}
-
 .profile-pic {
   display: block;
-  margin: -135px auto 15px;
-  width: 270px;
-  height: 270px;
+  margin: 0 auto 15px;
+  width: 210px;
+  height: 210px;
   background-color: $post-bg;
   border-radius: 50%;
   @media only screen and (max-width: $desktop-max + ($spacer * 2)) {

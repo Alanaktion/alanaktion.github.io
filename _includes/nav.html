@@ -1,13 +1,14 @@
 <input type="checkbox" class="chk-nav-toggle" id="chk-nav-toggle">
-<label for="chk-nav-toggle" class="nav-toggle"></label>
+<label for="chk-nav-toggle" class="nav-toggle">
+  <svg class="icon" viewBox="0 0 32 32">
+    <path d="M6 10 L26 10 M6 16 L26 16 M6 22 L26 22" />
+  </svg>
+</label>
 <label for="chk-nav-toggle" class="nav-dismiss"></label>
 
 <div class="navbar">
-  <p class="navbar-title"><b>{{ site.author.name }}</b></p>
-  <p>{{ site.description }}</p>
-
   <nav class="navbar-nav">
-    <a class="{% if page.url == site.baseurl %}active{% endif %}" href="/">Home</a>
+    <a class="{% if page.url == '/' %}active{% endif %}" href="/">Blog</a>
     <a class="{% if page.url == '/about/' %}active{% endif %}" href="/about/">About</a>
     <a class="{% if page.url == '/archive/' %}active{% endif %}" href="/archive/">Archive</a>
     {% assign pages_list = site.pages | sort:"url" %}
@@ -16,13 +17,5 @@
         <a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
       {% endif %}
     {% endfor %}
-  </nav>
-
-  <p>Top GitHub Repos</p>
-  <nav class="navbar-nav">
-    <a href="https://github.com/Alanaktion/phproject">Phproject</a>
-    <a href="https://github.com/Alanaktion/MCHostPanel">Minecraft Host Panel</a>
-    <a href="https://github.com/Alanaktion/chatbot2">PHP Chat Bot</a>
-    <a href="https://github.com/Alanaktion/php-landing">Server Landing Page</a>
   </nav>
 </div>
