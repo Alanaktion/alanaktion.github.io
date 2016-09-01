@@ -2,8 +2,9 @@
 layout: post
 title: Sublime Text Plugins
 date: 2014-05-06 18:45:37
+excerpt: Here's my collection of Sublime Text packages and configuration files that I couldn't make it through a day without.
 ---
-I use several plugins every day in [Sublime Text 3](http://www.sublimetext.com/3) that I've grown very used to having, and now find I couldn't work without them. I last updated this list on September 25, 2014.
+I use several plugins every day in [Sublime Text 3](http://www.sublimetext.com/3) that I've grown very used to having, and now find I couldn't work without them. I last updated this post on April 21, 2016.
 
 * [Package Control](https://sublime.wbond.net/installation)
     * This one is essential for any Sublime Text user, and makes installing other plugins very simple and fast.

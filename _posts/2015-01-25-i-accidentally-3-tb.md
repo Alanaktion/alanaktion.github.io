@@ -1,6 +1,7 @@
 ---
 layout: post
 title: I Accidentally 3 TB
+excerpt: So Saturday night, after Microsoft had released the new Windows 10 Tech Preview, I was going to make a USB installer for it. It didn't go quite as I intended.
 ---
 
 So Saturday night, after Microsoft had released the new Windows 10 Tech Preview, I was going to make a USB installer for it, and install it to a secondary HDD on my PC. Fairly standard. I decided I'd start off by formatting the drive so I'd have a clean base to copy the installer onto, just in case there was anything on it that could have conflicted with the installer. I right-clicked the drive in This PC, clicked Format, and confirmed the format with default options. I then left my computer for some reason.

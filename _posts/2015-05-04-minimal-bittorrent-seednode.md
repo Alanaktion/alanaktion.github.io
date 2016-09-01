@@ -2,6 +2,7 @@
 layout: post
 title: Minimal BitTorrent Seednode
 date: 2015-05-04 23:42:12
+excerpt: A complete guide to setting up an encrypted BitTorrent seednode on Debian 8 with OpenVPN and Transmission
 ---
 
 I took the time over the weekend to get more familiar with OpenVPN and Debian 8, which are an awesome combination. My first seednode I set up was on an old laptop. Debian 8's netboot CD gives you everything you need and nothing more, which is perfect, so that's where I started. Once I got the laptop up and running, I tried it out on a VirtualBox VM on my OVH server. Here's the complete guide to doing this yourself:
