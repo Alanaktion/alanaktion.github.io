@@ -1,4 +1,5 @@
 <head>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
@@ -9,12 +10,24 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <link rel="stylesheet" href="/public/css/phpizza.css">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+{% capture styles %}
+{% include style.scss %}
+{% endcapture %}
+{{ styles | scssify }}
+  </style>
+
+  {% if page.title == "Home" %}
+    <meta property="og:title" content="{{ page.title }}">
+  {% endif %}
 
   <link rel="manifest" href="/public/manifest.json">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
   <link rel="shortcut icon" href="/public/favicon.ico">
 
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 </head>

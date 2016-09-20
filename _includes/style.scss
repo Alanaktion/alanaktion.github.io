@@ -1,5 +1,3 @@
----
----
 @import 'normalize';
 
 /* Variables */
@@ -352,7 +350,8 @@ img {
   border: 0;
 }
 
-.profile-pic {
+.page-about amp-img,
+.page-about img {
   display: block;
   margin: 0 auto 15px;
   width: 210px;
@@ -360,8 +359,8 @@ img {
   background-color: $post-bg;
   border-radius: 50%;
   @media only screen and (max-width: $desktop-max + ($spacer * 2)) {
-    width: 135px;
-    height: 135px;
+    max-width: 135px;
+    max-height: 135px;
   }
 }
 

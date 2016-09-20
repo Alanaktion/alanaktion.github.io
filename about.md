@@ -3,7 +3,7 @@ layout: page-about
 title: About
 ---
 
-<img class="profile-pic" src="https://blog.phpizza.com/assets/profile/alan-1-sq-540.png" alt="Alan">
+<amp-img class="profile-pic" src="https://blog.phpizza.com/assets/profile/alan-1-sq-540.png" width="210" height="210" layout="fixed"></amp-img>
 
 ### Alan Hardman
 
