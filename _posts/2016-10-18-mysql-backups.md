@@ -30,6 +30,12 @@ If you plan on changing your column ordering or adding columns from your schema 
 mysqldump --complete-insert --no-create-info dbname | gzip > dbname.sql.gz
 ```
 
+Restoring views to a new server can fail if the view's DEFINER is not a user on the new system. If you're going to be importing the database on a different system with potentially different users, you can use grep to filter out the DEFINER rows, ensuring views import without errors.
+
+```bash
+mysqldump --no-data dbname | grep -v "50013 DEFINER" | gzip > dbname-schema.sql.gz
+```
+
 I pretty much always pipe mysqldump through gzip since there's no good reason to keep an uncompressed export sitting around. Restoring gzipped backups is very simple to do in-place with the help of `zcat`.
 
 ```bash
