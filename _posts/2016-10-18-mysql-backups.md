@@ -5,7 +5,7 @@ date: 2016-10-18 13:35:00
 excerpt: Flexible backup methods with mysqldump, and crazy-fast multithreaded backups using mydumper
 ---
 
-MySQL is pretty nice for a free, Open Source RMDBS. Before trying any kind of management, you should totally have a `.my.cnf` file in your `~`. Put your username and password for localhost there, and then remove read permissions from everyone but yourself. Also use a more secure password than this. Seriously.
+MySQL is pretty nice for a free, Open Source RMDBS. Before trying any kind of management, you should totally have a `.my.cnf` file in your `~`. Put your username and password for localhost there, and then remove read permissions from everyone but yourself. This file specifies the default options to use with MySQL command line tools, making them much easier to work with, and avoiding having to repeatedly type in your password or accidentally letting it end up in a history file somewhere.
 
 ```
 [mysql]
