@@ -5,11 +5,11 @@
 /* Variables */
 // Colors
 $body-bg: #fff;
-$body-fg: #5A6E65;
+$body-fg: #5a6e65;
 $post-bg: #f5f5f5;
 $link-color: #0087cb;
 $heading-fg: #04202a;
-$active-bg: #4C5B5E;
+$active-bg: #4c5b5e;
 
 $spacer: 15px;
 
@@ -39,7 +39,9 @@ body {
 .site-header {
   text-align: center;
   color: $heading-fg;
+  background-color: #f5e8d8;
   background-image: url(https://blog.phpizza.com/assets/ui/header-bg.jpg);
+  background-image: linear-gradient(to right, #FED8AD 0%, #FEF6E9 30%, #E5D4C4 60%, #465153 100%);
   background-position: center center;
   background-size: cover;
   padding: ($spacer / 3) 0;
