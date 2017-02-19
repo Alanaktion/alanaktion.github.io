@@ -1,14 +1,22 @@
 ---
 ---
 @import 'normalize';
+@import 'mixins';
+@import 'slabo';
 
 /* Variables */
 // Colors
 $body-bg: #fff;
 $body-fg: #5a6e65;
 $post-bg: #f5f5f5;
-$link-color: #0087cb;
-$heading-fg: #04202a;
+$brand-color: #b5d707;
+$brand-color-alt: #b0b1e9;
+$brand-color-inv: #000;
+$link-color: darken($brand-color, 10%);
+$header-bg: $brand-color;
+$header-fg: $brand-color-inv;
+$heading-fg: $brand-color;
+$heading-bg: $brand-color-inv;
 $active-bg: #4c5b5e;
 
 $spacer: 15px;
@@ -25,7 +33,7 @@ $desktop-max: 767px;
 
 /* Base Style */
 html {
-  font: 16px/1.618 -apple-system, BlinkMacSystemFont, "Segoe UI", "Cantarell", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 16px/1.618 'Slabo13px', serif;
   @media only screen and (max-width: $desktop-max) {
     font-size: 15px;
   }
@@ -38,32 +46,32 @@ body {
 
 .site-header {
   text-align: center;
-  color: $heading-fg;
-  background-color: #f5e8d8;
-  background-image: url(https://blog.phpizza.com/assets/ui/header-bg.jpg);
-  background-image: linear-gradient(to right, #FED8AD 0%, #FEF6E9 30%, #E5D4C4 60%, #465153 100%);
-  background-position: center center;
-  background-size: cover;
-  padding: ($spacer / 3) 0;
+  color: $header-fg;
+  background-color: $header-bg;
   margin-bottom: $spacer;
-  @media only screen and (min-width: $desktop-min) {
-    height: 100px;
+  .container {
+    position: relative;
+    @include clearfix();
   }
   h3 {
-    margin: 10px 0;
-    font-weight: 300;
-  }
-  a {
-    color: $heading-fg;
-    text-decoration: none;
+    float: left;
+    margin: 0;
+    font-family: 'Slabo27px', serif;
+    font-weight: 400;
+    a {
+      color: $header-bg;
+      background-color: $header-fg;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-decoration: none;
+    }
   }
   small {
-    color: $body-fg;
+    color: $header-fg;
     font-size: 18px;
   }
   @media only screen and (min-width: $desktop-min + ($spacer * 2)) {
     background-position: right center;
-    padding: $spacer * 2 0;
     margin-bottom: $spacer * 2;
     text-align: left;
     h3 {
@@ -80,7 +88,8 @@ body {
 .content {
   h1, h2, h3, h4 {
     color: $heading-fg;
-    font-weight: 300;
+    font-family: 'Slabo27px', serif;
+    font-weight: 400;
   }
   a {
     color: $link-color;
@@ -97,7 +106,7 @@ pre, p > code {
   border: 1px solid #ddd;
   background-color: #f5f5f5;
   font-size: 14px;
-  font-family: Menlo, Meslo, Monaco, "Courier New", monospace;
+  font-family: Courier, "Courier New", monospace;
 }
 pre {
   padding: 7px 10px;
@@ -132,14 +141,18 @@ img {
 }
 
 .post-header {
+  @include clearfix;
   margin-bottom: $spacer * 2;
 }
 .post-title {
+  display: inline-block;
   font-size: $spacer * 2;
   line-height: 1;
   font-weight: normal;
-  margin: 0 0 15px;
+  margin: 0;
+  padding: 5px;
   color: $heading-fg;
+  background-color: $heading-bg;
   a {
     color: inherit;
     text-decoration: none;
@@ -150,6 +163,11 @@ img {
   @media only screen and (min-width: $desktop-min) {
     font-size: 36px;
   }
+}
+.post-date {
+  padding: 3px 5px;
+  color: $heading-bg;
+  background-color: $heading-fg;
 }
 
 .pagination {
@@ -234,48 +252,11 @@ img {
 }
 
 .navbar {
-  position: absolute;
-  visibility: hidden;
-
-  font-size: 14px;
-  width: 100%;
-  max-height: 85vh;
-  overflow-y: auto;
-
   @media only screen and (min-width: $desktop-min) {
-    position: static;
-    visibility: visible;
-    margin-top: $spacer * -4;
-    margin-bottom: $spacer * 2;
-    height: $spacer * 2;
-  }
-
-  z-index: 1001;
-
-  p {
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0 15px;
-  }
-  .navbar-title {
-    margin: 10px 0 0;
-    color: $heading-fg;
-    font-weight: bold;
-  }
-  .chk-nav-toggle:checked ~ & {
-    visibility: visible;
-  }
-}
-.navbar-nav {
-  margin-bottom: 15px;
-  @media only screen and (min-width: $desktop-min) {
-    width: 768px;
-    margin: 0 auto;
-    &:after {
-      content: '';
-      display: table;
-      clear: both;
-    }
+    @include clearfix;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
   a {
     box-sizing: border-box;
