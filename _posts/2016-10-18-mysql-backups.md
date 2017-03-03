@@ -7,8 +7,8 @@ excerpt: Flexible backup methods with mysqldump, and crazy-fast multi-threaded b
 
 MySQL is pretty nice for a free, Open Source RDBMS. Before trying any kind of management, you should totally have a `.my.cnf` file in your `~`. Put your username and password for localhost there, and then remove read permissions from everyone but yourself. This file specifies the default options to use with MySQL command line tools, making them much easier to work with, and avoiding having to repeatedly type in your password or accidentally letting it end up in a history file somewhere.
 
-```
-[mysql]
+```ini
+[client]
 user=root
 password=letmein
 ```
