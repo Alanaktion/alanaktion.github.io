@@ -13,10 +13,12 @@ $brand-color: #b5d707;
 $brand-color-alt: #b0b1e9;
 $brand-color-inv: #000;
 $link-color: darken($brand-color, 10%);
+$link-color-active: darken($link-color, 5%);
 $header-bg: $brand-color;
 $header-fg: $brand-color-inv;
 $heading-fg: $brand-color;
 $heading-bg: $brand-color-inv;
+$heading-fg-content: darken($heading-fg, 5%);
 $active-bg: #4c5b5e;
 
 $spacer: 15px;
@@ -34,7 +36,7 @@ $desktop-max: 767px;
 /* Base Style */
 html {
   font: 16px/1.618 'Slabo13px', serif;
-  @media only screen and (max-width: $desktop-max) {
+  @media (max-width: $desktop-max) {
     font-size: 15px;
   }
 }
@@ -51,13 +53,21 @@ body {
   margin-bottom: $spacer;
   .container {
     position: relative;
-    @include clearfix();
+    @include clearfix;
+    @media (max-width: $desktop-max + ($spacer * 2)) {
+      margin-left: $spacer;
+      margin-right: $spacer;
+    }
   }
   h3 {
-    float: left;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     font-family: 'Slabo27px', serif;
     font-weight: 400;
+    @media (max-width: $desktop-max + ($spacer * 2)) {
+      padding-top: $spacer / 3;
+      padding-bottom: $spacer / 3;
+    }
     a {
       color: $header-bg;
       background-color: $header-fg;
@@ -70,11 +80,13 @@ body {
     color: $header-fg;
     font-size: 18px;
   }
-  @media only screen and (min-width: $desktop-min + ($spacer * 2)) {
+  @media (min-width: $desktop-min + ($spacer * 2)) {
     background-position: right center;
     margin-bottom: $spacer * 2;
     text-align: left;
     h3 {
+      float: left;
+      margin-left: 0;
       font-size: 32px;
     }
     small {
@@ -83,16 +95,70 @@ body {
   }
 }
 
+.navbar {
+  @include clearfix;
+  display: flex;
+  @media (min-width: $desktop-min + ($spacer * 2)) {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  a {
+    box-sizing: border-box;
+    flex: 1;
+    @media (min-width: $desktop-min + ($spacer * 2)) {
+      flex: none;
+      float: left;
+    }
+    padding: 5px 15px;
+    line-height: $spacer * 2 - 10px;
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: #000;
+    }
+    &.active {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+  span {
+    @media (max-width: 479px) {
+      @include sr-only;
+    }
+    @media (min-width: 480px) {
+      display: inline;
+    }
+  }
+  svg {
+    @media (min-width: 480px) {
+      display: none;
+    }
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+  }
+}
+
 
 /* Content */
 .content {
   h1, h2, h3, h4 {
-    color: $heading-fg;
+    color: $heading-fg-content;
     font-family: 'Slabo27px', serif;
     font-weight: 400;
   }
   a {
     color: $link-color;
+    &:hover, &:focus {
+      color: $link-color-active;
+    }
   }
   hr {
     height: 1px;
@@ -127,14 +193,14 @@ img {
 /* Posts */
 .post, .page {
   margin-bottom: $spacer * 4;
-  @media only screen and (max-width: $desktop-max + ($spacer * 2)) {
+  @media (max-width: $desktop-max + ($spacer * 2)) {
     margin-bottom: $spacer * 2;
-    padding: 15px;
+    padding: 0 15px;
   }
   + .post {
     padding-top: $spacer * 4;
     border-top: 1px solid #d6d6d6;
-    @media only screen and (max-width: $desktop-max + ($spacer * 2)) {
+    @media (max-width: $desktop-max + ($spacer * 2)) {
       padding-top: $spacer * 2;
     }
   }
@@ -160,7 +226,7 @@ img {
       color: $link-color;
     }
   }
-  @media only screen and (min-width: $desktop-min) {
+  @media (min-width: $desktop-min) {
     font-size: 36px;
   }
 }
@@ -200,90 +266,6 @@ img {
   }
 }
 
-/* Navigation */
-.chk-nav-toggle {
-  position: absolute;
-  visibility: hidden;
-}
-.nav-toggle {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-
-  opacity: 0.6;
-  cursor: pointer;
-  z-index: 100;
-
-  @media only screen and (min-width: $desktop-min) {
-    display: none;
-  }
-
-  .icon {
-    fill: none;
-    width: 32px;
-    height: 32px;
-    stroke: $heading-fg;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-width: 2px;
-  }
-  &:hover, &:focus, .chk-nav-toggle:checked ~ & {
-    opacity: 1;
-  }
-}
-
-.nav-dismiss {
-  position: absolute;
-  position: fixed;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  visibility: hidden;
-  background-color: #fff;
-  opacity: 0.8;
-
-  z-index: 90;
-
-  .chk-nav-toggle:checked ~ & {
-    visibility: visible;
-  }
-}
-
-.navbar {
-  @media only screen and (min-width: $desktop-min) {
-    @include clearfix;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-  a {
-    box-sizing: border-box;
-    @media only screen and (min-width: $desktop-min) {
-      float: left;
-      height: $spacer * 2;
-    }
-    display: block;
-    padding: 5px 15px;
-    line-height: $spacer * 2 - 10px;
-    color: inherit;
-    text-decoration: none;
-    &:hover, &:focus {
-      color: #000;
-    }
-    &.active {
-      background-color: $active-bg;
-      background: transparent linear-gradient(to right, $active-bg, transparent);
-      color: #fff;
-      @media only screen and (min-width: $desktop-min) {
-        background: #fff;
-        color: #000;
-      }
-    }
-  }
-}
-
 /* Archive */
 .archive {
   color: $body-fg;
@@ -292,7 +274,7 @@ img {
   .year {
     list-style: none;
     padding-left: 0;
-    @media only screen and (max-width: $desktop-max) {
+    @media (max-width: $desktop-max) {
       padding: 0 $spacer;
     }
     li {
@@ -310,14 +292,14 @@ img {
   .excerpt {
     margin-left: 60px;
     font-size: 12px;
-    @media only screen and (max-width: $desktop-max) {
+    @media (max-width: $desktop-max) {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
   h2 {
-    @media only screen and (max-width: $desktop-max) {
+    @media (max-width: $desktop-max) {
       margin: 0 $spacer;
     }
   }
@@ -325,27 +307,12 @@ img {
 
 /* Utilities */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  @include sr-only;
 }
 
 .profile-pic {
   display: block;
   margin: 0 auto 15px;
-  width: 210px;
-  height: 210px;
-  background-color: $post-bg;
-  border-radius: 50%;
-  @media only screen and (max-width: $desktop-max + ($spacer * 2)) {
-    width: 135px;
-    height: 135px;
-  }
 }
 
 /* Syntax highlighting */
