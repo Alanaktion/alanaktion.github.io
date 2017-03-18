@@ -9,16 +9,15 @@
 $body-bg: #fff;
 $body-fg: #5a6e65;
 $post-bg: #f5f5f5;
-$brand-color: #b5d707;
-$brand-color-alt: #b0b1e9;
+$brand-color: #98BC4B;
 $brand-color-inv: #000;
-$link-color: darken($brand-color, 10%);
+$link-color: $brand-color;
 $link-color-active: darken($link-color, 5%);
 $header-bg: $brand-color;
 $header-fg: $brand-color-inv;
 $heading-fg: $brand-color;
 $heading-bg: $brand-color-inv;
-$heading-fg-content: darken($heading-fg, 5%);
+$heading-fg-content: $heading-fg;
 $active-bg: #4c5b5e;
 
 $spacer: 15px;
