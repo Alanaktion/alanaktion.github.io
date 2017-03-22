@@ -17,9 +17,9 @@ sda      8:0    0 111.8G  0 disk
 └─sda3   8:3    0  15.9G  0 part [SWAP]
 ```
 
-`/dev/sda2` is the parition we want to extend. We'll use gdisk.
+`/dev/sda2` is the partition we want to extend. We'll use gdisk.
 
-First, list the paritions to be sure we're starting in the right place. Make a note of the start sector for the partition you want to extend, as we'll be deleting it and creating a new one in it's place.
+First, list the partitions to be sure we're starting in the right place. Make a note of the start sector for the partition you want to extend, as we'll be deleting it and creating a new one in it's place.
 
 ```
 root@box:~# gdisk /dev/sda
@@ -51,7 +51,7 @@ Current type is 'Linux filesystem'
 Hex code or GUID (L to show codes, Enter = 8300):
 ```
 
-Print the new parition table to make sure everything looks right.
+Print the new partition table to make sure everything looks right.
 
 ```
 Command (? for help): p
@@ -72,7 +72,7 @@ PARTITIONS!!
 Do you want to proceed? (Y/N): y
 ```
 
-Your new parition table is written, but the system won't recognize it everywhere yet. We'll partprobe to fix this.
+Your new partition table is written, but the system won't recognize it everywhere yet. We'll partprobe to fix this.
 
 ```
 partprobe

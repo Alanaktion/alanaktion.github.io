@@ -9,21 +9,21 @@ Phone: [+1 385 207-6652](tel:13852076652) · Email: [alan@phpizza.com](mailto:al
 
 ## Web Developer
 
-I've been coding since I was nine, and plan to keep doing it forever. I've primarily focused on PHP web development, but have experience in many other languages and platforms as well.
+I've been coding since I was nine, and plan to keep doing it forever. I've primarily focused on PHP web development, but have experience in many other languages and platforms as well. I'm the type of person that uses about five different operating systems a day, codes in several different languages, and constantly tweaks personal servers and network infrastructure.
 
 ### Skills
 
-- Web Development
-- Responsive Web Design
-- UX
-- Networking
+- Backend Web Development
 - Server Administration
+- Responsive Web Design
+- UI/UX
+- Networking
 
 ### Technology
 
-- **Programming:** PHP, JavaScript, HTML5, CSS/LESS/SCSS, C#, VB.NET
-- **Software:** Apache, nginx, HHVM, MySQL, Node.js, Unison
-- **Systems:** Linux (Debian/Ubuntu), Windows, OS X
+- **Programming:** PHP 5/7, JavaScript (ES5/6), HTML5, CSS/LESS/SCSS, C#, VB.NET
+- **Software:** Apache, nginx, MySQL, Node.js, Redis, Docker
+- **Operating Systems:** All of them. Seriously.
 
 ### Experience
 
