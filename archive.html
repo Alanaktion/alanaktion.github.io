@@ -18,7 +18,7 @@ title: Archive
   {% endif %}
   {% endunless %}
     <li>
-      <time>{{ post.date | date:"%d %b" }}</time>
+      <time datetime="{{ post.date | date: '%FT%T' }}">{{ post.date | date:"%d %b" }}</time>
       <a href="{{ post.url }}">{{ post.title }}</a>
       {% if post.excerpt %}
         <div class="excerpt">{{ post.excerpt | strip_html }}</div>
