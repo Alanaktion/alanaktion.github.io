@@ -8,5 +8,6 @@
       "type": "image/png"
     }
   ],
+  "theme_color": "#bada55",
   "start_url": "/"
 }

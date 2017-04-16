@@ -2,7 +2,6 @@
 layout: page-about
 title: About
 ---
-
 <img class="profile-pic"
     src="https://blog.phpizza.com/assets/profile/alan-2-230h.jpg"
     srcset="https://blog.phpizza.com/assets/profile/alan-2-460h.jpg 2x"
