@@ -1,4 +1,9 @@
 var quick = {
+    initialState: {
+        title: '',
+        main: '',
+        nav: ''
+    },
 
     /**
      * Add popstate event listener and init page links
@@ -6,8 +11,23 @@ var quick = {
      */
     init: function() {
         window.addEventListener('popstate', this.onPopState);
-        // @todo: add click event listener for relative hyperlinks
-        // @todo: store initial document state to return to if navigated back
+        document.addEventListener('click', function (e) {
+            if (e.button) {
+                return;
+            }
+
+            var t = e.target;
+            while (t && t !== this) {
+                if (t.tagName == 'A') {
+                    quick.onClick(t, e);
+                    return;
+                }
+                t = t.parentNode;
+            }
+        });
+        this.initialState.title = document.title;
+        this.initialState.main = document.querySelector('main.content').innerHTML;
+        this.initialState.nav = document.querySelector('nav.navbar').innerHTML;
     },
 
     /**
@@ -16,16 +36,28 @@ var quick = {
      * @return {void}
      */
     onPopState: function(e) {
-        // @todo: restore <main> contents from e.state
+        if (e.state) {
+            document.title = e.state.title;
+            document.querySelector('main.content').innerHTML = e.state.main;
+            document.querySelector('nav.navbar').innerHTML = e.state.nav;
+        } else {
+            document.title = quick.initialState.title;
+            document.querySelector('main.content').innerHTML = quick.initialState.main;
+            document.querySelector('nav.navbar').innerHTML = quick.initialState.nav;
+        }
     },
 
     /**
      * Handle anchor clicks and optionally trigger AJAX page loading
+     * @param  {Element} target
      * @param  {Event} e
      * @return {void}
      */
-    onAnchorClick: function(e) {
-        // @todo: check if anchor has a relative href, and call this.loadPage
+    onClick: function(target, e) {
+        if (target.hostname == location.hostname && !target.hasAttribute('target')) {
+            this.loadPage(target.href);
+            e.preventDefault();
+        }
     },
 
     /**
@@ -34,19 +66,37 @@ var quick = {
      * @return {XMLHttpRequest}
      */
     loadPage: function(url) {
-        // @todo: make ajax call
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', this.loadPageComplete);
+        xhr.open('GET', url);
+        xhr.send();
+        return xhr;
     },
 
     /**
      * Render page and push history state on AJAX call success
-     * @param {string} data
+     * @param {Event} e
      * @return {void}
      */
-    loadPageComplete: function(data) {
-        // @todo: set page <main> contents
-        // @todo: set document.title
-        // @todo: trigger history.pushState with a state object
-        // history.pushState({page: 1}, "Page Title", "/pageUrl");
+    loadPageComplete: function(e) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(this.response, "text/html");
+
+        document.title = doc.title;
+        var mainHtml = doc.querySelector('main.content').innerHTML
+        var navHtml = doc.querySelector('nav.navbar').innerHTML;
+        document.querySelector('main.content').innerHTML = mainHtml;
+        document.querySelector('nav.navbar').innerHTML = navHtml;
+
+        history.pushState(
+            {
+                title: doc.title,
+                main: mainHtml,
+                nav: navHtml
+            },
+            doc.title,
+            this.responseURL
+        );
     }
 
 };
