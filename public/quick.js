@@ -66,6 +66,7 @@ var quick = {
      * @return {XMLHttpRequest}
      */
     loadPage: function(url) {
+        document.querySelector('main.content').style.opacity = .5;
         var xhr = new XMLHttpRequest();
         xhr.addEventListener('load', this.loadPageComplete);
         xhr.open('GET', url);
@@ -85,8 +86,11 @@ var quick = {
         document.title = doc.title;
         var mainHtml = doc.querySelector('main.content').innerHTML
         var navHtml = doc.querySelector('nav.navbar').innerHTML;
+        document.querySelector('main.content').style.opacity = 1;
         document.querySelector('main.content').innerHTML = mainHtml;
         document.querySelector('nav.navbar').innerHTML = navHtml;
+
+        window.scrollTo(0, 0);
 
         history.pushState(
             {
