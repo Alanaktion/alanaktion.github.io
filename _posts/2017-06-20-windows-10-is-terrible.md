@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windows 10 is Terrible
-date: 2017-20-20 08:44:00
+date: 2017-06-20 08:44:00
 excerpt: Windows 10 is still terrible. Especially on Surface hardware.
 ---
 
