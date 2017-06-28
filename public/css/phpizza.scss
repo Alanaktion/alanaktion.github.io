@@ -265,10 +265,13 @@ code {
 
 // Archive
 .archive {
-  grid-column: main;
+  display: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
   color: $body-fg;
   margin-bottom: 4em;
   .year {
+    grid-column: main;
     list-style: none;
     padding-left: 0;
     @media (max-width: 70em) {
@@ -283,6 +286,7 @@ code {
         overflow: hidden;
         text-overflow: ellipsis;
         color: $link-color;
+        text-decoration-skip: ink;
         &:hover,
         &:focus {
           color: $link-color-active;
@@ -300,6 +304,13 @@ code {
     }
   }
   h2 {
+    grid-column: main;
+    @media (min-width: 70em) {
+      grid-column: full-start / main-start;
+      text-align: right;
+      margin-top: .5em;
+      margin-right: 2em;
+    }
     @media (max-width: 70em) {
       margin: 0 1em;
     }
