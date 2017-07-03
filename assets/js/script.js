@@ -1,14 +1,10 @@
 /**
- *    __           _
- *   / /  __ _ ___| |__   ___  ___
- *  / /  / _` / __| '_ \ / _ \/ __|
- * / /__| (_| \__ \ | | |  __/\__ \
- * \____/\__,_|___/_| |_|\___||___/
- *
- * Powered by kittehz
+ * LASHES - Lame Attempt at a Shell in ECMAScript
  *
  * @author Alan Hardman <alan@phpizza.com>
  */
+
+/*jshint esversion: 6 */
 
 // Commands are defined as anonymous functions with a return value sent to stdout
 var Commands = {
@@ -205,7 +201,6 @@ var Directories = {
 	}, false);
 
 	// Handle some non-alphanum keys
-	// TODO: Add arrow key history navigation
 	p.addEventListener('keydown', function(e) {
 		switch(e.which) {
 			case 8: // Backspace
@@ -226,14 +221,21 @@ var Directories = {
 
 				// Try to find `command` in Commands object
 				if(command.length) {
+					var matches = [];
 					for(var i = 0; i < commandNames.length; i++) {
 						if(commandNames[i].substr(0, command.length) == command) {
-							// Command matches, autocomplete
-							p.value = commandNames[i] + ' ';
-							p.dispatchEvent(new Event('keypress'));
-							r.textContent = p.value;
-							p.style.width = (r.clientWidth || 1) + 'px';
+							matches.push(commandNames[i]);
 						}
+					}
+					if (matches.length == 1) {
+						// One command matches, autocomplete
+						p.value = matches[0] + ' ';
+						p.dispatchEvent(new Event('keypress'));
+						r.textContent = p.value;
+						p.style.width = (r.clientWidth || 1) + 'px';
+					} else if (matches.length) {
+						// Multiple commands match, list all
+						stdout('', matches.sort().join(' '));
 					}
 				}
 
