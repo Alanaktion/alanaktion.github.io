@@ -3,8 +3,8 @@
   "short_name": "Phpizza",
   "icons": [
     {
-      "src": "/public/apple-touch-icon-precomposed.png",
-      "sizes": "152x152",
+      "src": "/public/phpizza-logo.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
