@@ -15,7 +15,7 @@ Using them feels very natural. I'm not sure I'll ever reach a point where I'm re
 
 <div style="text-align: center">
     <video class="video-specs"
-        src="https://blog.phpizza.com/assets/snap/monitors-silent.mp4" poster="https://blog.phpizza.com/assets/snap/monitors-silent.jpg"
+        src="https://blog.phpizza.com/assets/snap/monitors-silent-optimized.mp4" poster="https://blog.phpizza.com/assets/snap/monitors-silent.jpg"
         style="clip-path: circle(46% at 50% 50%); width: 400px; max-width: 100%;"
         muted autoplay loop></video>
 </div>
