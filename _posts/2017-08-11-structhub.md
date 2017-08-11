@@ -2,6 +2,7 @@
 layout: post
 title: An attempt was made
 date: 2017-08-11 00:14:00
+excerpt: Over the last several months, I've been working with a good friend to start a business. We called that business StructHub.
 ---
 
 Over the last several months, I've been working with a good friend to start a business. We called that business StructHub.
