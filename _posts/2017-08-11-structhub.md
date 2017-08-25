@@ -13,4 +13,4 @@ The issue with our platform was that it was the consumers that wanted it, but th
 
 Most companies willing to use digital instructions and registration are building products that already have a dedicated mobile application, where introducing our platform would've only complicated the process for consumers and provided no value. While we could support embedding StructHub features in third-party applications, many of the advantages of having a unified platform for product information would be lost.
 
-So while we had an incredible time working on our platform and meeting with potential customers, StructHub isn't going to come to life just yet. We're changing our focus onto new ventures. If for some reason you're interested in learning more about StructHub, [its website](https://www.structhub.com/) is still up, for now.
+So while we had an incredible time working on our platform and meeting with potential customers, StructHub isn't going to come to life just yet. We're changing our focus onto new ventures. If for some reason you're interested in learning more about StructHub, I have an [archive of the landing page](https://phpizza.com/~alan/structhub/).
