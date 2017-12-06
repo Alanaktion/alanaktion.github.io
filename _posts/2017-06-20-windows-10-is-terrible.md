@@ -13,7 +13,7 @@ I think I need to just write a solid list of reasons Windows 10 sucks. Here we g
 - Shows advertisements on lock screen and Start menu by default even though I paid $200 for a license and $3000 for a Surface Book. Apple doesn't do this and they've given OS updates for free for ages.
 - The Start menu doesn't always open. This is much better now than when Windows 10 first launched, but it's still far more common than it should be.
 - Cortana is no longer optional, I can't just have a classic Start menu search without all the tracking
-- Explorer crashes nearly every time I do a file operation on more than 100,000 files.
+- Explorer crashes nearly every time I do a file operation on more than 10,000 files.
 - Connecting to a VPN takes far more steps than it should
 - PC Settings is still missing most of the functionality from Control Panel
 - Typing to search directly from Start doesn't work if you've interacted with the menu at all, even just scrolling. As a keyboard-heavy user, this behavior is quite frustrating.
