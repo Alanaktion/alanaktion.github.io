@@ -2,6 +2,7 @@
 layout: post
 title: My First iPhone
 date: 2017-12-01 10:25:00
+excerpt: I've always had an interest in Apple products. Despite that, I've never owned an iPhone until now.
 ---
 
 I've always had an interest in Apple products. Despite that, I've never owned an iPhone. My first Apple device was an original iPod nano, quickly followed by the iPod 5G. These were neat devices, but nothing that incredible, considering how expensive they were compared with a similarly-usable MP3 player.
