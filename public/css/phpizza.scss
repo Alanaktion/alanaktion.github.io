@@ -5,17 +5,17 @@
 
 /* Variables */
 // Colors
-$body-bg: #131116;
-$body-fg: #D3D0D6;
-$brand-color: #8764B8;
+$body-bg: #212529;
+$body-fg: #f8f9fa;
+$brand-color: #3498db;
 $link-color: lighten($brand-color, 10%);
 $link-color-active: lighten($link-color, 15%);
-$code-fg: #DFDBE4;
-$code-bg: #2C2734;
+$code-fg: #e9ecef;
+$code-bg: #343a40;
 $header-bg: $brand-color;
-$header-fg: #fff;
-$header-active-bg: #fff;
-$header-active-fg: #000;
+$header-fg: $body-fg;
+$header-active-bg: $body-fg;
+$header-active-fg: $body-bg;
 
 $font-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -210,8 +210,8 @@ code {
   div.highlighter-rouge {
     padding: .5em 1em;
     margin-bottom: 1em;
-    color: #DFDBE4;
-    background-color: #2C2734;
+    color: $code-fg;
+    background-color: $code-bg;
     border-radius: .25em;
     overflow-x: auto;
     & > pre {
