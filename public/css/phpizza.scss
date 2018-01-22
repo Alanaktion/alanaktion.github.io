@@ -20,6 +20,12 @@ $header-active-fg: $body-bg;
 $font-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
+// Safari overscroll
+html {
+  background-color: $body-bg;
+  background-image: linear-gradient($body-bg 0%, $body-bg 50%, $header-bg 50%, $header-bg 100%);
+}
+
 // Main layout
 body {
   margin: 0;
