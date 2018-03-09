@@ -17,6 +17,16 @@ I think I need to just write a solid list of reasons Windows 10 sucks. Here we g
 - Connecting to a VPN takes far more steps than it should
 - PC Settings is still missing most of the functionality from Control Panel
 - Typing to search directly from Start doesn't work if you've interacted with the menu at all, even just scrolling. As a keyboard-heavy user, this behavior is quite frustrating.
+- Estimated remaining time on battery is only visible in the tooltip, not the power menu that displays when you click the icon. This is impossible to access in Tablet Mode, where it is most useful.
+- Windows 10 creates empty folders for Documents, Downloads, Pictures, and Videos in my user folder every time a major update is installed. I configured those special folders to use custom locations on different disks.
+- Windows randomly does invisible background installations that often take nearly an hour, while claiming that all updates are installed.
+- Defender is very slow when working with large numbers of small files, often taking 70% or more of my CPU when installing or updating software, or working with Git repositories.
+
+Many of my issues with Windows 10 are from longstanding issues with Windows overall.
+
+- Windows breaks really easily on deeply nested paths or files with long names. Almost all applications fail to use the files correctly, and even PowerShell can't access or delete files with long paths without using hacky syntax tricks. This is the case even if "Long path support" is enabled. NTFS doesn't care, only Windows filesystem libraries do.
+- The Disk Management application refuses to work with some disks and partitions that are supported just fine in DISKPART
+- Command Prompt and Powershell have very weird text selection, scrolling, and resizing behavior. You're better off using WSL with [a third-party terminal emulator](https://github.com/mintty/wsltty) purely because of how bad `cmd.exe` is.
 
 Microsoft's own Surface products have even more issues than my other PCs. I've heavily used both the Surface Pro 4 and Surface Book with Performance Base and experienced similar issues on both.
 
