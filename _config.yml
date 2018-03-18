@@ -11,9 +11,9 @@ permalink:           /:year/:month/:day/:title/
 
 # Setup
 title:               Phpizza
-tagline:             Minimal is good
-description:         I'm an insane web developer.
-url:                 https://blog.phpizza.com
+tagline:             Mínimo es bueno
+description:         Soy un desarrollador loco
+url:                 https://es.phpizza.com
 
 # SCSS
 sass:

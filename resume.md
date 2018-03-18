@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Résumé
+title: Currículum
 ---
 
 # Alan Hardman

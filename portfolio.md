@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Portfolio
+title: Portafolio
 ---
 
 Throughout my time developing websites, I've done quite a bit of design work as well. Here are a few examples of things I've designed.

@@ -1,6 +1,6 @@
 ---
 layout: page-about
-title: About
+title: Sobre
 ---
 <img class="profile-pic"
     src="https://blog.phpizza.com/assets/profile/alan-2-230h.jpg"
@@ -9,12 +9,12 @@ title: About
 
 ### Alan Hardman
 
-I'm a web developer & designer with several years of freelance and professional experience. I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database administration and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
+Soy un desarrollador y diseñador con muchos años de experiencia. Me gusta todo tipo de tecnología, pero mi interés principal es en aplicaciones web y móviles. También tengo habilidades en otros campos relacionados, como la administración de bases de datos y el diseño de la interfaz de usuario. Me gusta minimalisim en diseño de interfaz de usuario.
 
-I go by Alanaktion on just about everything, including [GitHub](https://github.com/Alanaktion), [Twitter](https://twitter.com/alanaktion), [Flickr](https://www.flickr.com/photos/alanaktion/), [SoundCloud](https://soundcloud.com/alanaktion), and [Steam](http://steamcommunity.com/id/alanaktion). I'm also on [Stack Overflow](https://stackoverflow.com/users/873843/alanaktion), [Google Play](https://play.google.com/store/apps/developer?id=Alan+Hardman), and several other developer communities under my real name.
+Me llamo Alanaktion en muchos sitos, incluso [GitHub](https://github.com/Alanaktion), [Twitter](https://twitter.com/alanaktion), [Flickr](https://www.flickr.com/photos/alanaktion/), [SoundCloud](https://soundcloud.com/alanaktion), y [Steam](http://steamcommunity.com/id/alanaktion). Soy en [Stack Overflow](https://stackoverflow.com/users/873843/alanaktion), [Google Play](https://play.google.com/store/apps/developer?id=Alan+Hardman), y muchas otras comunidades con mi nombre completo.
 
 ### Blog
 
-This blog is built on [Jekyll](http://jekyllrb.com), hosted by [GitHub](https://pages.github.com), and using a minimal custom theme I made when I got bored late at night. I don't update here very often, but the blog has become a place for me to keep things I use frequently like code cheatsheets, my favorite Sublime Text plugins, and other developer and non-developer things. There are also some recipes from when I was in high school, and a few posts from my old, old, old Blogger blog.
+Ese blog es construido con [Jekyll](http://jekyllrb.com), y usos un estilo minimalista de yo. No lo actualizo a menudo.
 
-If for some reason you want it, [here's my PGP public key](/pgp.txt). The CLI I used to host on my main page is at [/cli](https://phpizza.com/cli/) now.
+Si lo necesitas, [aquí está mi clave PGP](/pgp.txt).
