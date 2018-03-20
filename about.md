@@ -7,7 +7,7 @@ title: About
     srcset="https://blog.phpizza.com/assets/profile/alan-2-460h.jpg 2x"
     alt>
 
-### Alan Hardman
+### ハダマンカイト
 
 I'm a web developer & designer with several years of freelance and professional experience. I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database administration and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
 

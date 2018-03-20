@@ -10,9 +10,11 @@ kramdown:
 permalink:           /:year/:month/:day/:title/
 
 # Setup
-title:               Phpizza
-tagline:             Minimal is good
-description:         I'm an insane web developer.
+title:               Phピザ
+tagline:             最小限は良いです
+tagline_romanji:     Saishōgen wa yoidesu
+description:         僕はウェブ開発者。
+description_romanji: Boku wa u~ebu kaihatsu-sha.
 url:                 https://blog.phpizza.com
 
 # SCSS
@@ -31,9 +33,9 @@ paginate_path:       page:num
 
 # About/contact
 author:
-  name:              Alan Hardman
+  name:              ハダマンカイト
   url:               https://phpizza.com
-  email:             alan@phpizza.com
+  email:             alan+jp@phpizza.com
 
 # Workaround npm issue
 exclude:             ["reveal/node_modules"]
