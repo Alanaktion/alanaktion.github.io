@@ -61,6 +61,7 @@ code {
   color: $header-fg;
   background-color: $header-bg;
   .container {
+    position: relative;
     grid-column: main;
   }
   h1 {
@@ -94,6 +95,58 @@ code {
       display: block;
     }
   }
+}
+
+// Language selector
+.lang-selector {
+  position: absolute;
+  top: .5em;
+  right: 0;
+  @media (min-width: 40em) {
+    top: 1em;
+  }
+}
+.lang-selector label {
+  cursor: pointer;
+}
+.lang-selector input {
+  display: none;
+}
+.lang-icon .light {
+  fill: $body-fg;
+}
+.lang-icon .dark {
+  fill: $body-bg;
+}
+.lang-menu {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+  padding: .5em;
+  text-align: center;
+  background-color: $header-active-bg;
+  border-radius: .25rem;
+}
+#lang-toggle:checked ~ .lang-menu {
+  visibility: visible;
+}
+.lang-menu a {
+  display: block;
+  color: $brand-color;
+  padding: .2rem .5rem;
+  margin-bottom: 2px;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+.lang-menu a:last-child {
+  margin-bottom: 0;
+}
+.lang-menu a:hover {
+  border-color: $link-color;
+}
+.lang-menu a.active {
+  color: $header-active-bg;
+  background-color: $link-color;
 }
 
 // Navbar
