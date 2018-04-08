@@ -17,8 +17,8 @@ url:                 https://blog.phpizza.com
 
 # SCSS
 sass:
-  style: compressed
   sass_dir: _scss
+  style: compressed
 
 # Plugins
 plugins:

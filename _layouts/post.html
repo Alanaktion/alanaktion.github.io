@@ -2,15 +2,15 @@
 layout: default
 ---
 
-<div class="post">
-  <header class="post-header">
+<article class="post my-3 my-sm-5">
+  <header class="post-header mb-3">
     <h2 class="post-title">{{ page.title }}</h2>
     <span class="post-date">{{ page.date | date_to_string }}</span>
   </header>
   <div class="post-content">
     {{ content }}
   </div>
-</div>
+</article>
 
 {% if related %}
   <div class="related">

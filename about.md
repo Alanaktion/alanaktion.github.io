@@ -1,8 +1,8 @@
 ---
-layout: page-about
+layout: page
 title: About
 ---
-<img class="profile-pic"
+<img class="rounded mx-auto d-block mb-4 mb-sm-5"
     src="https://blog.phpizza.com/assets/profile/alan-2-230h.jpg"
     srcset="https://blog.phpizza.com/assets/profile/alan-2-460h.jpg 2x"
     alt>
@@ -15,6 +15,6 @@ I go by Alanaktion on just about everything, including [GitHub](https://github.c
 
 ### Blog
 
-This blog is built on [Jekyll](http://jekyllrb.com), hosted by [GitHub](https://pages.github.com), and using a minimal custom theme I made when I got bored late at night. I don't update here very often, but the blog has become a place for me to keep things I use frequently like code cheatsheets, my favorite Sublime Text plugins, and other developer and non-developer things. There are also some recipes from when I was in high school, and a few posts from my old, old, old Blogger blog.
+This blog is built on [Jekyll](http://jekyllrb.com), hosted on [Arch Linux](https://www.archlinux.org), and using a minimal custom theme based on Bootstrap 4. I don't update here very often, but it primarily focuses on web development and other technology-related things. It also includes most of the posts from all of the previous blogs I've maintained over the years.
 
 If for some reason you want it, [here's my PGP public key](/pgp.txt). The CLI I used to host on my main page is at [/cli](https://phpizza.com/cli/) now.

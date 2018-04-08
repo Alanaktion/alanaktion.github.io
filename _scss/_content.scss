@@ -1,0 +1,48 @@
+.site-header {
+  h1 a {
+    color: $white;
+  }
+  .nav-link:not(.active) {
+    color: $light;
+    &:hover {
+      color: lighten($link-color, 15%);
+    }
+  }
+}
+
+.post-header {
+  .post-title {
+    font-size: $font-size-base * 2;
+    a, & {
+      color: $dark;
+    }
+  }
+}
+
+.post-content {
+  img {
+    @include img-fluid();
+    border-radius: $border-radius;
+  }
+  pre {
+    background-color: $light;
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+    padding: $card-spacer-y $card-spacer-x;
+    overflow-x: auto;
+  }
+}
+
+.archive {
+  .excerpt {
+    color: $text-muted;
+    font-size: $font-size-sm;
+  }
+}
+
+.nav-pagination {
+  @include media-breakpoint-up(md) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}

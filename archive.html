@@ -3,23 +3,23 @@ layout: default
 title: Archive
 ---
 
-<section class="archive">
+<section class="archive my-3 my-sm-5">
 {% for post in site.posts %}
   {% unless post.next %}
   <h2 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h2>
-  <ul class="year">
+  <ul class="list-unstyled year">
   {% else %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
   {% if year != nyear %}
   </ul>
   <h2 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h2>
-  <ul class="year">
+  <ul class="list-unstyled year">
   {% endif %}
   {% endunless %}
-    <li>
+    <li class="mb-2">
       <time datetime="{{ post.date | date: '%FT%T' }}">{{ post.date | date:"%d %b" }}</time>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a class="ml-2" href="{{ post.url }}">{{ post.title }}</a>
       {% if post.excerpt %}
         <div class="excerpt">{{ post.excerpt | strip_html }}</div>
       {% endif %}
