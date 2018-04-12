@@ -3,7 +3,7 @@ layout: page-about
 title: About
 ---
 
-### Alan Hardman
+### ハダマンカイト
 
 I'm a web developer & designer with several years of freelance and professional experience. I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database administration and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
 
@@ -11,6 +11,6 @@ I go by Alanaktion on just about everything, including [GitHub](https://github.c
 
 ### Blog
 
-This blog is built on [Jekyll](http://jekyllrb.com), hosted on [Arch Linux](https://www.archlinux.org), and using a minimal custom theme based on Bootstrap 4. I don't update here very often, but it primarily focuses on web development and other technology-related things. It also includes most of the posts from all of the previous blogs I've maintained over the years.
+This blog is built on [Jekyll](http://jekyllrb.com), hosted by [GitHub](https://pages.github.com), and using a minimal custom theme I made when I got bored late at night. I don't update here very often, but the blog has become a place for me to keep things I use frequently like code cheatsheets, my favorite Sublime Text plugins, and other developer and non-developer things. There are also some recipes from when I was in high school, and a few posts from my old, old, old Blogger blog.
 
 If for some reason you want it, [here's my PGP public key](/pgp.txt). The CLI I used to host on my main page is at [/cli](https://phpizza.com/cli/) now.

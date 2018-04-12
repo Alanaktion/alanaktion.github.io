@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<nav class="nav nav-pills mt-3">
+  <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/" lang="en">
+    English
+    {% if page.url == '/about/' %}<span class="sr-only">(current)</span>{% endif %}
+  </a>
+  <a class="nav-link {% if page.url == '/about-es/' %}active{% endif %}" href="/about-es/" lang="es">
+    Español
+    {% if page.url == '/about-es/' %}<span class="sr-only">(current)</span>{% endif %}
+  </a>
+  <a class="nav-link {% if page.url == '/about-ja/' %}active{% endif %}" href="/about-ja/" lang="ja">
+    日本語
+    {% if page.url == '/about-ja/' %}<span class="sr-only">(current)</span>{% endif %}
+  </a>
+</nav>
+
+<div class="post page my-3 my-sm-5">
+  <h1 class="page-title sr-only">{{ page.title }}</h1>
+  <div class="post-content">
+    <img class="rounded mx-auto d-block mb-4 mb-sm-5"
+      src="https://blog.phpizza.com/assets/profile/alan-2-230h.jpg"
+      srcset="https://blog.phpizza.com/assets/profile/alan-2-460h.jpg 2x"
+      alt>
+    {{ content }}
+  </div>
+</div>
