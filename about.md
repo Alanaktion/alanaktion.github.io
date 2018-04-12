@@ -9,7 +9,9 @@ title: About
 
 ### ハダマンカイト
 
-I'm a web developer & designer with several years of freelance and professional experience. I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database administration and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
+僕はウェブ開発者とグラフィックデザイナー。
+
+I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database administration and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
 
 I go by Alanaktion on just about everything, including [GitHub](https://github.com/Alanaktion), [Twitter](https://twitter.com/alanaktion), [Flickr](https://www.flickr.com/photos/alanaktion/), [SoundCloud](https://soundcloud.com/alanaktion), and [Steam](http://steamcommunity.com/id/alanaktion). I'm also on [Stack Overflow](https://stackoverflow.com/users/873843/alanaktion), [Google Play](https://play.google.com/store/apps/developer?id=Alan+Hardman), and several other developer communities under my real name.
 
