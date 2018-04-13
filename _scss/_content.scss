@@ -2,6 +2,10 @@
   h1 a {
     color: $white;
   }
+  .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
   .nav-link:not(.active) {
     color: $light;
     &:hover {
