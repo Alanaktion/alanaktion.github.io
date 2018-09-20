@@ -21,7 +21,7 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 
 ### Proficient technologies
 
-- **Languages:** PHP 5/7, JavaScript (ES5/6), HTML5, CSS/LESS/SCSS, Python, C#
+- **Languages:** PHP 5/7, JavaScript (ES6), HTML5, CSS/LESS/SCSS, Python, C#
 - **Servers:** nginx, Apache, MySQL, Docker
 - **Operating Systems:** Linux, Windows, macOS, Chrome OS
 
@@ -31,7 +31,8 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 
 - Developed custom modules for Magento eCommerce platform in PHP
 - Set up and maintained Linux web server cluster with nginx and MySQL
-  - Later updated codebase and server setup to run HHVM
+  - Later updated PHP 5.2-based codebase to run on PHP 7.2
+- Re-architected codebase and server environment for PCI DSS D compliance
 - Developed open-source project management system - [phproject.org](https://www.phproject.org/)
   - Currently in use by entire company to track projects, tasks, bugs, and kaizens.
 - 2014 Employee of the Year
