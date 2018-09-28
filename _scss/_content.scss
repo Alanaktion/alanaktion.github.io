@@ -14,6 +14,13 @@
   }
 }
 
+// Support "safe areas" for display cutouts
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.site-header .container {
+  padding-top: env(safe-area-inset-top);
+}
 .container {
   padding-left: calc(env(safe-area-inset-left) + 15px);
   padding-right: calc(env(safe-area-inset-right) + 15px);
