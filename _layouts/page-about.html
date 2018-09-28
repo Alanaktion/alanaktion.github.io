@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
-<div class="post page my-3 my-sm-5">
+<div class="post page mb-3 mb-sm-5 mt-2 mt-sm-3">
   <h1 class="page-title sr-only">{{ page.title }}</h1>
-  <img class="rounded mx-auto d-block"
-    src="https://blog.phpizza.com/assets/profile/alan-2-230h.jpg"
-    srcset="https://blog.phpizza.com/assets/profile/alan-2-460h.jpg 2x"
-    alt>
+  <video class="mx-auto d-block" style="width: 240px; height: 240px;"
+    poster="https://blog.phpizza.com/assets/profile/memoji-poster-low.jpg" muted autoplay playsinline loop>
+    <source src="https://blog.phpizza.com/assets/profile/memoji-1.m4v" type="video/mp4">
+    <img src="https://blog.phpizza.com/assets/profile/memoji-poster-low.jpg">
+  </video>
 
-  <nav class="nav nav-pills justify-content-center my-3 my-sm-4">
+  <nav class="nav nav-pills justify-content-center mb-3 mb-sm-4">
     <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/" lang="en">
       English {% if page.url == '/about/' %}
       <span class="sr-only">(current)</span>{% endif %}

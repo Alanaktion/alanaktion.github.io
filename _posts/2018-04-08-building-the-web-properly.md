@@ -1,0 +1,24 @@
+---
+layout: post
+title: Building the Web, Properly
+date: 2018-09-25 22:07:00
+excerpt: We've reached a point in web technology where we're just making everything worse for no real reason.
+---
+
+It's 2018. The web has more potential to be incredible now than it ever has before, with all major browsers supporting a huge number of powerful modern technologies, including HTTP/2, SVG, and CSS Flexible Boxes and Grids. With all of this consistency in support and optimization in engines and network stack, our websites should be faster and more robust than ever.
+
+But they're not.
+
+We've reached a point in the industry where most new web developers learn just enough code to start building, but are never exposed to the greater needs surrounding development. Things like accessibility, compatibility, and performance are afterthoughts, rather than core concepts within a website's architecture. Even simple things like UI state changes due to user input are being replaced with buggy JavaScript that only occasionally approximates what the browser could do natively if only we'd let it.
+
+Let's take the new web interface for YouTube as an example. It's fairly clean, UI-wise, but it's built on Polymer, which [relies on polyfills](https://www.polymer-project.org/3.0/docs/browsers) for every browser except Chrome and Safari, resulting in very poor performance throughout the site, even on incredibly high-end PCs. An even more painful example is Google Play Music, which is also built on Polymer, but uses an incredibly large number of custom element instances, that absolutely tank even the fast Chrome implementation when doing things as simple as scrolling though a playlist.
+
+And then you have sites like the Lego Shop. It was rebuilt in React a couple years ago, right before their big winter holiday sale, and the rewrite completely broke a huge portion of the major features. To this day, there is still a huge number of core features, like adding to the shopping cart and wishlist, that take a really long time to complete and have no visual indication of activity, and often don't complete at all. Session data gets very broken as you navigate throughout the site, with AJAX calls updating quantities and other user-specific information happening on huge delays, sometimes taking tens of seconds to show that your cart isn't empty, even on the cart page itself! There's no real reason for this, since even with React and a fully-static frontend, most of this data could be safely persisted between pageloads and even prefetched in cases of critical data used widely throughout the experience.
+
+The new Bitbucket UI is also very poorly engineered in many ways. Despite being a single-page application, it sometimes reloads the entire navigation UI through a several-second AJAX call, even when just clicking a tab within the existing navigation. It also takes an *incredibly* long time to load very common information, like file listings and settings pages, the latter of which should be fairly easy to generate on the server side. I really have no idea why Bitbucket is so slow.
+
+Not everyone is doing a terrible job though. GitHub is probably my favorite example of a website built just about perfectly. It's incredibly fast, and uses a perfect hybrid of AJAX and full page loads, with minimal assets on each page, resulting in navigation that's basically instant, and a UI that stays visible and interactive throughout the experience. Their site is designed so well that even the URLs are intuitive and hackable. Unlike Bitbucket, that seemingly uses random names for many parts of the application that don't correspond with the UI, GitHub structures their entire site in a very obvious-feeling way, that really makes me wonder why other people overcomplicate things so much. GitHub even goes as far as using things like the `<details>` element for dropdown menus, which are more semantic than CSS checkbox hacks, and don't require any JavaScript to function. I really admire that level of care in engineering.
+
+Personally, I'm trying to keep everything I build as standards-compliant, cross-browser friendly, and performant as I can. I try to find a good balance between cacheable static pages and completely dynamic experiences, and still try to avoid JavaScript where possible to keep things instantly usable and more resilient. Where I do need complexity, I usually stick with Vue.js, so I can avoid adding overhead to pages and site components that don't need a lot of custom behaivor. Minifying assets, setting good TTLs, and serving things over HTTP2 are also all easy wins for performance, but the easiest thing you can do is just remove code that doesn't need to be there. If you have several megabytes of JavaScript on your site, you're almost certainly doing something very, very wrong.
+
+Stop wasting so much bandwidth :P
