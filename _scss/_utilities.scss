@@ -16,7 +16,10 @@
 }
 .img-ratio-16-10 {
   padding-bottom: 10 / 16 * 100%;
-  @include media-breakpoint-up(lg) {
+  @media
+    (min-width: map-get($grid-breakpoints, 'md')) and
+    (min-height: map-get($grid-breakpoints, 'sm'))
+  {
     // Scale to 720px width on desktop, resulting in 450px@2x images
     padding-bottom: 70.3135%;
     margin-left: -6.25%;
