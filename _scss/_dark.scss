@@ -1,0 +1,31 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $light;
+    background-color: darken($dark, 10%);
+  }
+
+  .post-header {
+    .post-title {
+      a, & {
+        color: $light;
+      }
+    }
+  }
+
+  .post-content, .archive {
+    a {
+      color: lighten($link-color, 15%);
+      &:hover, &:focus {
+        color: lighten($link-color, 25%);
+      }
+    }
+    pre {
+      background-color: $light;
+      border-color: $card-border-color;
+    }
+  }
+
+  .video-avatar {
+    display: none !important;
+  }
+}
