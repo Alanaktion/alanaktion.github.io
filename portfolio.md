@@ -43,6 +43,6 @@ This is the documentation site built for my open-source project management syste
 ![StructHub](//blog.phpizza.com/assets/portfolio/firefox/structhub.png)
 </div>
 
-StructHub was a startup I developed with Michael Robinson, that is now cancelled. We developed a brand, landing page, and several Facebook ads before retiring the project.
+This is an early landing page for StructHub, a startup I co-founded with Michael Robinson. We developed a brand, landing page, and several Facebook ads in the early stages following this minimalistic style.
 
 [View Landing Page &rsaquo;](https://phpizza.com/~alan/structhub/) (archived)
