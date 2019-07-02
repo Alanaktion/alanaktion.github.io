@@ -5,6 +5,17 @@ title: Portfolio
 
 Throughout my time developing websites, I've done quite a bit of design work as well. Here are a few examples of things I've designed.
 
+## Zippa
+<div class="img-responsive-container img-ratio-16-10" markdown="1">
+![Vault](//blog.phpizza.com/assets/portfolio/firefox/zippa.png)
+</div>
+
+After a few pivots, my co-founder Mike and I have moved from StructHub to Zippa, a knowledge base platform. This is our first design using the new brand. Mike did most of the design of the main pages, while I handled the implementation and design of the individual UI components and back-end.
+
+[Visit Zippa &rsaquo;](https://getzippa.com/)
+
+***
+
 ## Vault
 <div class="img-responsive-container img-ratio-16-10" markdown="1">
 ![Vault](//blog.phpizza.com/assets/portfolio/firefox/vault.jpg)
