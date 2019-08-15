@@ -21,13 +21,19 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 
 ### Proficient technologies
 
-- **Languages:** PHP 5/7, JavaScript (ES6), HTML5, CSS/LESS/SCSS, Python, C#
+- **Languages:** PHP 5/7, JavaScript (ES6/Node), HTML5, CSS/LESS/SCSS, Python, C#
 - **Servers:** nginx, Apache, MySQL, Docker
 - **Operating Systems:** Linux, Windows, macOS, Chrome OS
 
 ### Experience
 
-**Senior Web Developer** - Thrive Life, March 2013 - Present
+**CTO/Co-Founder** - StructHub, Inc., December 2018 - Present
+
+- Designed and developed a website and web application for customers
+- Architected a server cluster for running the production website and APIs, including static file distribution via a CDN
+- Designed and developed a mobile application for consumers, using React Native
+
+**Senior Web Developer** - Thrive Life, March 2013 - December 2018
 
 - Developed custom modules for Magento eCommerce platform in PHP
 - Set up and maintained Linux web server cluster with nginx and MySQL

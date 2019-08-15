@@ -7,4 +7,6 @@ I've successfully listened to the entire 10 hour version of the Ryden Ridge remi
 
 There's nothing interesting, it's literally just the same few lines over and over for 10 hours with some nice background music.
 
-[![](//img.youtube.com/vi/uPPEdZ-rFBw/maxresdefault.jpg)](//www.youtube.com/watch?v=uPPEdZ-rFBw)
+<a href="//www.youtube.com/watch?v=uPPEdZ-rFBw" target="_blank" rel="noopener noreferrer">
+<img src="//img.youtube.com/vi/uPPEdZ-rFBw/maxresdefault.jpg" loading="lazy" alt>
+</a>

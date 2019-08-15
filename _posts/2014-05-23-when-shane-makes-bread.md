@@ -3,8 +3,8 @@ layout: post
 title: When Shane Makes Bread
 date: 2014-05-23 18:36:49
 ---
-[![](//blog.phpizza.com/assets/2014-05-23-10-27-56-sm.jpg)](//blog.phpizza.com/assets/2014-05-23-10-27-56.jpg)
+<a href="//blog.phpizza.com/assets/2014-05-23-10-27-56.jpg"><img src="//blog.phpizza.com/assets/2014-05-23-10-27-56-sm.jpg" loading="lazy" alt></a>
 
-[![](//blog.phpizza.com/assets/2014-05-23-10-27-41-sm.jpg)](//blog.phpizza.com/assets/2014-05-23-10-27-41.jpg)
+<a href="//blog.phpizza.com/assets/2014-05-23-10-27-41.jpg"><img src="//blog.phpizza.com/assets/2014-05-23-10-27-41-sm.jpg" loading="lazy" alt></a>
 
 :P
