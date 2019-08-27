@@ -19,7 +19,7 @@ And then I bought one.
 
 My first iPhone, purchased in November 2017, is, in my opinion, the best iPhone out there.
 
-![iPhone 2G](https://blog.phpizza.com/assets/iphone-2g.jpg)
+<img src="https://blog.phpizza.com/assets/iphone-2g.jpg" alt="iPhone 2G" loading="lazy">
 
 The original iPhone predates Apple's obsession with blocking any and all attempts to modify their devices, leaving it totally open to install any compatible iPhone OS version, and jailbreak and tweak to your heart's content. Mine is running iPhone OS 3.1.3, unlocked and running a slightly tweaked Cydia setup. I'm planning on setting up my own Cydia repository with only older packages that support the OS so I can use it without causing issues, because modern jailbreak tweaks don't exactly play well with such an old OS.
 
