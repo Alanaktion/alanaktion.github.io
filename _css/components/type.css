@@ -1,0 +1,42 @@
+p {
+  @apply mb-4;
+}
+
+h1, h2, h3 {
+  @apply text-gray-900 font-serif;
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+
+@screen md {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+}
+
+.text-muted {
+  @apply text-gray-600;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3 {
+    @apply text-gray-100;
+  }
+  .text-muted {
+    @apply text-gray-400;
+  }
+}

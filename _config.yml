@@ -36,4 +36,6 @@ author:
   email:             alan@phpizza.com
 
 # Workaround npm issue
-exclude:             ["reveal/node_modules"]
+exclude:             
+  - "node_modules"
+  - "reveal/node_modules"

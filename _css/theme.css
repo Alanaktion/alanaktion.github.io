@@ -1,5 +1,21 @@
-@tailwind base;
+@import "tailwindcss/base";
 
-@tailwind components;
+@import "tailwindcss/components";
 
-@tailwind utilities;
+@import "./components/*.css";
+
+@import "tailwindcss/utilities";
+
+@import "./syntax*.css";
+
+hr {
+  @apply my-4;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-gray-900 text-gray-200;
+  }
+  * {
+    @apply border-gray-700;
+  }
+}

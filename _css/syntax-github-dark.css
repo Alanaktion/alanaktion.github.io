@@ -1,3 +1,4 @@
+@media (prefers-color-scheme: dark) {
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: lighten(#a61717, 20%) } /* Error */
@@ -59,3 +60,4 @@
 .highlight .vg { color: lighten(#008080, 15%) } /* Name.Variable.Global */
 .highlight .vi { color: lighten(#008080, 15%) } /* Name.Variable.Instance */
 .highlight .il { color: lighten(#009999, 15%) } /* Literal.Number.Integer.Long */
+}

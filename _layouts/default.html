@@ -2,15 +2,15 @@
 <html lang="en-us">
 {% include head.html %}
 <body>
-  <header class="site-header text-white bg-dark py-3 py-sm-5">
+  <header class="site-header text-white bg-dark py-4 sm:py-6">
     <div class="container">
       <h1 class="mb-0"><a href="/">{{ site.title }}</a></h1>
-      <p class="mb-3 mb-sm-4 text-muted">{{ site.tagline }}</p>
+      <p class="mb-4 sm:mb-6 text-muted text-sm">{{ site.tagline }}</p>
       {% include nav.html %}
     </div>
   </header>
 
-  <div class="container mb-5">
+  <div class="container mb-6 sm:mb-12">
     {{ content }}
   </div>
 </body>

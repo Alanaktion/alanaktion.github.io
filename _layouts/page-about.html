@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-<div class="post page mb-3 mb-sm-5 mt-2 mt-sm-3">
+<div class="post page mb-4 sm:mb-6 mt-3 sm:mt-4">
   <h1 class="page-title sr-only">{{ page.title }}</h1>
-  <img class="d-block rounded-circle mx-auto mb-3 my-md-4" src="https://blog.phpizza.com/assets/profile/me-2019.jpg"
+  <img class="block rounded-full mx-auto mb-4 md:my-6" src="https://blog.phpizza.com/assets/profile/me-2019.jpg"
     style="width: 192px; height: 192px;" alt="Me">
 
-  <nav class="nav nav-pills justify-content-center mb-3 mb-sm-4">
+  <nav class="nav nav-pills justify-center mb-4 sm:mb-6">
     <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/" lang="en">
       English {% if page.url == '/about/' %}
       <span class="sr-only">(current)</span>{% endif %}
     </a>
-    <a class="nav-link {% if page.url == '/about-es/' %}active{% endif %}" href="/about-es/" lang="es">
+    <a class="nav-link {% if page.url == '/about-es/' %}active{% endif %} mr-0" href="/about-es/" lang="es">
       Español {% if page.url == '/about-es/' %}
       <span class="sr-only">(current)</span>{% endif %}
     </a>

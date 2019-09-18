@@ -1,0 +1,26 @@
+.nav {
+  @apply flex;
+}
+.nav-link {
+  @apply mr-4 text-blue-500;
+}
+@screen sm {
+  .nav-link {
+    @apply mr-6;
+  }
+}
+.nav-link:hover,
+.nav-link:focus {
+  @apply text-blue-800;
+}
+.nav-link.active {
+  @apply text-blue-600 underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link.active {
+    @apply text-blue-300;
+  }
+}
