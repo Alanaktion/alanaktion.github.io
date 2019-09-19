@@ -1,5 +1,5 @@
 {
-  "name": "Phpizza",
+  "name": "Phpizza — Minimal is good",
   "short_name": "Phpizza",
   "icons": [
     {
@@ -8,6 +8,6 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#3498db",
+  "theme_color": "#38B2AC",
   "start_url": "/"
 }

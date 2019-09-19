@@ -15,11 +15,6 @@ tagline:             Minimal is good
 description:         I'm an insane web developer.
 url:                 https://blog.phpizza.com
 
-# SCSS
-sass:
-  sass_dir: _scss
-  style: compressed
-
 # Plugins
 plugins:
   - jekyll-paginate
@@ -36,6 +31,6 @@ author:
   email:             alan@phpizza.com
 
 # Workaround npm issue
-exclude:             
+exclude:
   - "node_modules"
   - "reveal/node_modules"

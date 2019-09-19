@@ -18,7 +18,16 @@
   @apply ml-5 mb-0;
 }
 pre {
-  @apply mb-4 p-2 border rounded bg-gray-100 text-sm font-mono overflow-x-auto;
+  @apply mb-4 p-2 border rounded bg-gray-100 text-xs font-mono overflow-x-auto;
+}
+hr {
+  @apply my-4;
+}
+
+@screen sm {
+  pre {
+    @apply text-sm;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,13 +44,13 @@ pre {
 
 .archive a,
 .post-content a {
-  @apply text-blue-500;
+  @apply text-teal-500;
 }
 .archive a:hover,
 .archive a:focus,
 .post-content a:hover,
 .post-content a:focus {
-  @apply text-blue-800;
+  @apply text-teal-800;
 }
 .excerpt {
   @apply text-sm text-gray-600;
@@ -52,7 +61,7 @@ pre {
   .archive a:focus,
   .post-content a:hover,
   .post-content a:focus {
-    @apply text-blue-300;
+    @apply text-teal-300;
   }
   .excerpt {
     @apply text-gray-400;

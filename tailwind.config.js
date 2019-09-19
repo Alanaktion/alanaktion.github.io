@@ -7,6 +7,7 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
+      teal: colors.teal,
       blue: colors.blue,
     },
     screens: {

@@ -8,13 +8,7 @@
 
 @import "./syntax*.css";
 
-hr {
-  @apply my-4;
-}
 @media (prefers-color-scheme: dark) {
-  body {
-    @apply bg-gray-900 text-gray-200;
-  }
   * {
     @apply border-gray-700;
   }

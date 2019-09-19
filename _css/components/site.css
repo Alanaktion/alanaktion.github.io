@@ -1,0 +1,27 @@
+html {
+  background-image: linear-gradient(theme('colors.white'), theme('colors.gray.100'));
+}
+body {
+  @apply bg-white pb-6;
+}
+.site-header {
+  @apply bg-gray-100;
+}
+.archive h2 {
+  @apply sticky top-0 bg-white;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-image: linear-gradient(theme('colors.gray.900'), theme('colors.gray.800'));
+  }
+  body {
+    @apply bg-gray-900 text-gray-200;
+  }
+  .archive h2 {
+    @apply bg-gray-900;
+  }
+  .site-header {
+    @apply bg-gray-800;
+  }
+}

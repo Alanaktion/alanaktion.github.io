@@ -1,10 +1,16 @@
 const mix = require('laravel-mix');
 
-mix.postCss('_css/theme.css', 'public/css/', [
-    require('postcss-easy-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-    require('@fullhuman/postcss-purgecss')({
-      content: ['./**/*.html'],
-    }),
-  ]);
+let postcssOptions = [
+  require('postcss-easy-import'),
+  require('tailwindcss'),
+  require('autoprefixer'),
+];
+
+if (mix.inProduction()) {
+  postcssOptions.push(require('@fullhuman/postcss-purgecss')({
+    content: ['./**/*.html'],
+    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  }));
+}
+
+mix.postCss('_css/theme.css', 'public/css/', postcssOptions);
