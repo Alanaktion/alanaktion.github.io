@@ -30,7 +30,7 @@ author:
   url:               https://phpizza.com
   email:             alan@phpizza.com
 
-# Workaround npm issue
+# Ignore node stuff
 exclude:
   - "node_modules"
-  - "reveal/node_modules"
+  - "_pdf"

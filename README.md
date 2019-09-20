@@ -2,7 +2,7 @@
 
 This is my new blog built on [Jekyll](http://jekyllrb.com). I like it.
 
-It uses a custom theme built on [Tailwind CSS](https://tailwindcss.com), and includes a local copy of [instant.page](https://instant.page) to make page transitions feel even snappier.
+It uses a custom theme built on [Tailwind CSS](https://tailwindcss.com), and includes a local copy of [instant.page](https://instant.page) to make page transitions feel even snappier. It also includes a [Puppeteer](https://github.com/GoogleChrome/puppeteer) setup for generating a PDF of the Resume page.
 
 ## Using
 
@@ -33,4 +33,14 @@ Before committing, a final build and production npm build are required to genera
 jekyll build
 npm ci
 npm run prod
+```
+
+## Building Resume PDF
+
+A script is included to generate a PDF of the Resume page. So far it's only been run on macOS so we're getting those fonts in the output 😋
+
+```bash
+cd pdf
+npm ci
+node ./resume.js
 ```
