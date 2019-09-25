@@ -7,7 +7,7 @@ title: About
 
 I'm a web developer & designer with several years of freelance and professional experience. I'm interested in all kinds of technology, but my major focus is on developing web & mobile applications. I also have skills in other related fields like database administration and UI design. I'm a strong believer in minimalism, as so many users have trouble understanding and using complex applications. Also it just looks better.
 
-I go by Alanaktion on just about everything, including [GitHub](https://github.com/Alanaktion), [Twitter](https://twitter.com/alanaktion), [Unsplash](https://unsplash.com/@alanaktion), [SoundCloud](https://soundcloud.com/alanaktion), and [Steam](http://steamcommunity.com/id/alanaktion). I'm also on [Stack Overflow](https://stackoverflow.com/users/873843/alanaktion), [Google Play](https://play.google.com/store/apps/developer?id=Alan+Hardman), and several other developer communities under my real name.
+I go by Alanaktion on just about everything, including [GitHub](https://github.com/Alanaktion), [Twitter](https://twitter.com/alanaktion), [Keybase](https://keybase.io/alanaktion), [Unsplash](https://unsplash.com/@alanaktion), [SoundCloud](https://soundcloud.com/alanaktion), and [Steam](http://steamcommunity.com/id/alanaktion). I'm also on [Stack Overflow](https://stackoverflow.com/users/873843/alanaktion), [Google Play](https://play.google.com/store/apps/developer?id=Alan+Hardman), and several other developer communities under my real name.
 
 If you want to reach me, the best way is probably [via Twitter](https://twitter.com/alanaktion); I'm slightly addicted to it. I also occasionally check my email, [alan@phpizza.com](mailto:alan@phpizza.com).
 
