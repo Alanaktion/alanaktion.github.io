@@ -1,0 +1,35 @@
+.img-responsive-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: calc(10 / 16 * 100%);
+}
+.img-responsive-container > p {
+  margin: 0;
+}
+.img-responsive-container + .img-responsive-container,
+.img-responsive-container + p {
+  @apply mt-4;
+}
+
+.img-ratio-16-9 {
+  padding-bottom: calc(9 / 16 * 100%);
+}
+.img-ratio-16-10 {
+  padding-bottom: calc(10 / 16 * 100%);
+}
+@media
+  (min-width: theme('screens.md')) and
+  (min-height: theme('screens.sm'))
+{
+  .img-ratio-16-10 {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+.img-ratio-4-3 {
+  padding-bottom: calc(3 / 4 * 100%);
+}
+.img-ratio-1-1 {
+  padding-bottom: 100%;
+}
