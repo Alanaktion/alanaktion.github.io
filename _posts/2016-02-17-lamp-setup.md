@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LAMP Sever Setup
+title: LAMP Server Setup
 date: 2016-02-17 11:10:00
 ---
 
