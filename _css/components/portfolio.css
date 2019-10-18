@@ -1,0 +1,14 @@
+.portfolio .post-content h2 {
+    @apply mb-3;
+}
+.portfolio .post-content img {
+    @apply shadow;
+}
+@screen sm {
+    .portfolio hr {
+        @apply my-8;
+    }
+    .portfolio .post-content img {
+        @apply shadow-md;
+    }
+}

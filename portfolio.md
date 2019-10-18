@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Portfolio
+class: portfolio
 ---
 
-Throughout my time developing websites, I've done quite a bit of design work as well. Here are a few examples of things I've designed.
+Throughout my time developing websites and apps, I've done quite a bit of design work as well. Here are a few examples of things I've designed.
 
 ## Zippa
 <div class="img-responsive-container img-ratio-16-10" markdown="1">
@@ -13,6 +14,39 @@ Throughout my time developing websites, I've done quite a bit of design work as 
 After a few pivots, my co-founder Mike and I have moved from StructHub to Zippa, a knowledge base platform. This is our first design using the new brand. Mike did most of the design of the main pages, while I handled the implementation and design of the individual UI components and back-end.
 
 [Visit Zippa &rsaquo;](https://getzippa.com/)
+
+***
+
+## Zippa Brand Guide
+<div class="img-responsive-container img-ratio-16-10" markdown="1">
+<img src="//blog.phpizza.com/assets/portfolio/firefox/zippa-brand.png" loading="lazy" alt="Zippa">
+</div>
+
+The Zippa site has a strong, opinionated UI, with bold colors and fonts. To keep that consistent and clean, I designed a branding page that covers color use, logo options, typography, and basic UI patterns.
+
+[View Brand Guide &rsaquo;](https://getzippa.com/brand)
+
+***
+
+## Thrive Life Redesign Concept
+<div class="img-responsive-container img-ratio-16-10" markdown="1">
+<img src="//blog.phpizza.com/assets/portfolio/firefox/tl-sanfran.png" loading="lazy" alt="Thrive Life Style Guide">
+</div>
+
+The Thrive Life shopping experience isn't terrible, but definitely shows its age. As a way of thinking through new UI options, I designed the basics of the shopping experience in an Apple-like style. I think it really fits well with the clean aesthetic the company goes for in other marketing materials.
+
+[View Concept Site &rsaquo;](https://phpizza.com/~alan/tl-sanfran/)
+
+***
+
+## Thrive Life Web Style Guide
+<div class="img-responsive-container img-ratio-16-10" markdown="1">
+<img src="//blog.phpizza.com/assets/portfolio/firefox/tl-styleguide.png" loading="lazy" alt="Thrive Life Style Guide">
+</div>
+
+While working at Thrive Life, I became frustrated with the lack of consistency in design patterns, color use, and font choices. To solve this, I created a basic style guide that standardized the basic front-end design process, with colors, fonts, components, and prose guidelines.
+
+[View Style Guide &rsaquo;](https://phpizza.com/~alan/tl-styleguide/)
 
 ***
 
