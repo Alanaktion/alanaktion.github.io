@@ -4,9 +4,9 @@ title: Home
 ---
 
 {% for post in paginator.posts %}
-<article class="post my-3 sm:my-5 pb-3">
-  <header class="post-header mb-3">
-    <h2 class="post-title">
+<article class="my-3 sm:my-5 pb-3 md:pb-5">
+  <header class="mb-3">
+    <h2 class="md:text-2xl">
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h2>
     <span class="post-date">{{ post.date | date_to_string }}</span>
