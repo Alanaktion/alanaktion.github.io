@@ -12,6 +12,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
   <link rel="stylesheet" href="/public/css/theme.css">
 
+  {% if page.collection == "posts" %}
+    {% include post-meta.html %}
+  {% elsif page.url == '/' %}
+    <meta name="description" content="The blog of Alan Hardman, full of nerdiness.">
+  {% endif %}
+
   <link rel="manifest" href="/public/manifest.json">
   <link rel="apple-touch-icon" href="/public/icon.png">
   <link rel="shortcut icon" type="image/png" href="/public/favicon.png">

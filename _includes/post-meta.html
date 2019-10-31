@@ -1,0 +1,27 @@
+{% if page.excerpt != "" %}
+  <meta name="description" content="{{ page.excerpt }}">
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.excerpt }}",
+  "datePublished": "{{ page.date }}",
+  "dateModified": "{% if page.modified %}{{ page.modified }}{% else %}{{ page.date }}{% endif %}",
+  "isPartOf": {
+    "@type": ["CreativeWork", "Blog"],
+    "name": "Phpizza",
+    "url": "{{ site.url }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Alan Hardman",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://blog.phpizza.com/assets/profile/me-2019-sm.jpg"
+    }
+  }
+}
+</script>
