@@ -39,7 +39,7 @@ h3 {
 }
 
 .text-muted {
-  @apply text-gray-600;
+  @apply text-gray-700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +47,6 @@ h3 {
     @apply text-gray-100;
   }
   .text-muted {
-    @apply text-gray-400;
+    @apply text-gray-300;
   }
 }

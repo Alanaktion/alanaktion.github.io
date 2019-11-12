@@ -1,8 +1,8 @@
 .post-date {
-  @apply text-sm text-gray-600;
+  @apply text-sm text-gray-700;
 }
 .post-content {
-  @apply text-gray-700;
+  @apply text-gray-800;
 }
 .post-content img {
   @apply rounded;
@@ -44,13 +44,13 @@ hr {
 
 .archive a,
 .post-content a {
-  @apply text-teal-500;
+  @apply text-teal-700;
 }
 .archive a:hover,
 .archive a:focus,
 .post-content a:hover,
 .post-content a:focus {
-  @apply text-teal-800;
+  @apply text-teal-900 underline;
 }
 .excerpt {
   @apply text-sm text-gray-600;

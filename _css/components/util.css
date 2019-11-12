@@ -1,10 +1,9 @@
 .img-responsive-container {
-  position: relative;
-  height: 0;
+  @apply relative h-0 rounded;
   padding-bottom: calc(10 / 16 * 100%);
 }
 .img-responsive-container > p {
-  margin: 0;
+  @apply m-0;
 }
 .img-responsive-container + .img-responsive-container,
 .img-responsive-container + p {
@@ -16,15 +15,6 @@
 }
 .img-ratio-16-10 {
   padding-bottom: calc(10 / 16 * 100%);
-}
-@media
-  (min-width: theme('screens.md')) and
-  (min-height: theme('screens.sm'))
-{
-  .img-ratio-16-10 {
-    max-width: 720px;
-    margin: 0 auto;
-  }
 }
 .img-ratio-4-3 {
   padding-bottom: calc(3 / 4 * 100%);

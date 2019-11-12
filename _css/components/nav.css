@@ -2,7 +2,7 @@
   @apply flex;
 }
 .nav-link {
-  @apply mr-4 text-teal-500 text-sm;
+  @apply mr-4 text-teal-700 text-sm;
 }
 @screen sm {
   .nav-link {
@@ -14,10 +14,10 @@
 }
 .nav-link:hover,
 .nav-link:focus {
-  @apply text-teal-800;
+  @apply text-teal-900;
 }
 .nav-link.active {
-  @apply text-teal-600 underline;
+  @apply text-teal-800 underline;
 }
 
 @media (prefers-color-scheme: dark) {
