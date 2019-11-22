@@ -21,6 +21,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .nav-link {
+    @apply text-teal-500;
+  }
   .nav-link:hover,
   .nav-link:focus,
   .nav-link.active {

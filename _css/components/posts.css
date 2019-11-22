@@ -57,6 +57,12 @@ hr {
 }
 
 @media (prefers-color-scheme: dark) {
+  .archive a,
+  .archive a,
+  .post-content a,
+  .post-content a {
+    @apply text-teal-500;
+  }
   .archive a:hover,
   .archive a:focus,
   .post-content a:hover,
