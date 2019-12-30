@@ -13,6 +13,6 @@ If you want to reach me, the best way is probably [via Twitter](https://twitter.
 
 ### Blog
 
-This blog is built on [Jekyll](http://jekyllrb.com), hosted on [Arch Linux](https://www.archlinux.org), and using a minimal custom theme based on Bootstrap 4. I don't update here very often, but it primarily focuses on web development and other technology-related things. It also includes most of the posts from all of the previous blogs I've maintained over the years.
+This blog is built on [Jekyll](http://jekyllrb.com), hosted on [Arch Linux](https://www.archlinux.org), and using a minimal custom theme built with [Tailwind CSS](https://tailwindcss.com). I don't update here very often, but it primarily focuses on web development and other technology-related things. It also includes most of the posts from all of the previous blogs I've maintained over the years.
 
-If for some reason you want it, [here's my PGP public key](/pgp.txt). The CLI I used to host on my main page is at [/cli](https://phpizza.com/cli/) now.
+If for some reason you want it, [here's my PGP public key](/pgp.txt).
