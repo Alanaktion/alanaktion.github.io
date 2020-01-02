@@ -30,7 +30,15 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 ### Experience
 
 <section markdown="1">
-**CTO/Co-Founder** &ndash; StructHub, Inc., December 2018 &ndash; Present
+**Senior Software Architect** &ndash; Thrive Life, December 2019 &ndash; Present
+
+- Architected a Laravel+Vue based affiliate dashboard application with Magento integration
+- Currently working to migrate a Magento 1.x site to 2.x
+- Working to migrate several unmaintained Java and .NET applications to the affiliate dashboard to reduce duplication of data and business logic
+</section>
+
+<section markdown="1">
+**CTO/Co-Founder** &ndash; StructHub, Inc., December 2018 &ndash; December 2019
 
 - Designed and developed a website and web application for customers
 - Architected a server cluster for running the production website and APIs, including static file distribution via a CDN
@@ -38,7 +46,7 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 </section>
 
 <section markdown="1">
-**Senior Web Developer** &ndash; Thrive Life, March 2013 &ndash; December 2018
+**Web Developer** &ndash; Thrive Life, March 2013 &ndash; December 2018
 
 - Developed custom modules for Magento eCommerce platform in PHP
 - Set up and maintained Linux web server cluster with nginx and MySQL
