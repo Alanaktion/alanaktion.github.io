@@ -1,4 +1,4 @@
-const { colors } = require('tailwindcss/defaultTheme');
+const { colors, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   theme: {
@@ -13,6 +13,9 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
+    },
+    fontFamily: {
+      mono: ['JetBrains Mono', 'Cascadia Code', 'Fira Code', ...fontFamily.mono],
     },
     fontWeight: {
       light: '300',
