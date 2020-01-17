@@ -7,6 +7,17 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
+      ngray: {
+        '100': '#f5f5f5',
+        '200': '#eeeeee',
+        '300': '#e0e0e0',
+        '400': '#bdbdbd',
+        '500': '#9e9e9e',
+        '600': '#757575',
+        '700': '#585858',
+        '800': '#3a3a3a',
+        '900': '#212121',
+      },
       teal: colors.teal,
       blue: colors.blue,
     },
@@ -28,7 +39,6 @@ module.exports = {
       center: true,
       padding: '1rem',
     },
-    extend: {}
   },
   variants: {
     appearance: [],

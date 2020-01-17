@@ -32,13 +32,13 @@ hr {
 
 @media (prefers-color-scheme: dark) {
   .post-date {
-    @apply text-gray-400;
+    @apply text-ngray-400;
   }
   .post-content {
-    @apply text-gray-300;
+    @apply text-ngray-300;
   }
   pre {
-    @apply bg-gray-800;
+    @apply bg-ngray-800;
   }
 }
 
@@ -70,7 +70,7 @@ hr {
     @apply text-teal-300;
   }
   .excerpt {
-    @apply text-gray-400;
+    @apply text-ngray-400;
   }
 }
 

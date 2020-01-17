@@ -44,9 +44,9 @@ h3 {
 
 @media (prefers-color-scheme: dark) {
   h1, h2, h3 {
-    @apply text-gray-100;
+    @apply text-ngray-100;
   }
   .text-muted {
-    @apply text-gray-300;
+    @apply text-ngray-300;
   }
 }

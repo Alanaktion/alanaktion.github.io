@@ -10,6 +10,6 @@
 
 @media (prefers-color-scheme: dark) {
   * {
-    @apply border-gray-700;
+    @apply border-ngray-700;
   }
 }
