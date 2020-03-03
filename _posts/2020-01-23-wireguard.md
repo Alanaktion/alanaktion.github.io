@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Wireguard
+title: WireGuard
 date: 2020-01-23 19:18:00
 ---
 
