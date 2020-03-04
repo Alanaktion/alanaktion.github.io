@@ -1,11 +1,6 @@
 html {
   background-image: linear-gradient(theme('colors.white'), theme('colors.gray.100'));
 }
-@screen sm {
-  html {
-    font-size: 18px;
-  }
-}
 body {
   @apply bg-white pb-6;
 }
