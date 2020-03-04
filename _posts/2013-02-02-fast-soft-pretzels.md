@@ -3,7 +3,7 @@ layout: post
 title: Fast Soft Pretzels
 date: 2013-02-02 11:27:59
 ---
-These aren't as good as the [other soft pretzels I posted](/2013/02/02/2-day-soft-pretzels/)</a>, but they're a lot quicker and easier to make.
+These aren't as good as the [other soft pretzels I posted](/2013/02/02/2-day-soft-pretzels/), but they're a lot quicker and easier to make.
 
 Ingredients:
 
