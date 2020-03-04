@@ -22,3 +22,8 @@
 .img-ratio-1-1 {
   padding-bottom: 100%;
 }
+
+.stretched-link::after {
+  content: "";
+  @apply absolute inset-0 z-10;
+}
