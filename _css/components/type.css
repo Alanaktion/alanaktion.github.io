@@ -4,6 +4,12 @@ html {
 }
 @media screen and (min-width: 320px) {
   html {
+    /*
+    16px: base size
+    6: difference between base and max size
+    320px: min viewport width to start scaling
+    680: difference between min and max viewport widths
+    */
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
 }
