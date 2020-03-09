@@ -26,7 +26,9 @@ module.exports = {
       md: '768px',
     },
     fontFamily: {
-      mono: ['JetBrains Mono', 'Cascadia Code', 'Fira Code', ...fontFamily.mono],
+      sans: ['Source Sans Pro', ...fontFamily.sans],
+      headings: ['Lato', ...fontFamily.sans],
+      mono: ['Source Code Pro', 'JetBrains Mono', 'Fira Code', ...fontFamily.mono],
     },
     fontSize: {
       xs: '0.75rem',

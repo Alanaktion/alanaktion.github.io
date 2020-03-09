@@ -21,8 +21,7 @@ p {
 }
 
 h1, h2, h3 {
-  /* @apply text-gray-900 font-serif; */
-  @apply text-gray-900 font-light;
+  @apply text-gray-900 font-light font-headings;
 }
 
 h1 {
