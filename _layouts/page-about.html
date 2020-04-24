@@ -4,13 +4,18 @@ layout: default
 <div class="mb-4 sm:mb-6 mt-3 sm:mt-4">
   <h1 class="sr-only">{{ page.title }}</h1>
 
-  <picture>
-    <source type="image/webp" srcset="https://blog.phpizza.com/assets/profile/me-2019-sm.webp">
-    <source type="image/jpeg" srcset="https://blog.phpizza.com/assets/profile/me-2019-sm.jpg">
-    <img class="block rounded-full mx-auto mb-4 md:my-6 bg-black"
-      src="https://blog.phpizza.com/assets/profile/me-2019-sm.jpg"
-      style="width: 192px; height: 192px;" alt="Me">
-  </picture>
+  <div class="relative rounded-full mx-auto mb-4 md:my-6 overflow-hidden"
+    style="width: 192px; height: 192px;">
+    <picture>
+      <source type="image/webp" srcset="https://blog.phpizza.com/assets/profile/me-2019-sm.webp">
+      <source type="image/jpeg" srcset="https://blog.phpizza.com/assets/profile/me-2019-sm.jpg">
+      <img class="bg-black"
+        src="https://blog.phpizza.com/assets/profile/me-2019-sm.jpg"
+        style="width: 192px; height: 192px;" alt="Me">
+    </picture>
+    <div class="absolute inset-0 rounded-full"
+      style="box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);"></div>
+  </div>
 
   <nav class="nav nav-pills justify-center mb-4 sm:mb-6">
     <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/" lang="en">
