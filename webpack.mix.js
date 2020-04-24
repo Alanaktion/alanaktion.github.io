@@ -9,7 +9,7 @@ let postcssOptions = [
 if (mix.inProduction()) {
   postcssOptions.push(require('@fullhuman/postcss-purgecss')({
     content: ['./**/*.html'],
-    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
   }));
 }
 

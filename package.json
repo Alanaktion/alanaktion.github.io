@@ -17,10 +17,10 @@
   "homepage": "https://blog.phpizza.com",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.6",
     "cross-env": "^5.2.1",
     "laravel-mix": "^4.1.4",
     "postcss-easy-import": "^3.0.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.3.5"
   }
 }
