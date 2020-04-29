@@ -42,5 +42,5 @@ A script is included to generate a PDF of the Resume page. So far it's only been
 ```bash
 cd pdf
 npm ci
-node ./resume.js
+npm run pdf
 ```

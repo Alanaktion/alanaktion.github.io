@@ -1,12 +1,12 @@
 @media print {
   @page {
-    margin: .7in 1in;
+    margin: 1in;
   }
   body {
     @apply p-0;
   }
   .site-header {
-    @apply hidden;
+    display: none !important;
   }
 
   section, ul {
@@ -18,7 +18,11 @@
   }
 
   .print\:hidden {
-    @apply hidden;
+    display: none !important;
+  }
+  .container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
   a.print-link::after {
     content: ' \2014 ' attr(href);
