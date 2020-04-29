@@ -7,7 +7,7 @@ class: resume
 # Alan Hardman
 *Web Developer* &mdash; alan@phpizza.com
 
-I've been coding since I was nine, and plan to keep doing it forever. I've primarily focused on web development, but have experience with Windows desktop and mobile app development. I have a passion for Open Source and contribute to a variety of projects as well as maintain [several of my own](https://github.com/Alanaktion).
+I've been coding since I was nine, and plan to keep doing it forever. I've primarily focused on web development, but have experience with Windows and mobile app development. I have a passion for Open Source and contribute to a variety of projects as well as maintain [several of my own](https://github.com/Alanaktion).
 
 <section markdown="1">
 ### Skills
@@ -55,7 +55,7 @@ I've been coding since I was nine, and plan to keep doing it forever. I've prima
 - Built API and web app for managing third-party orders
   - Included integrations with Amazon MWS and Shopify to process orders automatically
 - Developed open-source project management system - [phproject.org](https://www.phproject.org/)
-  - Currently in use by entire company to track over 150,000 projects, tasks, and bugs.
+  - Currently in use tracking over 150,000 projects, tasks, and bugs.
 - 2014 Employee of the Year
 </section>
 
