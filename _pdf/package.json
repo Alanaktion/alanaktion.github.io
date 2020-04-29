@@ -4,5 +4,8 @@
   "author": "Alan Hardman <alan@phpizza.com>",
   "devDependencies": {
     "puppeteer": "^1.20.0"
+  },
+  "scripts": {
+    "pdf": "node resume"
   }
 }
