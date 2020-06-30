@@ -3,7 +3,7 @@ layout: post
 title: Bridged Networking on Ubuntu 14.04
 date: 2015-07-02 14:58:16
 ---
-It's often necessary to set up a bridged network on VM hosts, but the documntation for Ubuntu has gotten a bit dated. After much trial-and-error, here is what worked for my datacenter-hosted VM server:
+It's often necessary to set up a bridged network on VM hosts, but the documentation for Ubuntu has gotten a bit dated. After much trial-and-error, here is what worked for my datacenter-hosted VM server:
 
 First, run `sudo apt-get install bridge-utils`, if the package is not already installed.
 

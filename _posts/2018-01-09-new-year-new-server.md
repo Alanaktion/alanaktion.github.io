@@ -33,4 +33,4 @@ Overall:
     Global reserve:                       536.87MB      (used: 0.00B)
 ```
 
-I still need to go through a few terabytes of data on my desktop PC, and eventually organize it all and move it over to Longhorn, but the result I've got now is something I'm incredibly satisfied with. The new setup leaves Longhorn with 38 terabytes of hard drives, giving a usable 19 terabytes after RAID1 redunancy and the overhead of btrfs's metadata storage.
+I still need to go through a few terabytes of data on my desktop PC, and eventually organize it all and move it over to Longhorn, but the result I've got now is something I'm incredibly satisfied with. The new setup leaves Longhorn with 38 terabytes of hard drives, giving a usable 19 terabytes after RAID1 redundancy and the overhead of btrfs's metadata storage.

@@ -28,7 +28,7 @@ sdg      8:96   0   2.7T  0 disk
 └─sdg1   8:97   0   2.7T  0 part /scratch
 ```
 
-I'm still using btrfs for the RAID1 `/archive` and RAID0 `/storage` volumes. I added the `/scratch` volume with a dedicated disk used as a cache drive, and for heavy random IO that's too big for the SSD (temporary transcoding, compiling Android ROMs, _etc._). It also stores things like thumbnails and metadata for Plex and [Jellyin](https://jellyfin.org/) (which is a great fork of the Emby project).
+I'm still using btrfs for the RAID1 `/archive` and RAID0 `/storage` volumes. I added the `/scratch` volume with a dedicated disk used as a cache drive, and for heavy random IO that's too big for the SSD (temporary transcoding, compiling Android ROMs, _etc._).
 
 The newly-added 12 TB drive mounted at `/youtube` is a good sign of my /r/datahoarder tendencies, as I'm already using 65% of its capacity. 3.4 TiB of that is just my Nerd³ archive, which I _think_ has every video publicly listed on every official Nerd³ channel, and the complete UnofficialNerdCubedLive collection.
 

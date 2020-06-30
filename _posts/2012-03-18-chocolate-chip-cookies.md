@@ -20,14 +20,14 @@ Beat in:
 Stir in with mixer on low speed:
 
 * ½ tsp. baking soda
-* ½ tsp. salf
+* ½ tsp. salt
 * 1 ½ cup flour
 
 Stir in with wooden spoon:
 
 * ½ cup chocolate chips
 
-Drop by rounded teaspoons onto ungreased cookie sheet.
+Drop by rounded teaspoons onto un-greased cookie sheet.
 
 Bake 8-10 minutes or until cookies are light brown.
 
