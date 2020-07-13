@@ -1,7 +1,7 @@
 .post-date {
   @apply text-sm text-gray-700;
 }
-.post-content {
+/* .post-content {
   @apply text-gray-800;
 }
 @screen md {
@@ -29,13 +29,13 @@
 .post-content ul ul {
   @apply ml-4 mb-0;
 }
+hr {
+  @apply my-4;
+}*/
+
 pre {
   @apply mb-4 p-2 border rounded bg-gray-100 text-xs font-mono overflow-x-auto;
 }
-hr {
-  @apply my-4;
-}
-
 @screen sm {
   pre {
     @apply text-sm;
@@ -46,12 +46,12 @@ hr {
   .post-date {
     @apply text-ngray-400;
   }
-  .post-content {
+  /* .post-content {
     @apply text-ngray-300;
   }
   pre {
     @apply bg-ngray-800;
-  }
+  } */
 }
 
 .archive a,

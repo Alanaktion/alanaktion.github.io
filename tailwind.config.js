@@ -24,6 +24,7 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
+      lg: '960px',
     },
     fontFamily: {
       mono: ['JetBrains Mono', 'Cascadia Code', 'Fira Code', ...fontFamily.mono],
