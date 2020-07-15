@@ -1,5 +1,7 @@
 # Phpizza Blog
 
+[![github randos](https://randos.online/u/Alanaktion)](https://randos.online/u/Alanaktion/next)
+
 This is my new blog built on [Jekyll](http://jekyllrb.com). I like it.
 
 It uses a custom theme built on [Tailwind CSS](https://tailwindcss.com), and includes a local copy of [instant.page](https://instant.page) to make page transitions feel even snappier. It also includes a [Puppeteer](https://github.com/GoogleChrome/puppeteer) setup for generating a PDF of the Resume page.
