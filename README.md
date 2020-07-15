@@ -1,6 +1,6 @@
 # Phpizza Blog
 
-[![github randos](https://randos.online/u/Alanaktion)](https://randos.online/u/Alanaktion/next)
+[![github randos](https://randos.online/u/Alanaktion?theme=green)](https://randos.online/u/Alanaktion/next)
 
 This is my new blog built on [Jekyll](http://jekyllrb.com). I like it.
 
