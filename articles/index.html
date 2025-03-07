@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/tailwind.css">
+  <link rel="icon" href="/icon.png">
+  <title>Articles - Alan Hardman</title>
+  <meta name="author" content="Alan Hardman">
+  <meta name="og:image" content="/me.webp">
+</head>
+
+<body class="bg-white sm:bg-zinc-50 dark:bg-zinc-900 dark:sm:bg-black h-full">
+  <!-- Backdrop -->
+  <div class="fixed inset-0 hidden sm:flex justify-center sm:px-8 -z-1">
+    <div class="flex w-full max-w-7xl lg:px-8">
+      <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+    </div>
+  </div>
+
+  <div class="mx-auto w-full max-w-2xl sm:px-6 lg:max-w-5xl lg:px-12 xl:px-0">
+    <main class="px-4 sm:px-8 lg:px-12 my-10 sm:my-20">
+      <h1 class="sr-only">Articles</h1>
+
+      <header class="flex justify-between items-center gap-6 mb-10 sm:my-20">
+        <a class="group rounded-full" href="/">
+          <span class="sr-only">Home</span>
+          <img class="ring-3 ring-transparent group-hover:ring-zinc-300 dark:group-hover:ring-zinc-700 transition rounded-full bg-black object-cover size-12" src="/me.webp">
+        </a>
+        <nav class="pointer-events-auto hidden md:block">
+          <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+            <li>
+              <a class="block px-3 py-2 transition hover:text-sky-500 dark:hover:text-sky-400" href="/">Portfolio</a>
+            </li>
+            <li class="relative overflow-y-clip">
+              <a class="block px-3 py-2 transition text-sky-500 dark:hover:text-sky-400" href="/articles/">Articles</a>
+              <div class="w-10 h-1 absolute left-[50%] -ml-[25%] bottom-0 bg-sky-400 blur-sm pointer-events-none"></div>
+              <div class="w-full h-px absolute inset-x-0 bottom-0 bg-linear-to-r from-transparent via-sky-400 to-transparent pointer-events-none"></div>
+            </li>
+            <li>
+              <a class="block px-3 py-2 transition hover:text-sky-500 dark:hover:text-sky-400" href="https://github.com/Alanaktion">GitHub</a>
+            </li>
+          </ul>
+        </nav>
+        <div></div>
+      </header>
+
+      <div class="flex flex-col gap-16 max-w-xl">
+        <article class="group relative flex flex-col items-start">
+          <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+            <div class="absolute -inset-x-4 -inset-y-6 -z-1 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+            <a href="/articles/python/">
+              <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+              My experience with Python
+            </a>
+          </h2>
+          <time class="relative order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="2025-02-21">
+            <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+              <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+            </span>
+            February 21, 2025
+          </time>
+          <p class="relative mt-2 text-sm text-zinc-600 dark:text-zinc-400">Python has become my preferred programming language due to its versatility, ease of use, and robust feature set. With simplicity in handling parallel processing tasks and streamlined command-line interfaces, Python offers powerful tools for both simple and complex projects, from system utilities to graphical applications.</p>
+          <div aria-hidden="true" class="relative mt-4 flex items-center text-sm font-medium text-sky-500">
+            Read article
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+              <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </article>
+
+        <article class="group relative flex flex-col items-start">
+          <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+            <div class="absolute -inset-x-4 -inset-y-6 -z-1 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+            <a href="/articles/solid-php/">
+              <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+              Applying SOLID principles to modern PHP
+            </a>
+          </h2>
+          <time class="relative order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="2021-08-31">
+            <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+              <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+            </span>
+            August 31, 2021
+          </time>
+          <p class="relative mt-2 text-sm text-zinc-600 dark:text-zinc-400">The SOLID principles are one of a few groups of software design principles that are often and easily applied to most modern software development. I work primarily in PHP development on the back-end, where object oriented programming is still the usual standard and SOLID is of particular relevancy.</p>
+          <div aria-hidden="true" class="relative mt-4 flex items-center text-sm font-medium text-sky-500">
+            Read article
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+              <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </article>
+      </div>
+
+    </main>
+
+    <footer class="px-4 sm:px-8 lg:px-12 mt-10 mb-8 sm:mb-24 flex-none">
+      <div class="flex gap-4 items-center mx-auto max-w-2xl lg:max-w-5xl text-zinc-500 text-xs">
+        <div class="size-4 rounded-full bg-linear-to-br from-teal-300 to-purple-400 dark:from-teal-600 dark:to-purple-600"></div>
+        © 2025
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
