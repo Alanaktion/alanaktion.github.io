@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/tailwind.css">
+  <link rel="icon" href="/icon.webp" type="image/webp">
   <link rel="icon" href="/icon.png">
   <title>My experience with Python - Alan Hardman</title>
   <meta name="author" content="Alan Hardman">
   <meta name="og:title" content="My experience with Python">
   <meta name="og:image" content="/me.webp">
+  <meta name="description" content="Leveraging Python for efficient development of command-line tools and system administration utilities. Discover examples including Imgfind and Ren, and building with SQLite for robust data management.">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,7 +40,10 @@
       <header class="flex justify-between items-center gap-6 mb-10 sm:my-20">
         <a class="group rounded-full" href="/">
           <span class="sr-only">Home</span>
-          <img class="ring-3 ring-transparent group-hover:ring-zinc-300 dark:group-hover:ring-zinc-700 transition rounded-full bg-black object-cover size-12" src="/me.webp">
+          <picture>
+            <source srcset="/me.avif" type="image/avif">
+            <img class="ring-3 ring-transparent group-hover:ring-zinc-300 dark:group-hover:ring-zinc-700 transition rounded-full bg-black object-cover size-12" src="/me.webp" alt="Photo of Alan.">
+          </picture>
         </a>
         <nav class="pointer-events-auto hidden md:block">
           <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
@@ -61,7 +66,7 @@
           <h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             My experience with Python
           </h1>
-          <time datetime="2025-02-21" class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500">
+          <time datetime="2025-02-21" class="order-first flex items-center text-base text-zinc-500 dark:text-zinc-400">
             <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
             <span class="ms-3">February 21, 2025</span>
           </time>

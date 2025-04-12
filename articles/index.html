@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/tailwind.css">
+  <link rel="icon" href="/icon.webp" type="image/webp">
   <link rel="icon" href="/icon.png">
   <title>Articles - Alan Hardman</title>
   <meta name="author" content="Alan Hardman">
   <meta name="og:image" content="/me.webp">
+  <meta name="description" content="Discover a diverse range of software engineering projects from Alan’s portfolio. Explore open-source contributions & see how he applies adaptability and collaboration to solve complex challenges.">
 </head>
 
 <body class="bg-white sm:bg-zinc-50 dark:bg-zinc-900 dark:sm:bg-black h-full">
@@ -26,7 +28,10 @@
       <header class="flex justify-between items-center gap-6 mb-10 sm:my-20">
         <a class="group rounded-full" href="/">
           <span class="sr-only">Home</span>
-          <img class="ring-3 ring-transparent group-hover:ring-zinc-300 dark:group-hover:ring-zinc-700 transition rounded-full bg-black object-cover size-12" src="/me.webp">
+          <picture>
+            <source srcset="/me.avif" type="image/avif">
+            <img class="ring-3 ring-transparent group-hover:ring-zinc-300 dark:group-hover:ring-zinc-700 transition rounded-full bg-black object-cover size-12" src="/me.webp" alt="Photo of Alan.">
+          </picture>
         </a>
         <nav class="pointer-events-auto hidden md:block">
           <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
