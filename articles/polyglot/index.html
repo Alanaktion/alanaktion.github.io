@@ -74,8 +74,8 @@
 
         <section class="mt-8 prose dark:prose-invert prose-code:before:content-none prose-code:after:content-none prose-code:font-medium text-pretty">
 
-          <p>Over the last ten years I’ve written PHP apps, Python scripts, Svelte/TypeScript frontends, and more. None of this was about collecting languages for the sake of it. It was about solving problems with the tools that fit best.</p>
-          <p>Working this way comes with real advantages, and some costs.</p>
+          <p>Over the last ten years I’ve written PHP apps, Python scripts, Svelte/TypeScript frontends, and more. While I always enjoy learning new languages, it’s truly about solving problems with the tools that fit best, and being able to adapt to new challenges.</p>
+          <p>Working this way comes with real advantages, and some real costs.</p>
 
           <hr />
 
@@ -113,16 +113,17 @@
 
           <h2>A Few Examples</h2>
           <h3>Phproject in PHP</h3>
-          <p>Maintaining Phproject from PHP 5 through PHP 8 meant building with change in mind: backward compatibility, avoiding fragile syntax, and designing APIs that wouldn’t break with every new version.</p>
+          <p>Maintaining Phproject from PHP 5 through PHP 8 meant building with change in mind: backward compatibility, avoiding reliance on specific vendor or platform featues, and designing APIs that wouldn’t break with every new version.</p>
+          <p>Phproject has continued to work well across a wide range of organizations for more than a decade, with long-term usability and a clear upgrade and maintenance path being essential. Keeping the project usable for the largest set of people and systems is essential, and requires a variety of skills and planning to maintain that flexibility.</p>
 
           <h3>CI for Polyglot Repos</h3>
-          <p>For projects mixing PHP backends with TypeScript clients, I’ve built pipelines that:</p>
+          <p>For projects mixing PHP backends with TypeScript clients, I’ve built systems that:</p>
           <ul>
             <li>Run jobs in parallel per runtime.</li>
             <li>Use separate Docker images for each environment.</li>
             <li>Cache dependencies (Composer, npm) for faster builds.</li>
           </ul>
-          <p>This keeps pipelines manageable while letting each language’s ecosystem do its job.</p>
+          <p>This keeps pipelines manageable while letting each language’s ecosystem do its job. A deep knowledge of each platform is necessary to build out a complete CI process that's maintainable and flexible.</p>
 
           <h3>Automation in Python</h3>
           <p>When I need a quick tool, batch renaming, data cleanup, simple CLIs, I reach for Python. Python acts as an effortless glue compared to setting up PHP or Node for the same small scripts, while still providing significant usability and feature improvements over pure shell scripts. With out-of-the-box modules for argument parsing, multiprocessing, and SQLite, I can build flexible tools that solve real problems in <em>minutes</em>, not days.</p>
@@ -136,6 +137,7 @@
             <li>Automate setup and CI to manage ecosystem overhead.</li>
             <li>Document conventions so you don’t waste time relearning each context.</li>
           </ul>
+          <p>Starting with a single language that you can use to solve a real problem is best. Avoid trying too many things early on, until you have a solid baseline knowledge of programming fundamentals, but don’t be afraid to learn new things. Technology moves fast, and the more you can learn the more you can do!</p>
 
           <hr />
 
@@ -143,7 +145,6 @@
           <p>Working in many languages builds resilience, flexibility, and sharper design instincts. It teaches you not just code, but environments, servers, and deployment models.</p>
           <p>The cost is complexity: more tools to manage, more contexts to juggle.</p>
           <p>Handled intentionally, though, polyglot programming becomes a career advantage. It broadens the ways you can solve problems, and that’s the real goal.</p>
-
 
         </section>
       </article>
