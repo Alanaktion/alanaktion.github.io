@@ -1,0 +1,26 @@
+---
+interface Props {
+  company: string,
+  role: string,
+  start: string,
+  end: string,
+}
+
+const { company, role, start, end } = Astro.props
+---
+
+<li class="flex gap-4">
+  <div class="relative size-10 flex flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+    <slot />
+  </div>
+  <dl class="flex flex-auto flex-wrap gap-x-2">
+    <dt class="sr-only">Company</dt>
+    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{company}</dd>
+    <dt class="sr-only">Role</dt>
+    <dd class="text-xs text-zinc-500 dark:text-zinc-400">{role}</dd>
+    <dt class="sr-only">Date</dt>
+    <dd class="ms-auto text-xs text-zinc-500 dark:text-zinc-400" aria-label={`${start} until ${end}`}>
+      <time datetime={start}>{start}</time> <span aria-hidden="true">&ndash;</span> <time datetime={end}>{end}</time>
+    </dd>
+  </dl>
+</li>

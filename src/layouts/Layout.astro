@@ -1,0 +1,72 @@
+---
+import '../styles/global.css'
+
+const {
+  data: { title, schema, description } = {},
+  header = true,
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="/icon.webp" type="image/webp">
+  <link rel="icon" href="/icon.png">
+  <meta name="author" content="Alan Hardman">
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  {description && <meta name="description" content={description}>}
+  <link rel="alternate" type="application/rss+xml" title="Alan Hardman" href={new URL("rss.xml", Astro.site)} />
+  {schema && <script type="application/ld+json" is:inline>{JSON.stringify(schema)}</script>}
+</head>
+
+<body class="bg-white sm:bg-zinc-50 dark:bg-zinc-900 dark:sm:bg-black h-full">
+  <!-- Backdrop -->
+  <div class="fixed inset-0 hidden sm:flex justify-center sm:px-8 -z-1">
+    <div class="flex w-full max-w-7xl lg:px-8">
+      <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+    </div>
+  </div>
+
+  <div class="mx-auto w-full max-w-2xl sm:px-6 lg:max-w-5xl lg:px-12 xl:px-0">
+    <main class={`px-4 sm:px-8 lg:px-12 my-10 ${header ? 'sm:my-20' : 'sm:mt-32'}`}>
+
+      {header && <header class="flex justify-between items-center gap-6 mb-10 sm:my-20">
+        <a class="group rounded-full" href="/">
+          <span class="sr-only">Home</span>
+          <picture>
+            <source srcset="/me.avif" type="image/avif">
+            <img class="ring-3 ring-transparent group-hover:ring-zinc-300 dark:group-hover:ring-zinc-700 transition rounded-full bg-black object-cover size-12" src="/me.webp" alt="Photo of Alan.">
+          </picture>
+        </a>
+        <nav class="pointer-events-auto hidden md:block">
+          <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+            <li>
+              <a class="block px-3 py-2 transition hover:text-sky-500 dark:hover:text-sky-400" href="/">Portfolio</a>
+            </li>
+            <li>
+              <a class="block px-3 py-2 transition hover:text-sky-500 dark:hover:text-sky-400" href="/articles/">Articles</a>
+            </li>
+            <li>
+              <a class="block px-3 py-2 transition hover:text-sky-500 dark:hover:text-sky-400" href="https://github.com/Alanaktion">GitHub</a>
+            </li>
+          </ul>
+        </nav>
+        <div></div>
+      </header>}
+
+      <slot />
+
+    </main>
+
+    <footer class="px-4 sm:px-8 lg:px-12 mt-10 mb-8 sm:mb-24 flex-none">
+      <div class="flex gap-4 items-center mx-auto max-w-2xl lg:max-w-5xl text-zinc-500 text-xs">
+        <div class="size-4 rounded-full bg-linear-to-br from-teal-300 to-purple-400 dark:from-teal-600 dark:to-purple-600"></div>
+        © 2026
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
