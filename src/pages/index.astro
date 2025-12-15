@@ -5,6 +5,8 @@ import Job from "../components/Job.astro"
 import PortfolioLink from "../components/PortfolioLink.astro"
 import Layout from "../layouts/Layout.astro";
 
+import { CupSoda, Play, SquareCheckBig, Zap } from "@lucide/astro";
+
 const articles = await getCollection("articles")
 articles.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
@@ -91,12 +93,7 @@ const data = {
           </svg>
         </PortfolioLink>
         <PortfolioLink title="RUVI" description="Health-focused e-commerce with affiliate program and memberships." href="https://www.goruvi.com" class="text-zinc-800 dark:text-zinc-400">
-          <svg viewBox="0 0 24 24" class="stroke-current fill-none size-8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8"></path>
-            <path d="M5 8h14"></path>
-            <path d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0"></path>
-            <path d="m12 8 1-6h2"></path>
-          </svg>
+          <CupSoda stroke-width="1.5" class="size-8" />
         </PortfolioLink>
         <PortfolioLink title="Thrive Life" description="Freeze-dried food store, recipe site, and direct sales dashboard." href="https://www.thrivelife.com" class="text-[#7ac143]">
           <svg stroke-width="2" class="size-8 stroke-current fill-none overflow-visible" viewBox="0 0 31.75 31.75">
@@ -110,22 +107,13 @@ const data = {
           </svg>
         </PortfolioLink>
         <PortfolioLink title="Lime Testing Suite" description="Test case library and software testing suite, making app testing easy." href="http://github.com/Alanaktion/lime-testing" class="text-lime-500">
-          <svg class="stroke-current fill-none size-8" viewBox="0 0 24 24" stroke-width="1.5">
-            <path d="M21.66 17.67a1.08 1.08 0 0 1-.04 1.6A12 12 0 0 1 4.73 2.38a1.1 1.1 0 0 1 1.61-.04z"></path>
-            <path d="M19.65 15.66A8 8 0 0 1 8.35 4.34"></path>
-            <path d="m14 10-5.5 5.5"></path>
-            <path d="M14 17.85V10H6.15"></path>
-          </svg>
+          <SquareCheckBig stroke-width="1.5" class="size-8" />
         </PortfolioLink>
         <PortfolioLink title="MyTube" description="Self-hosted video archive web app, with mobile and TV app integrations." href="https://github.com/Alanaktion/mytube" class="text-blue-500">
-          <svg class="stroke-none fill-current size-8 relative left-px" viewBox="0 0 24 24">
-            <polygon points="6 3 20 12 6 21 6 3"></polygon>
-          </svg>
+          <Play class="stroke-none fill-current size-8 relative left-px" />
         </PortfolioLink>
         <PortfolioLink title="Zippa Builder" description="Documentation publishing platform for web, mobile, and print." href="https://web.archive.org/web/20210226213120/https://getzippa.com/" class="text-teal-500">
-          <svg viewBox="0 0 24 24" class="stroke-none fill-current size-8">
-            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-          </svg>
+          <Zap class="stroke-none fill-current size-8" />
         </PortfolioLink>
         <PortfolioLink title="StructHub" description="Mobile app for instruction and assembly manuals." href="https://web.archive.org/web/20180816221417/https://www.structhub.com/" class="text-blue-500">
           <svg class="fill-current size-8" viewBox="0 0 12 21">
