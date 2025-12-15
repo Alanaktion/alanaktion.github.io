@@ -1,7 +1,7 @@
 ---
 title: Lessons from a Decade as a Programming Polyglot
 short_title: Being a Programming Polyglot
-description: SOLID principles are essential for modern PHP development, especially with frameworks like Laravel. This guide explains Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion – building better, more maintainable applications.
+description: Most languages share common design patterns, and diversity sharpens skills beyond syntax. Working across PHP, Python, and TypeScript gave me stronger instincts for architecture, environment setup, and server configuration, while also highlighting the real costs of juggling multiple ecosystems. The result is broader flexibility in how I approach unique projects and long-term software maintenance.
 date: 2025-09-09
 ---
 
@@ -61,7 +61,7 @@ Being a polyglot isn’t free.
 
 ### Phproject in PHP
 
-Maintaining Phproject from PHP 5 through PHP 8 meant building with change in mind: backward compatibility, avoiding reliance on specific vendor or platform featues, and designing APIs that wouldn’t break with every new version.
+Maintaining Phproject from PHP 5 through PHP 8 meant building with change in mind: backward compatibility, avoiding reliance on specific vendor or platform features, and designing APIs that wouldn’t break with every new version.
 
 Phproject has continued to work well across a wide range of organizations for more than a decade, with long-term usability and a clear upgrade and maintenance path being essential. Keeping the project usable for the largest set of people and systems is essential, and requires a variety of skills and planning to maintain that flexibility.
 
