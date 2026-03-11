@@ -25,5 +25,6 @@ export default defineConfig({
   adapter: netlify(),
   experimental: {
     clientPrerender: true,
+    rustCompiler: true,
   },
 });
