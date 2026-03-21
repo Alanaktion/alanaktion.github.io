@@ -8,12 +8,13 @@ type Props = {
 }
 
 const {
-  data: { title, description, date },
+  data: { title, description, date, llm },
 } = Astro.props
 
 const data = {
   title: `${title} - Alan Hardman`,
   description,
+  generator: llm,
   schema: {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -37,6 +38,11 @@ const data = {
         <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
         <FormattedDate class="ms-3" date={date} />
       </div>
+      {llm && (
+        <p class="mt-4 inline-flex w-fit items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/60 dark:text-zinc-300">
+          This article was written with assistive LLM support ({llm}).
+        </p>
+      )}
     </header>
     <section class="mt-8 prose dark:prose-invert prose-code:before:content-none prose-code:after:content-none prose-code:font-medium text-pretty">
       <slot />

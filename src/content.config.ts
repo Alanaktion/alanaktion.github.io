@@ -1,5 +1,6 @@
 import { glob } from "astro/loaders"
-import { defineCollection, z } from "astro:content"
+import { z } from "astro/zod"
+import { defineCollection } from "astro:content"
 
 const articles = defineCollection({
   // Load Markdown files in the `content/articles/` directory.
@@ -18,6 +19,7 @@ const articles = defineCollection({
     short_title: z.string().optional(),
     description: z.string().optional(),
     date: z.date(),
+    llm: z.string().optional(),
   }),
 })
 

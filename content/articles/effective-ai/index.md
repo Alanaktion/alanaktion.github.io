@@ -1,8 +1,8 @@
 ---
 title: Effective AI
-short_title: Effective AI
 description: Effective use of AI in software development comes from pairing strong models and agents with engineering discipline. This article covers practical workflows, where modern models shine, and how to avoid over-reliance.
 date: 2026-03-10
+llm: GPT-5.3-Codex
 ---
 
 AI tools for software development are now good enough that the question is no longer "should we use them?" but "how do we use them responsibly and effectively?"

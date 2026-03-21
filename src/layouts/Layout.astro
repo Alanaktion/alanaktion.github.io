@@ -2,7 +2,7 @@
 import '../styles/global.css'
 
 const {
-  data: { title, schema, description } = {},
+  data: { title, schema, description, generator } = {},
   header = true,
 } = Astro.props
 ---
@@ -15,7 +15,7 @@ const {
   <link rel="icon" href="/icon.webp" type="image/webp">
   <link rel="icon" href="/icon.png">
   <meta name="author" content="Alan Hardman">
-  <meta name="generator" content={Astro.generator} />
+  <meta name="generator" content={generator ? `${Astro.generator} + ${generator}` : Astro.generator} />
   <title>{title}</title>
   {description && <meta name="description" content={description}>}
   <link rel="alternate" type="application/rss+xml" title="Alan Hardman" href={new URL("rss.xml", Astro.site)} />

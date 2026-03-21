@@ -2,6 +2,7 @@
 title: My experience with Python
 description: Leveraging Python for efficient development of command-line tools and system administration utilities. Discover examples including Imgfind and Ren, and building with SQLite for robust data management.
 date: 2025-02-21
+llm: GPT-4o
 ---
 
 Python has become my preferred programming language, and it is easy to understand why: its versatility, ease of use, and the robust set of features that make development efficient. The `multiprocessing` module stands out for its simplicity while providing immense utility in parallel processing tasks. The `argparse` library is particularly valuable for crafting intuitive command-line interfaces (CLI), enhancing productivity without compromising on functionality.

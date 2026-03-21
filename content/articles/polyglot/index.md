@@ -3,6 +3,7 @@ title: Lessons from a Decade as a Programming Polyglot
 short_title: Being a Programming Polyglot
 description: Most languages share common design patterns, and diversity sharpens skills beyond syntax. Working across PHP, Python, and TypeScript gave me stronger instincts for architecture, environment setup, and server configuration, while also highlighting the real costs of juggling multiple ecosystems. The result is broader flexibility in how I approach unique projects and long-term software maintenance.
 date: 2025-09-09
+llm: GPT-5
 ---
 
 Over the last ten years I’ve written PHP apps, Python scripts, Svelte/TypeScript frontends, and more. While I always enjoy learning new languages, it’s truly about solving problems with the tools that fit best, and being able to adapt to new challenges.

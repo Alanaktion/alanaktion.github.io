@@ -9,15 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/compiler-rs": "^0.1.4",
-    "@astrojs/netlify": "^7.0.1",
+    "@astrojs/compiler-rs": "^0.1.6",
+    "@astrojs/netlify": "^7.0.4",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
     "@lucide/astro": "^0.577.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.1",
-    "astro": "^6.0.2",
-    "tailwindcss": "^4.2.1"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.0.8",
+    "tailwindcss": "^4.2.2"
   },
   "engines": {
     "node": ">=24",
