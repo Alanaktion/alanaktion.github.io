@@ -7,7 +7,7 @@ llm: Qwen 3.6
 
 The economics of AI have hit a wall. Running frontier models at scale costs billions per quarter, and investors are no longer willing to fund those losses indefinitely. Providers have responded by pricing to survive — some have 5-10x'd their prices, with certain frontier models even more expensive than that. Most are [still losing money](https://isaiprofitable.com), but at a dramatically reduced rate.
 
-The result: frontier models are no longer practical for many everyday use cases. The compute overhead is too high, the latency too long, the pricing too punitive for sustained work. Developers are looking elsewhere.
+The result: **frontier models are no longer practical for many everyday use cases.** The compute overhead is too high, the latency too long, the pricing too punitive for sustained work. Developers are looking elsewhere.
 
 That's where stealth models and "free" tiers come in. But the data collection practice isn't limited to them — many paid models, including enterprise tools, still train on your inputs. The distinction is one of degree and transparency, not kind.
 
@@ -52,7 +52,7 @@ The "patterns only" argument holds up in theory but breaks down in practice:
 
 2. **Model inversion attacks.** Even if raw code isn't "leaked," a competitor with access to the model (via API or open-weight release) can sometimes reverse-engineer specific features or architectures that look suspiciously like your private work.
 
-3. **The competitive advantage leak.** If you're using a free model to solve a unique business problem, and that model gets better at solving that exact type of problem because of your input, you've just subsidized your competitor's R&D. You didn't give them the code — you gave them the recipe for how you think.
+3. **The competitive advantage leak.** If you're using a free model to solve a unique business problem, and that model gets better at solving that exact type of problem because of your input, you've just subsidized your competitor's R&D. **You didn't give them the code — you gave them the recipe for how you think.**
 
 ## The employment risk no one talks about
 
@@ -71,6 +71,6 @@ It's not a clean choice — it's a risk calculation. The question isn't whether 
 - **Enterprise route:** Pay for the tier with data guarantees. Cost: hundreds per month. Value: Legal recourse if things go wrong. Not necessarily IP protection.
 - **Free route:** Use the stealth model. Cost: $0. Risk: Potential IP leakage, employment liability, subsidizing competitors.
 
-You're making a calculated bet that convenience is worth the risk. That's a personal choice. But the unease you feel is your internal security auditor screaming that you just handed your source code to a black box with no audit trail.
+It's making a calculated bet that convenience is worth the risk. That's a personal choice. But any unease you might feel is your internal security auditor screaming that you just handed your source code to a black box with no audit trail.
 
 If the code is truly sensitive — proprietary algorithms, client data, core IP — hundreds buys you more than compute. It buys you sovereignty over your work product. If it's boilerplate or low-risk stuff? Maybe the trade-off is worth it. But "maybe fine" is a dangerous place to rest when the alternative is an NDA violation.
